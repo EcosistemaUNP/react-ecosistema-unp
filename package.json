@@ -2,12 +2,20 @@
   "name": "react-ecosistema-unp",
   "author": "Ecosistema de Información - Unidad Nacional de Protección",
   "private": false,
-  "version": "0.1.5",
+  "version": "0.1.6",
   "type": "module",
   "exports": {
     ".": {
       "types": "./dist/lib/main.d.ts",
       "default": "./dist/main.js"
+    },
+    "./shared": {
+      "types": "./dist/lib/shared.d.ts",
+      "default": "./dist/shared.js"
+    },
+    "./utils": {
+      "types": "./dist/lib/utils.d.ts",
+      "default": "./dist/utils.js"
     }
   },
   "files": ["dist"],

@@ -1,0 +1,1 @@
+export { VentanaLienzo } from './shared/components/VentanaLienzo'
