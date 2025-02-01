@@ -1,3 +1,1 @@
-export function helloAnything(thing: string): string {
-    return `Hello ${thing}!`
-}
+export { MenuLateral } from './shared/components/MenuLateral'

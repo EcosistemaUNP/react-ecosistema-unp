@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&family=Noto+Sans:wght@300;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap");
+
+:root {
+  --color-default: #303d50;
+  --color-white: #fff;
+  --color-body: #ffffff;
+  --color-light: #e0e0e0;
+  --Color-complementario: #2e465f;
+}
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "roboto", sans-serif;
+}
+
+body {
+  min-height: calc(100vh - 8px);
+}
+
+/* sidebar-bar-panel */
+
+.sidebar-bar-panel {
+  min-height: 100vh;
+  width: 78px;
+  padding: 6px 14px;
+  background-color: var(--color-default);
+  transition: all 0.5s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.sidebar-bar-panel.open {
+  width: 280px;
+  z-index: 0;
+}
+
+.sidebar-bar-panel .logo_details {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.logo-image {
+  height: 30px;
+  width: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-left: 4px;
+}
+
+.sidebar-bar-panel .logo_details .icon {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.sidebar-bar-panel .logo_details .logo-name {
+  color: var(--color-white);
+  font-size: 18px;
+  font-weight: 600;
+  padding-left: 0px;
+  max-width: 180px;
+  min-width: 0px;
+  opacity: 0;
+  transition: all 0.5s ease;
+  z-index: 0;
+}
+
+.sidebar-bar-panel.open .logo_details .icon,
+.sidebar-bar-panel.open .logo_details .logo-name {
+  opacity: 1;
+}
+
+.sidebar-bar-panel .logo_details #btn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 23px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.sidebar-bar-panel.open .logo_details #btn {
+  text-align: right;
+  left: 84.5%;
+}
+
+.sidebar-bar-panel .i {
+  color: var(--color-white);
+  height: 30px;
+  line-height: 60px;
+  min-width: 50px;
+  font-size: 25px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.sidebar-bar-panel .i2 {
+  color: var(--color-white);
+  height: 20px;
+  line-height: 60px;
+  min-width: 50px;
+  font-size: 25px;
+  text-align: center;
+  font-weight: 300;
+}
+
+.sidebar-bar-panel .nav-list-panel {
+  margin-top: 20px;
+  height: 100%;
+  padding: 0px;
+}
+
+.sidebar-bar-panel li {
+  position: relative;
+  margin: 20px 0;
+  list-style: none;
+}
+
+.sidebar-bar-panel li .tooltip {
+  position: absolute;
+  top: -20px;
+  left: calc(100% + 15px);
+  z-index: 9000 !important;
+  background-color: var(--color-white);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 6px 14px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar-bar-panel li:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sidebar-bar-panel.open li .tooltip {
+  display: none;
+}
+
+.sidebar-bar-panel li a {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  text-decoration: none;
+  background-color: var(--color-default);
+  position: relative;
+  transition: all 0.5s ease;
+  z-index: 12;
+}
+
+.sidebar-bar-panel li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 35px;
+  transform: scaleX(0);
+  background-color: var(--color-white);
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+  transform-origin: left;
+  z-index: -2;
+}
+
+.sidebar-bar-panel li a:hover::after {
+  transform: scaleX(1);
+  color: var(--color-default);
+  height: 35px;
+}
+
+.sidebar-bar-panel li a .link_name {
+  color: var(--color-white);
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.sidebar-bar-panel li a:hover .link_name,
+.sidebar-bar-panel li a:hover .i {
+  transition: all 0.5s ease;
+  color: var(--color-default);
+}
+
+.sidebar-bar-panel li a:hover .bx {
+  color: var(--color-default);
+}
+
+.sidebar-bar-panel.open li a .link_name {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Diseño de la parte baja con inforamción de la persona logueada */
+
+.sidebar-bar-panel .profile-content {
+  position: absolute;
+  color: var(--color-white);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.sidebar-bar-panel .profile-content .profile {
+  position: relative;
+  padding: 18px 18px;
+  height: 75px;
+  background: none;
+  transition: all 0.5s ease;
+}
+
+.sidebar-bar-panel .profile-content .profile a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.sidebar-bar-panel.open .profile-content .profile {
+  background-color: var(--Color-complementario);
+}
+
+.profile-content .profile .profile-detail {
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  pointer-events: auto;
+  white-space: nowrap;
+}
+
+.sidebar-bar-panel.open .profile .profile-detail {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sidebar-bar-panel.open .profile .icon {
+  left: 90%;
+  background: none;
+}
+
+.sidebar-bar-panel .profile .icon:hover {
+  cursor: pointer;
+}
+
+/* profile */
+
+.profile .profile-detail .name-job {
+  margin-left: 10px;
+}
+
+.profile .profile-detail .name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.profile .profile-detail .job {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.profile .icon {
+  position: absolute;
+  left: 50%;
+  bottom: 23%;
+  transform: translateX(-50%);
+  min-width: 40px;
+  line-height: 60px;
+  height: 38px;
+  text-align: center;
+  transition: all 0.5s ease;
+  background: var(--Color-complementario);
+  padding: 7px;
+  border-radius: 7px;
+}
+
+/* main-section */
+
+.main-section {
+  margin-top: 7px;
+  margin-left: 88px;
+  margin-right: 10px;
+  transition: margin-left 0.5s ease;
+  z-index: 1;
+  height: calc(100vh - 17px);
+}
+
+.menu-open .main-section {
+  margin-left: 290px;
+  z-index: 1;
+}
+
+/*  */
+
+.bg-custom {
+  background-color: #303d50;
+  border: #ffffff;
+}
+
+.bg-custom:hover {
+  background-color: #2e465f;
+}
+
+.custom-collapse {
+  animation: slideFromRight 0.5s ease forwards;
+}
+
+.custom-collapse-reverse {
+  animation: slideToRight 0.5s ease forwards;
+}
+
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Deslizamiento hacia la izquierda */
+@keyframes slideToRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
