@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Tab } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+import '../../styles/Bootstrap.css';
 
 interface TabVentanaProps {
   eventKey: string;

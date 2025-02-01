@@ -1,0 +1,1 @@
+export { Subtitulo } from './ui/components/Subtitulo'

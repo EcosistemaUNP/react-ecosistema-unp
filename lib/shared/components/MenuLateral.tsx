@@ -1,8 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useFinalizarSesion } from "../../auth/hooks/useFinalizarSesion";
-import { jwtDecode } from "jwt-decode";
 import { useNavigate } from "react-router";
+
+import { jwtDecode } from "jwt-decode";
+import { useFinalizarSesion } from "../../auth/hooks/useFinalizarSesion";
+import { urlCertificadoLaboral, urlBase } from "../../utils/Url";
+
 import {
   BiMenu,
   BiMenuAltRight,
@@ -20,7 +23,6 @@ import {
   BiFile,
 } from "react-icons/bi";
 import "../styles/MenuLateral.css";
-import { urlCertificadoLaboral, urlBase } from "../../utils/Url";
 
 interface MenuLateralProps {
   onToggle: () => void;

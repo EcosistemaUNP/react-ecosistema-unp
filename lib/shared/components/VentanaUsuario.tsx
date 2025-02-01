@@ -1,9 +1,11 @@
 import React from "react";
+import { BrowserRouter } from "react-router";
+
+import { MenuLateral } from "./MenuLateral";
+import NotificacionUsuario from "./NotificacionUsuario";
 
 import { Tabs } from "react-bootstrap";
-import NotificacionUsuario from "./NotificacionUsuario";
-import { BrowserRouter } from "react-router";
-import { MenuLateral } from "./MenuLateral";
+import '../../styles/Bootstrap.css';
 
 interface VentanaUsuarioProps {
   children?: React.ReactElement | React.ReactElement[];
