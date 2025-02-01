@@ -2,7 +2,7 @@
   "name": "react-ecosistema-unp",
   "author": "Ecosistema de Información - Unidad Nacional de Protección",
   "private": false,
-  "version": "0.2.3",
+  "version": "0.2.4",
   "type": "module",
   "exports": {
     ".": {
@@ -39,7 +39,10 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build:storybook": "storybook build --output-dir .storybook-build",
+    "predeploy": "npm run build:storybook",
+    "deploy:storybook": "gh-pages -d .storybook-build -b gh-pages -t"
   },
   "peerDependencies": {
     "react": "^18.3.1",
@@ -75,6 +78,7 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "eslint-plugin-storybook": "^0.11.2",
+    "gh-pages": "^6.3.0",
     "glob": "^11.0.1",
     "globals": "^15.14.0",
     "storybook": "^8.5.3",
