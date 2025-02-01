@@ -1,9 +1,17 @@
-import { VentanaLienzo } from '../lib/shared/components/VentanaLienzo'
+import TabVentana from '../lib/shared/components/TabVentana'
+import VentanaUsuario from '../lib/shared/components/VentanaUsuario'
 
 function App() {
   return (
     <>
-      <VentanaLienzo />
+      <VentanaUsuario>
+        <TabVentana eventKey='demo' title='Demo'>
+          Demo
+        </TabVentana>
+        <TabVentana eventKey='demo2' title='Demo 2'>
+          Demo 2
+        </TabVentana>
+      </VentanaUsuario>
     </>
   )
 }
