@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
-import { AuthProvider } from '../../lib/utils';
-import { VentanaLienzo } from '../../lib/shared';
 import { BrowserRouter } from 'react-router';
 
-const meta: Meta<typeof VentanaLienzo> = {
-    title: 'Shared/Ventana lienzo',
-    component: VentanaLienzo,
+import { AuthProvider } from '../../../lib/utils';
+import { VentanaTabs } from '../../../lib/shared/components/VentanaTabs';
+
+const meta: Meta<typeof VentanaTabs> = {
+    title: 'Shared/Ventana tabs',
+    component: VentanaTabs,
     decorators: [
         (Story) => (
             <AuthProvider>

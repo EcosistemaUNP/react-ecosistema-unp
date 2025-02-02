@@ -1,0 +1,11 @@
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+.dropdown-menu.show {
+    margin-right: 2rem;
+
+    border-radius: 10px;
+    border: 0;
+    box-shadow: 0 6px 12px #0000002d;
+}

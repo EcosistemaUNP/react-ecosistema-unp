@@ -10,7 +10,7 @@ interface VentanaUsuarioProps {
   children?: React.ReactElement | React.ReactElement[];
 }
 
-const VentanaUsuario: React.FC<VentanaUsuarioProps> = ({ children }) => {
+const VentanaTabs: React.FC<VentanaUsuarioProps> = ({ children }) => {
   const [menuOpen, setMenuOpen] = React.useState(false);
   const [key, setKey] = React.useState<string | undefined>(undefined);
 
@@ -20,9 +20,9 @@ const VentanaUsuario: React.FC<VentanaUsuarioProps> = ({ children }) => {
 
   return (
     <React.Fragment>
-      <div className="position-absolute top-0 end-0 m-3">
+      
         <NotificacionUsuario />
-      </div>
+      
 
       <MenuLateral onToggle={handleToggle} isOpen={menuOpen} />
 
@@ -46,4 +46,4 @@ const VentanaUsuario: React.FC<VentanaUsuarioProps> = ({ children }) => {
   );
 };
 
-export default VentanaUsuario;
+export { VentanaTabs };

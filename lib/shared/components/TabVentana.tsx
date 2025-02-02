@@ -25,4 +25,4 @@ const TabVentana: React.FC<TabVentanaProps> = ({
   );
 };
 
-export default TabVentana;
+export { TabVentana };

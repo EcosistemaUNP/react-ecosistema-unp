@@ -1,13 +1,13 @@
 import React from 'react'
-import VentanaUsuario from '../../lib/shared/components/VentanaUsuario'
-import TabVentana from '../../lib/shared/components/TabVentana'
 import Encabezado from '../../lib/ui/components/Encabezado'
 import { Subtitulo } from '../../lib/ui'
 import { FaHouse } from 'react-icons/fa6'
+import { VentanaTabs } from '../../lib/shared/components/VentanaTabs'
+import { TabVentana } from '../../lib/shared/components/TabVentana'
 
 const Tabs: React.FC = () => {
     return (
-        <VentanaUsuario>
+        <VentanaTabs>
             <TabVentana eventKey="demo" title={'Pestaña 1'}>
                 <Encabezado dependencia={'Dependencia de la UNP'} />
                 <Subtitulo icon={FaHouse} subtitulo={'Demo de un subtítulo muy largo, y sigue...'} />
@@ -27,7 +27,7 @@ const Tabs: React.FC = () => {
             <TabVentana eventKey="demo3" title={'Pestaña 3'}>
 
             </TabVentana>
-        </VentanaUsuario>
+        </VentanaTabs>
     )
 }
 
