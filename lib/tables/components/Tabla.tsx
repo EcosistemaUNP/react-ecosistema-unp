@@ -2,19 +2,19 @@ import React, { useState, useEffect, ReactNode } from "react";
 
 import Lottie from "lottie-react";
 
-import BusquedaInput from "./components/Buscador";
-import CustomModal from "./components/Modal";
+import BusquedaInput from "./Buscador";
+import CustomModal from "./Modal";
 
-import logo from './assets/logo.png';
-import noData from "./assets/animations/noData.json";
-import noInfo from "./assets/animations/noInfo.json";
-import isLoadingAnimation from "./assets/animations/isLoading.json";
+import logo from '../assets/logo.png';
+import noData from "../assets/animations/noData.json";
+import noInfo from "../assets/animations/noInfo.json";
+import isLoadingAnimation from "../assets/animations/isLoading.json";
 
 import { Table } from "react-bootstrap";
 import { FaGripLines } from "react-icons/fa";
 
-import './styles/Encabezado.css';
-import "./styles/Tabla.css";
+import '../styles/Encabezado.css';
+import "../styles/Tabla.css";
 
 interface Column {
   key: string;
@@ -245,8 +245,8 @@ const TablaRegistros: React.FC<TableProps> = ({
             <img className="img-logo" src={logo} alt="logo" />
           </div>
           <div className="subtitle-container">
-            <span className="subtitle-logo">{subtitle}</span>
-            <span>{items}</span>
+            <span className="title">{subtitle}</span>
+            <span className="subtitle">{items}</span>
           </div>
         </div>
 

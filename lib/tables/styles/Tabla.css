@@ -32,7 +32,7 @@
 }
 
 .table-scroll::-webkit-scrollbar-track {
-  background: linear-gradient(to bottom right, #ececec, #ffffff);
+  background: linear-gradient(to bottom right, #ececec, #f8f8f8, #ffffff);
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
