@@ -14,7 +14,7 @@ const NotificacionUsuario: React.FC = () => {
         <FaBell style={{ 
           width: "25px", 
           height: "25px",
-          color: '#152121'
+          color: '#142338'
         }} />
       }
       align='end'>

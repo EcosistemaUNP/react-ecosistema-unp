@@ -1,35 +1,66 @@
-import { Meta, Story, Canvas } from '@storybook/blocks';
+import { Meta, Story, Canvas, Stories } from '@storybook/blocks';
 import VentanaTabsStories from './VentanaTabs.stories';
+
+import { VentanaTabs } from '../../../lib/shared/components/VentanaTabs';
+import { TabVentana } from '../../../lib/shared/components/TabVentana';
 
 <Meta of={VentanaTabsStories} />
 
-# VentanaLienzo
-
-El componente `VentanaLienzo` es un contenedor flexible que permite incluir cualquier tipo de contenido dentro de él. Aquí puedes ver un ejemplo de cómo usar este componente.
+# VentanaTabs
+El componente `VentanaTabs` es un contenedor en blanco con tabs en la parte superior. Este incluye el menú lateral del ecosistema.
 
 ## Ejemplo de uso
 
-Este es un ejemplo básico de cómo puedes usar el componente `VentanaLienzo` con un `children` personalizado:
+> **Nota:** El componente debe estar envuelto entre el componente `AuthProvider` de **react-ecosistema-unp/utils** y el componente `BrowserRouter` de **react-dom**, es de preferencia hacerlo en el componente *index.tsx* o *main.tsx*
 
+- main.tsx
+```tsx
+<AuthProvider>
+  <BrowserRouter>
+    <App  />
+  </BrowserRouter>
+</AuthProvider>
 ```
-import { VentanaLienzo } from 'react-ecosistema-unp/shared';
 
-export default function App() {
+- MiComponente.tsx
+> **Uso de tabs:** Para usar correctamente las *tabs* se requiere del componente `TabVentana` por cada pestaña que se requiera agregar.
+
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Descripción</th>
+  </tr>
+  <tr>
+    <td>eventKey</td>
+    <td>Llave única de cada tab</td>
+  </tr>
+  <tr>
+    <td>title</td>
+    <td>Título de la tab</td>
+  </tr>
+</table>
+
+```tsx
+import { VentanaTabs } from 'react-ecosistema-unp/shared';
+
+const MiComponente: React.FC = () => {
   return (
-    <VentanaLienzo>
-      <div>Aquí va el contenido del sitio</div>
-    </VentanaLienzo>
+    <VentanaTabs>
+    <TabVentana eventKey="idTabUno" title={'Pestaña Uno'}>
+      <div>
+        Contenido de la pestaña uno...
+      </div>
+    </TabVentana>
+    <TabVentana eventKey="idTabDos" title={'Pestaña Dos'}>
+      <div>
+        Contenido de la pestaña 2...
+      </div>
+    </TabVentana>
+  </VentanaTabs>
   );
 }
 ```
 
-## Componente en vivo
+## Previsualización
 
-A continuación, te mostramos el componente `VentanaLienzo` en vivo. El contenido dentro de `VentanaLienzo` es dinámico y puedes modificarlo a través de los controles de Storybook.
-
-<Canvas>
-  <Story name="Lienzo">
-      <div>Aquí va el contenido del sitio</div>
-  </Story>
-</Canvas>
-
+<Stories />

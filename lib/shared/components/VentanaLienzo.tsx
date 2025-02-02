@@ -20,7 +20,7 @@ const VentanaLienzo: React.FC<VentanaLienzoProps> = ({ children }) => {
       <MenuLateral onToggle={handleToggle} isOpen={menuOpen} />
 
       <div className={`${menuOpen ? "menu-open" : ""}`}>
-        <div className={`main-section`}>{children}</div>
+        <div className={`main-section`} style={{ padding: '0.5rem' }}>{children}</div>
       </div>
     </React.Fragment>
   );
