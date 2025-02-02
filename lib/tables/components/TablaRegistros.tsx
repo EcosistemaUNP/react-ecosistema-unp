@@ -105,12 +105,12 @@ const TablaRegistros: React.FC<TableProps> = ({
 
   return (
     <>
-      <EncabezadoTabla 
-      title={title} 
-      subtitle={subtitle} 
-      data={data} 
-      setSearchTerm={setSearchTerm}    
-      extraInput={extraInput}  
+      <EncabezadoTabla
+        title={title}
+        subtitle={subtitle}
+        data={data}
+        setSearchTerm={setSearchTerm}
+        extraInput={extraInput}
       />
 
       {isLoading ? (

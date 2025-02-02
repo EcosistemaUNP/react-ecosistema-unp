@@ -1,5 +1,7 @@
 .input-with-icon {
+  border-radius: 12px;
   padding-right: 40px;
+  box-shadow: 0 1px 6px #00000012;
 }
 
 .input-icon {
@@ -7,7 +9,7 @@
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 30px;
+  font-size: 1.66rem;
   color: #303D50;
 }
 

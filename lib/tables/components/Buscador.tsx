@@ -1,6 +1,8 @@
 import React from "react";
-import { BiSearchAlt } from "react-icons/bi";
-import { Form } from "react-bootstrap";
+
+import { FormControl, FormGroup } from "react-bootstrap";
+import { FaMagnifyingGlass } from "react-icons/fa6";
+
 import "../styles/Buscador.css";
 
 interface BusquedaInputProps {
@@ -19,15 +21,15 @@ const BusquedaInput: React.FC<BusquedaInputProps> = ({ onSearch }) => {
 
   return (
     <div className="search-container">
-      <Form.Group className="d-flex align-items-center mx-1 position-relative">
-        <Form.Control
+      <FormGroup className="d-flex align-items-center mx-1 position-relative">
+        <FormControl
           type="text"
           className="me-0 input-with-icon"
           placeholder="Ingrese un criterio de búsqueda..."
           onChange={handleSearch}
         />
-        <BiSearchAlt className="input-icon" />
-      </Form.Group>
+        <FaMagnifyingGlass className="input-icon" />
+      </FormGroup>
     </div>
   );
 };

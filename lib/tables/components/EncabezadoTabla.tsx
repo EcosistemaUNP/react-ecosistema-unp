@@ -34,7 +34,9 @@ const EncabezadoTabla: React.FC<Encabezado> = ({
                 {data.length > 0 && (
                     <BusquedaInput onSearch={setSearchTerm} />
                 )}
-                <div>{extraInput}</div>
+                {extraInput &&
+                    <div>{extraInput}</div>
+                }
             </div>
 
         </div>
