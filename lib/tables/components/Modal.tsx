@@ -6,6 +6,7 @@ interface CustomModalProps {
   onHide: () => void;
   title: string;
   children: React.ReactNode;
+  closeModalOut: boolean;
 }
 
 const CustomModal: React.FC<CustomModalProps> = ({
@@ -13,6 +14,7 @@ const CustomModal: React.FC<CustomModalProps> = ({
   onHide,
   title,
   children,
+  closeModalOut
 }) => {
   const [showModal, setShowModal] = useState(false);
   const [closing, setClosing] = useState(false);
@@ -25,16 +27,18 @@ const CustomModal: React.FC<CustomModalProps> = ({
       setTimeout(() => {
         setShowModal(false);
         setClosing(false);
-      }, 400);
+      }, 200);
     }
   }, [show]);
 
   const handleHide = () => {
-    setClosing(true);
-    setTimeout(() => {
-      onHide();
-      setClosing(false);
-    }, 400);
+    if (closeModalOut) {
+      setClosing(true);
+      setTimeout(() => {
+        onHide();
+        setClosing(false);
+      }, 200);
+    }
   };
 
   return (
@@ -43,14 +47,12 @@ const CustomModal: React.FC<CustomModalProps> = ({
       onClick={handleHide}
     >
       <div
-        className={`modal-container ${showModal ? "show" : ""} ${
-          closing ? "hide" : ""
-        }`}
+        className={`modal-container ${showModal ? "show" : ""} ${closing ? "hide" : ""}`}
         onClick={(e) => e.stopPropagation()}
       >
         <div className="modal_header">
           <span>{title}</span>
-          <button className="close_button" onClick={handleHide}>
+          <button className="close_button" onClick={onHide}>
             &times;
           </button>
         </div>

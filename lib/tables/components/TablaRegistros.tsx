@@ -32,6 +32,7 @@ interface TableProps {
   dateColumnKey?: string;
   isShared?: boolean;
   isLoading?: boolean;
+  closeModalOut?: boolean;
 }
 
 const getCurrentYear = (): number => {
@@ -56,7 +57,8 @@ const TablaRegistros: React.FC<TableProps> = ({
   subtitle,
   dateColumnKey,
   isShared = false,
-  isLoading
+  isLoading,
+  closeModalOut = true
 }) => {
 
   const [searchTerm, setSearchTerm] = useState<string>("");
@@ -172,6 +174,7 @@ const TablaRegistros: React.FC<TableProps> = ({
           show={showModal}
           onHide={() => setShowModal(false)}
           title={`${modalData.column.label}`}
+          closeModalOut={closeModalOut}
         >
           {renderModalContent(modalData.row, modalData.column, () =>
             setShowModal(false)

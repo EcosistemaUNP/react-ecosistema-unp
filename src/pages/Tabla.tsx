@@ -25,7 +25,20 @@ const Tabla: React.FC = () => {
         { key: 'nuip', label: 'NUIP' },
         { key: 'contacto', label: 'Contacto' },
         { key: 'ubicacion', label: 'Ubicación', hasModal: true }
-    ]
+    ];
+
+    const renderModalContent = (row: Record<string, any>, column: any, onHide?: () => void) => {
+        switch (column.key) {
+            case "numeroRegistro":
+                return (<Button onClick={onHide}>Cerrar</Button>);
+            case "nombres":
+                return (<></>);
+            case "ubicacion":
+                return (<></>);
+            default:
+                return <p>No hay información adicional disponible.</p>;
+        }
+      };
 
     useEffect(() => {
         setIsLoading(true);
@@ -56,6 +69,8 @@ const Tabla: React.FC = () => {
                 title={'Título de la tabla'}
                 subtitle={'Subtítulo de la tabla'}
                 isLoading={isLoading}
+                renderModalContent={renderModalContent}
+                closeModalOut={true}
                 extraInput={
                     <>
                         <Button variant='primary'>
