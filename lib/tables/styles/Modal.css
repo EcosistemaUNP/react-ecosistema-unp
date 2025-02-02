@@ -1,0 +1,131 @@
+.modal-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  transition: opacity 0.4s ease !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  z-index: 1000 !important;
+}
+
+.modal-overlay.show {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.modal-container {
+  width: 42% !important;
+  height: 95vh !important;
+  background: white !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+  position: relative !important;
+  transform: translateX(100%) !important;
+  transition: transform 0.4s ease, opacity 0.4s ease !important;
+  border-radius: 10px !important;
+  margin: 1.75em !important;
+}
+
+/* Brakepoints para el ancho del modal */
+@media (max-width: 1400px) {
+  .modal-container {
+    width: 50% !important;
+  }
+}
+
+@media (max-width: 1300px) {
+  .modal-container {
+    width: 55% !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .modal-container {
+    width: 60% !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .modal-container {
+    width: 70% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-container {
+    width: 80% !important;
+  }
+}
+
+.modal-container.show {
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+}
+
+.modal-container.hide {
+  transform: translateX(100%) !important;
+  opacity: 0 !important;
+}
+
+.modal_header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 10px 30px !important;
+  background-color: #303D50 !important;
+  color: white !important;
+  font-weight: 500 !important;
+  font-size: 16px !important;
+  border-radius: 10px 10px 0 0 !important;
+}
+
+.modal_body {
+  padding: 30px 35px 0px 35px !important;
+  height: calc(85vh - 0px) !important;
+  overflow-y: auto !important;
+  box-sizing: border-box !important;
+}
+
+.close_button {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: white;
+}
+
+.close_button:hover {
+  color: #D36269;
+}
+
+.unp-row-subtitle{
+  margin-bottom: 4rem;
+}
+
+.modal_subtitle_container{
+  display: flex;
+  gap: 0.5rem;
+  font-size: 18px;
+  font-weight: 400;
+  align-items: center;
+}
+
+.modal_body::-webkit-scrollbar {
+  width: 10px;
+}
+
+.modal_body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal_body::-webkit-scrollbar-thumb {
+  background-color: #303D50;
+  border-radius: 10px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}

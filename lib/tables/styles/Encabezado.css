@@ -1,0 +1,49 @@
+.unp-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.title-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.logo-subtitle-container {
+  height: 100%;
+  display: flex;
+  gap: 0.66rem;
+}
+
+.red-section {
+  width: 10px;
+  background-color: #D13C47;
+  color: transparent;
+}
+
+.img-logo {
+  height: 60px;
+  object-fit: cover;
+}
+
+.subtitle-logo {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.subtitle-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs-container {
+  display: flex;
+  justify-content: end;
+  width: 40%;
+}

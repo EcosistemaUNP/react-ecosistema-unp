@@ -1,0 +1,1 @@
+export { TablaRegistros } from './tables/Tabla'

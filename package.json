@@ -2,7 +2,7 @@
   "name": "react-ecosistema-unp",
   "author": "Ecosistema de Información - Unidad Nacional de Protección",
   "private": false,
-  "version": "0.3.0",
+  "version": "0.3.2",
   "type": "module",
   "exports": {
     ".": {
@@ -16,6 +16,10 @@
     "./ui": {
       "types": "./dist/lib/ui.d.ts",
       "default": "./dist/ui.js"
+    },
+    "./tables": {
+      "types": "./dist/lib/tables.d.ts",
+      "default": "./dist/tables.js"
     },
     "./utils": {
       "types": "./dist/lib/utils.d.ts",
@@ -48,7 +52,6 @@
     "react-dom": "^18.3.1"
   },
   "dependencies": {
-    "@storybook/addon-docs": "^8.5.3",
     "bootstrap": "^5.3.3",
     "jwt-decode": "^4.0.0",
     "lottie-react": "^2.4.1",

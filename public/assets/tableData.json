@@ -1,0 +1,302 @@
+[
+    {
+        "tipoRuta": "Individual",
+        "numeroRegistro": 1017,
+        "numeroRadicado": "EXT25-00145000",
+        "diasHabiles": 25,
+        "nombres": "Fernanda Gómez",
+        "nuip": "PS XD2345678",
+        "contacto": "335 789 0123",
+        "ubicacion": "Guainía, Inírida"
+    },
+    {
+        "tipoRuta": "Individual",
+        "numeroRegistro": 1003,
+        "numeroRadicado": "EXT25-00084567",
+        "diasHabiles": 25,
+        "nombres": "Isabela Rojas",
+        "nuip": "CC 135792468",
+        "contacto": "321 345 6789",
+        "ubicacion": "Córdoba, Montería"
+    },
+    {
+        "tipoRuta": "Individual",
+        "numeroRegistro": 1020,
+        "numeroRadicado": "EXT25-00145799",
+        "diasHabiles": 24,
+        "nombres": "Alejandro Ruiz",
+        "nuip": "CC 852741963",
+        "contacto": "338 012 3456",
+        "ubicacion": "Bolívar, Cartagena"
+    },
+    {
+        "tipoRuta": "Individual",
+        "numeroRegistro": 1009,
+        "numeroRadicado": "EXT25-00123456",
+        "diasHabiles": 23,
+        "nombres": "Marcela Díaz",
+        "nuip": "CE 334455667",
+        "contacto": "327 901 2345",
+        "ubicacion": "Norte de Santander, Cúcuta"
+    },
+    {
+        "tipoRuta": "Individual",
+        "numeroRegistro": 995,
+        "numeroRadicado": "EXT25-00092345",
+        "diasHabiles": 22,
+        "nombres": "Laura Fernández",
+        "nuip": "PS BC8765432",
+        "contacto": "317 567 8901",
+        "ubicacion": "Santander, Bucaramanga"
+    },
+    {
+        "tipoRuta": "Individual",
+        "numeroRegistro": 1013,
+        "numeroRadicado": "EXT25-00139876",
+        "diasHabiles": 22,
+        "nombres": "Lucía Mendoza",
+        "nuip": "CC 987123654",
+        "contacto": "331 345 6789",
+        "ubicacion": "Guaviare, San José del Guaviare"
+    },
+    {
+        "tipoRuta": "Individual",
+        "numeroRegistro": 1007,
+        "numeroRadicado": "EXT25-00123457",
+        "diasHabiles": 20,
+        "nombres": "Carolina Sánchez",
+        "nuip": "PS A12345678",
+        "contacto": "325 789 0123",
+        "ubicacion": "La Guajira, Riohacha"
+    },
+    {
+        "tipoRuta": "Individual",
+        "numeroRegistro": 999,
+        "numeroRadicado": "EXT25-00093210",
+        "diasHabiles": 20,
+        "nombres": "Camila González",
+        "nuip": "CC 654321987",
+        "contacto": "313 901 2345",
+        "ubicacion": "Huila, Neiva"
+    },
+    {
+        "tipoRuta": "Individual",
+        "numeroRegistro": 1010,
+        "numeroRadicado": "EXT25-00157890",
+        "diasHabiles": 18,
+        "nombres": "Hugo Ramírez",
+        "nuip": "CC 443322110",
+        "contacto": "328 012 3456",
+        "ubicacion": "Chocó, Quibdó"
+    },
+    {
+        "tipoRuta": "Individual",
+        "numeroRegistro": 1005,
+        "numeroRadicado": "EXT25-00101342",
+        "diasHabiles": 18,
+        "nombres": "Daniela Castro",
+        "nuip": "CC 112233445",
+        "contacto": "323 567 8901",
+        "ubicacion": "Quindío, Armenia"
+    },
+    {
+        "tipoRuta": "Individual",
+        "numeroRegistro": 1001,
+        "numeroRadicado": "EXT25-00072784",
+        "diasHabiles": 17,
+        "nombres": "Valentina Herrera",
+        "nuip": "CC 321654987",
+        "contacto": "319 123 4567",
+        "ubicacion": "Risaralda, Pereira"
+    },
+    {
+        "tipoRuta": "Individual",
+        "numeroRegistro": 1015,
+        "numeroRadicado": "EXT25-00141235",
+        "diasHabiles": 15,
+        "nombres": "Adriana Castro",
+        "nuip": "CC 321987654",
+        "contacto": "333 567 8901",
+        "ubicacion": "Vichada, Puerto Carreño"
+    },
+    {
+        "tipoRuta": "Individual",
+        "numeroRegistro": 1006,
+        "numeroRadicado": "EXT25-00105467",
+        "diasHabiles": 15,
+        "nombres": "Felipe Gutiérrez",
+        "nuip": "TI 998877665",
+        "contacto": "324 678 9012",
+        "ubicacion": "Casanare, Yopal"
+    },
+    {
+        "tipoRuta": "Individual",
+        "numeroRegistro": 1014,
+        "numeroRadicado": "EXT25-00140124",
+        "diasHabiles": 14,
+        "nombres": "Oscar Ríos",
+        "nuip": "CE 654987321",
+        "contacto": "332 456 7890",
+        "ubicacion": "Vaupés, Mitú"
+    },
+    {
+        "tipoRuta": "Individual",
+        "numeroRegistro": 1012,
+        "numeroRadicado": "EXT25-00139012",
+        "diasHabiles": 12,
+        "nombres": "Santiago Jiménez",
+        "nuip": "PS YT9876543",
+        "contacto": "330 234 5678",
+        "ubicacion": "Arauca, Arauca"
+    },
+    {
+        "tipoRuta": "Individual",
+        "numeroRegistro": 1004,
+        "numeroRadicado": "EXT25-00093456",
+        "diasHabiles": 12,
+        "nombres": "Gabriel Morales",
+        "nuip": "CE 246813579",
+        "contacto": "322 456 7890",
+        "ubicacion": "Magdalena, Santa Marta"
+    },
+    {
+        "tipoRuta": "Individual",
+        "numeroRegistro": 1008,
+        "numeroRadicado": "EXT25-00125678",
+        "diasHabiles": 10,
+        "nombres": "Ricardo Peña",
+        "nuip": "CC 556677889",
+        "contacto": "326 890 1234",
+        "ubicacion": "Putumayo, Mocoa"
+    },
+    {
+        "tipoRuta": "Individual",
+        "numeroRegistro": 992,
+        "numeroRadicado": "EXT25-00054781",
+        "diasHabiles": 10,
+        "nombres": "José López",
+        "nuip": "TI 612345678",
+        "contacto": "315 234 5678",
+        "ubicacion": "Cundinamarca, Bogotá"
+    },
+    {
+        "tipoRuta": "Individual",
+        "numeroRegistro": 1019,
+        "numeroRadicado": "EXT25-00145678",
+        "diasHabiles": 9,
+        "nombres": "Valeria Suárez",
+        "nuip": "CE 7531598462",
+        "contacto": "337 901 2345",
+        "ubicacion": "Sucre, Sincelejo"
+    },
+    {
+        "tipoRuta": "Individual",
+        "numeroRegistro": 1018,
+        "numeroRadicado": "EXT25-00134567",
+        "diasHabiles": 8,
+        "nombres": "Julián Torres",
+        "nuip": "CC 1597534682",
+        "contacto": "336 890 1234",
+        "ubicacion": "San Andrés y Providencia, San Andrés"
+    },
+    {
+        "tipoRuta": "Individual",
+        "numeroRegistro": 1011,
+        "numeroRadicado": "EXT25-00128901",
+        "diasHabiles": 7,
+        "nombres": "Paula Ortiz",
+        "nuip": "TI 776655443",
+        "contacto": "329 123 4567",
+        "ubicacion": "Cauca, Popayán"
+    },
+    {
+        "tipoRuta": "Individual",
+        "numeroRegistro": 1002,
+        "numeroRadicado": "EXT25-00075893",
+        "diasHabiles": 6,
+        "nombres": "Andrés Moreno",
+        "nuip": "TI 876543210",
+        "contacto": "320 234 5678",
+        "ubicacion": "Boyacá, Tunja"
+    },
+    {
+        "tipoRuta": "Individual",
+        "numeroRegistro": 997,
+        "numeroRadicado": "EXT25-00098734",
+        "diasHabiles": 5,
+        "nombres": "Sofía Ramírez",
+        "nuip": "TI 543216789",
+        "contacto": "310 789 0123",
+        "ubicacion": "Caldas, Manizales"
+    },
+    {
+        "tipoRuta": "Individual",
+        "numeroRegistro": 994,
+        "numeroRadicado": "EXT25-00089012",
+        "diasHabiles": 5,
+        "nombres": "Carlos Andrés Martínez",
+        "nuip": "CC 123456789",
+        "contacto": "301 456 7890",
+        "ubicacion": "Atlántico, Barranquilla"
+    },
+    {
+        "tipoRuta": "Individual",
+        "numeroRegistro": 1016,
+        "numeroRadicado": "EXT25-00142345",
+        "diasHabiles": 4,
+        "nombres": "Gustavo Navarro",
+        "nuip": "TI 445566778",
+        "contacto": "334 678 9012",
+        "ubicacion": "Amazonas, Leticia"
+    },
+    {
+        "tipoRuta": "Individual",
+        "numeroRegistro": 996,
+        "numeroRadicado": "EXT25-00115467",
+        "diasHabiles": 3,
+        "nombres": "Pedro Vargas",
+        "nuip": "CC 987654321",
+        "contacto": "318 678 9012",
+        "ubicacion": "Nariño, Pasto"
+    },
+    {
+        "tipoRuta": "Individual",
+        "numeroRegistro": 993,
+        "numeroRadicado": "EXT25-00071245",
+        "diasHabiles": 3,
+        "nombres": "Ana Rodríguez Pérez",
+        "nuip": "CE 999000123",
+        "contacto": "320 345 6789",
+        "ubicacion": "Valle del Cauca, Cali"
+    },
+    {
+        "tipoRuta": "Individual",
+        "numeroRegistro": 991,
+        "numeroRadicado": "EXT25-00020030",
+        "diasHabiles": 2,
+        "nombres": "María García",
+        "nuip": "CC 850314795",
+        "contacto": "300 123 4567",
+        "ubicacion": "Antioquia, Medellín"
+    },
+    {
+        "tipoRuta": "Individual",
+        "numeroRegistro": 998,
+        "numeroRadicado": "EXT25-00129876",
+        "diasHabiles": 1,
+        "nombres": "Diego Castro",
+        "nuip": "CE 777888999",
+        "contacto": "312 890 1234",
+        "ubicacion": "Meta, Villavicencio"
+    },
+    {
+        "tipoRuta": "Individual",
+        "numeroRegistro": 1000,
+        "numeroRadicado": "EXT25-00110321",
+        "diasHabiles": 1,
+        "nombres": "Jorge Silva",
+        "nuip": "PS ZA6789123",
+        "contacto": "314 012 3456",
+        "ubicacion": "Tolima, Ibagué"
+    }
+]

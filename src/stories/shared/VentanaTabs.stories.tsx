@@ -29,7 +29,7 @@ const meta: Meta<typeof VentanaTabs> = {
             </TabVentana>
             <TabVentana eventKey="idTabDos" title={'Pestaña dos'}>
                 <div>
-                    Contenido de la pestaña 2...
+                    Contenido de la pestaña dos...
                 </div>
             </TabVentana>
         </VentanaTabs>
