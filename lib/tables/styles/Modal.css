@@ -32,7 +32,7 @@
   position: relative;
   transform: translateX(100%);
   transition: transform 0.4s ease, opacity 0.4s ease;
-  border-radius: 10px;
+  border-radius: 12px;
   margin: 1.75em;
 }
 
@@ -110,12 +110,13 @@
   color: white;
   font-weight: 500;
   font-size: 16px;
-  border-radius: 10px 10px 0 0;
+  border-radius: 12px 12px 0 0;
 }
 
 .modal_body {
   padding: 35px;
-  height: 87.5vh;
+  height: calc(100% - 56px);
+  border-radius: 0 0 12px 12px;
   overflow-y: auto;
 }
 
