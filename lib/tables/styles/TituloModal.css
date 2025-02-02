@@ -33,12 +33,58 @@
 
 .modal-subtitle-container-right {
     display: flex;
-    align-items: center;
+    justify-content: flex-end;
+    overflow: visible !important; /* Permite tooltips fuera del contenedor */
+}
+
+.animation-wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+}
+
+.buttons-group, .close-group {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    display: flex;
     gap: 1rem;
+    align-items: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Estados iniciales */
+.buttons-group {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.close-group {
+    transform: translateX(100%);
+    opacity: 0;
+    justify-content: flex-end; /* Alinea el botón cerrar a la derecha */
+}
+
+/* Animaciones */
+.buttons-group.hide {
+    transform: translateX(100%); /* Desplaza a la derecha */
+    opacity: 0;
+}
+
+.close-group.show {
+    transform: translateX(0); /* Entra desde la derecha */
+    opacity: 1;
+}
+
+/* Tooltip (asegurar que está visible) */
+.tooltip-text {
+    /* Tus estilos originales aquí */
+    z-index: 9999; /* Asegura que está por encima de todo */
 }
 
 .icon-registro {
     font-size: 1.66rem;
+    transition: all 0.3s ease-in-out;
     color: #646c73;
 }
 
@@ -50,6 +96,7 @@
 
 .icon-close-registro {
     font-size: 1.66rem;
+    transition: all 0.3s ease-in-out;
     color: #D13C47;
 }
 
@@ -112,6 +159,7 @@
     transition: opacity 0.2s;
     pointer-events: none;
     font-size: 0.9rem;
+    transition: all 0.2s ease-in-out;
 }
 
 .icon-container:hover .tooltip-text {

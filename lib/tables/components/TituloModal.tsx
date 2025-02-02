@@ -34,22 +34,31 @@ const TituloModal: React.FC<TituloModalProps> = ({ title, children, buttons, isS
                             {(isShowing && buttons) && currentButton ? buttons[currentButton - 1].title : title}
                         </div>
                     </div>
+                    {/* Hecho con DeepSeek, podría causar errores */}
                     <div className="modal-subtitle-container-right">
-                        {buttons && !isShowing && buttons.map((button, i) => (
-                            <div key={i} className="icon-container">
-                                <button.icon
-                                    className='icon-registro'
-                                    onClick={() => { button.onShow(); setCurrentButton(i + 1); }}
-                                />
-                                <span className="tooltip-text">{button.title}</span>
+                        <div className="animation-wrapper">
+                            {/* Botones principales */}
+                            <div className={`buttons-group ${isShowing ? "hide" : "show"}`}>
+                                {buttons && buttons.map((button, i) => (
+                                    <div key={i} className="icon-container">
+                                        <button.icon
+                                            className='icon-registro'
+                                            onClick={() => { button.onShow(); setCurrentButton(i + 1); }}
+                                        />
+                                        <span className="tooltip-text">{button.title}</span>
+                                    </div>
+                                ))}
                             </div>
-                        ))}
-                        {isShowing && (
-                            <FaEyeSlash
-                                className='icon-close-registro'
-                                onClick={() => { setIsShowing(false); setCurrentButton(0) }}
-                            />
-                        )}
+
+                            {/* Botón de cerrar (posicionado absolutamente) */}
+                            <div className={`close-group ${isShowing ? "show" : "hide"}`}>
+                                <FaEyeSlash
+                                    className='icon-close-registro'
+                                    onClick={() => { setIsShowing(false); setCurrentButton(0) }}
+                                    style={{ position: 'absolute', right: 0 }}
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <hr className='modal-horizontal-line' />
