@@ -39,9 +39,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build --output-dir ./.storybook-build",
+    "build-storybook": "storybook build --output-dir ./.storybook/.storybook-build",
     "predeploy": "npm run build:storybook",
-    "deploy:storybook": "gh-pages -d .storybook-build -b gh-pages -t"
+    "deploy:storybook": "gh-pages -d .storybook/.storybook-build -b gh-pages -t"
   },
   "peerDependencies": {
     "react": "^18.3.1",
