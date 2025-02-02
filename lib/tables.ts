@@ -1,1 +1,1 @@
-export { TablaRegistros } from './tables/components/Tabla'
+export { TablaRegistros } from './tables/components/TablaRegistros'

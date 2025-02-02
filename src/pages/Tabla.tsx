@@ -53,8 +53,8 @@ const Tabla: React.FC = () => {
                 columns={columns}
                 data={data}
                 totalDias={25}
-                subtitle={'Título de la tabla'}
-                items={'Subtítulo de la tabla'}
+                title={'Título de la tabla'}
+                subtitle={'Subtítulo de la tabla'}
                 isLoading={isLoading}
                 extraInput={
                     <>
