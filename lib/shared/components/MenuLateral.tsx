@@ -75,11 +75,11 @@ const MenuLateral: React.FC<MenuLateralProps> = ({ onToggle, isOpen }) => {
       <div className={sidebarClass}>
         <div className="logo_details">
           <img
-            src="/logo-unp-gris.png"
+            src="https://i.imgur.com/g7HnbOv.png"
             alt="Logo"
             className="icon logo-image"
           />
-          <div className="logo-name">EI-UNP</div>
+          <div className="logo-name">EI - UNP</div>
           {isOpen ? (
             <BiMenuAltRight
               className="bx bx-menu i"

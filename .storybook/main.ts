@@ -14,17 +14,17 @@ const config: StorybookConfig = {
     name: "@storybook/react-vite",
     options: {},
   },
-  async viteFinal(defaultConfig) {
-    return mergeConfig(defaultConfig, {
-      base: '/react-ecosistema-unp/',
-      build: {
-        outDir: resolve(__dirname, '.storybook-build'),
-        emptyOutDir: true,
-        rollupOptions: {
-          external: ['react', 'react-dom']
-        }
-      }
-    })
-  }
+  // async viteFinal(defaultConfig) {
+  //   return mergeConfig(defaultConfig, {
+  //     base: '/react-ecosistema-unp/',
+  //     build: {
+  //       outDir: resolve(__dirname, './.storybook-build'),
+  //       emptyOutDir: true,
+  //       rollupOptions: {
+  //         external: ['react', 'react-dom']
+  //       }
+  //     }
+  //   })
+  // }
 };
 export default config;

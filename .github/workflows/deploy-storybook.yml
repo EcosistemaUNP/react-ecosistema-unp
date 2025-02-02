@@ -3,9 +3,9 @@ name: Deploy Storybook
 on:
   push:
     branches: [main]
-  workflow_dispatch:
 
 permissions:
+  contents: read
   pages: write
   id-token: write
 
@@ -13,28 +13,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - id: build-publish
+        uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
         with:
-          node-version: 20
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build Storybook
-        run: npm run build-storybook
-
-      - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          name: github-pages
-          path: .storybook-build
-
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
-        with:
-          artifact-name: github-pages 
+          path: .storybook/.storybook-build
