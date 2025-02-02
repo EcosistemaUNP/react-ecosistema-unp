@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { AuthProvider } from '../../lib/utils';
 import { VentanaLienzo } from '../../lib/shared';
+import { BrowserRouter } from 'react-router';
 
 const meta: Meta<typeof VentanaLienzo> = {
     title: 'Shared/Ventana lienzo',
@@ -9,7 +10,9 @@ const meta: Meta<typeof VentanaLienzo> = {
     decorators: [
         (Story) => (
             <AuthProvider>
-                <Story />
+                <BrowserRouter>
+                    <Story />
+                </BrowserRouter>
             </AuthProvider>
         )
     ],

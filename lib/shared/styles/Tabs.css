@@ -1,0 +1,36 @@
+.nav {
+    background: #f8f9fa;
+    padding-top: 1rem;
+}
+
+.nav-tabs {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+    
+    --bs-nav-tabs-link-active-color: #074470;
+    --bs-nav-tabs-link-active-bg: #ffffff;
+    --bs-nav-tabs-link-hover-border-color: #c3c3c3;
+    /* --bs-nav-tabs-link-active-border-color: #000000; */
+    --bs-nav-link-color: #697580;
+    --bs-nav-link-hover-color: #344754;
+    
+}
+
+.nav-item {
+    font-weight: 500;
+}
+
+.nav-link {
+    padding-top: 0.55rem;
+    padding-bottom: 0.66rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+
+    /* --bs-nav-tabs-link-active-bg: #e5e5e5; */
+    --bs-nav-tabs-border-radius: 10px;
+
+}
+
+.tab-content {
+    padding: 0.5rem;
+}

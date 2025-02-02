@@ -5,7 +5,7 @@
   --color-white: #fff;
   --color-body: #ffffff;
   --color-light: #e0e0e0;
-  --Color-complementario: #2e465f;
+  --Color-complementario: #2e4b6b;
 }
 
 * {
@@ -292,16 +292,16 @@ body {
 /* main-section */
 
 .main-section {
-  margin-top: 7px;
-  margin-left: 88px;
-  margin-right: 10px;
+  margin-top: 0px;
+  margin-left: 78px; /* Ancho del menú cuando está cerrado */
+  margin-right: 0px;
   transition: margin-left 0.5s ease;
   z-index: 1;
   height: calc(100vh - 17px);
 }
 
 .menu-open .main-section {
-  margin-left: 290px;
+  margin-left: 280px;
   z-index: 1;
 }
 

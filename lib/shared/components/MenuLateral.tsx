@@ -124,7 +124,7 @@ const MenuLateral: React.FC<MenuLateralProps> = ({ onToggle, isOpen }) => {
           </li>
           <li>
             <a
-              href="https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000002-0000-0ff1-ce00-000000000000&redirect_uri=https%3a%2f%2foutlook.office365.com%2fowa%2f&resource=00000002-0000-0ff1-ce00-000000000000&response_mode=form_post&response_type=code+id_token&scope=openid&msafed=1&msaredir=1&client-request-id=f8488f2f-33b7-d769-3dc8-fe71d263f531&protectedtoken=true&claims=%7b%22id_token%22%3a%7b%22xms_cc%22%3a%7b%22values%22%3a%5b%22CP1%22%5d%7d%7d%7d&nonce=638372347486593361.36439678-d731-49f6-a49f-cc0594f2abb0&state=Dcs7EoAgDEVR0HE5kc8LCVkO4NBaun1T3NPdGEI4vcOL2Qkq6NAKVu7SDJByQxgm2ulRFGLbQsOltXIz3nXMmaO_V3q_kX4"
+              href="https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000002-0000-0ff1-ce00-000000000000"
               target="_blank"
             >
               <BiEnvelope className="bx bx-envelope i2" />
@@ -171,7 +171,7 @@ const MenuLateral: React.FC<MenuLateralProps> = ({ onToggle, isOpen }) => {
             <span className="tooltip">Solicitud de viáticos</span>
           </li>
           <li>
-            <a href={`${urlBase}${urlCertificadoLaboral}`}>
+            <a href={`${urlBase}${urlCertificadoLaboral}`} target="_blank">
               <BiFile className="bx i2" />
               <span className="link_name">Certificados laborales (OPS)</span>
             </a>

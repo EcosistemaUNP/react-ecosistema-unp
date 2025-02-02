@@ -1,5 +1,4 @@
 import React from "react";
-import { BrowserRouter } from "react-router";
 
 import { MenuLateral } from "./MenuLateral";
 import NotificacionUsuario from "./NotificacionUsuario";
@@ -19,17 +18,8 @@ const VentanaUsuario: React.FC<VentanaUsuarioProps> = ({ children }) => {
     setMenuOpen(!menuOpen);
   };
 
-  React.useEffect(() => {
-    if (React.Children.count(children) > 0) {
-      const firstTab = React.Children.toArray(
-        children
-      )[0] as React.ReactElement;
-      setKey(firstTab.props.eventKey);
-    }
-  }, [children]);
-
   return (
-    <BrowserRouter>
+    <React.Fragment>
       <div className="position-absolute top-0 end-0 m-3">
         <NotificacionUsuario />
       </div>
@@ -39,7 +29,7 @@ const VentanaUsuario: React.FC<VentanaUsuarioProps> = ({ children }) => {
       <div className={`${menuOpen ? "menu-open" : ""}`}>
         <div className={`main-section`}>
           <Tabs
-            id="controlled-tab-example"
+            id="controlled-tab"
             activeKey={key}
             onSelect={(k: string | null) => setKey(k !== null ? k : undefined)}
           >
@@ -52,7 +42,7 @@ const VentanaUsuario: React.FC<VentanaUsuarioProps> = ({ children }) => {
           </Tabs>
         </div>
       </div>
-    </BrowserRouter>
+    </React.Fragment>
   );
 };
 

@@ -1,12 +1,14 @@
 import React from "react";
 
 import { Tab } from "react-bootstrap";
+
+import '../styles/Tabs.css';
 import '../../styles/Bootstrap.css';
 
 interface TabVentanaProps {
   eventKey: string;
   title: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const TabVentana: React.FC<TabVentanaProps> = ({
@@ -15,7 +17,9 @@ const TabVentana: React.FC<TabVentanaProps> = ({
   children,
 }) => {
   return (
-    <Tab eventKey={eventKey} title={title}>
+    <Tab eventKey={eventKey} title={title} style={{
+      border: '50%'
+    }}>
       {children}
     </Tab>
   );
