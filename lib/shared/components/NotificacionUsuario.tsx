@@ -11,11 +11,7 @@ const NotificacionUsuario: React.FC = () => {
       marginTop: '9px'
     }}>
       <NavDropdown title={
-        <FaBell style={{ 
-          width: "25px", 
-          height: "25px",
-          color: '#142338'
-        }} />
+        <FaBell className="icono-notificaciones" />
       }
       align='end'>
         <div style={{

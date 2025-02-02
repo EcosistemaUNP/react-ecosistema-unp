@@ -20,9 +20,8 @@ const VentanaTabs: React.FC<VentanaUsuarioProps> = ({ children }) => {
 
   return (
     <React.Fragment>
-      
-        <NotificacionUsuario />
-      
+
+      <NotificacionUsuario />
 
       <MenuLateral onToggle={handleToggle} isOpen={menuOpen} />
 
