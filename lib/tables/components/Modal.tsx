@@ -43,7 +43,7 @@ const CustomModal: React.FC<CustomModalProps> = ({
 
   return (
     <div
-      className={`modal-overlay ${showModal ? "show" : ""}`}
+      className={`modal-overlay ${showModal ? "show" : ""} ${closing ? "hide" : ""}`}
       onClick={handleHide}
     >
       <div
