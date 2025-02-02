@@ -1,0 +1,120 @@
+.modal-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-bottom: 1px solid #D13C47; */
+}
+
+.red-item {
+    height: 30px;
+    width: 8px;
+    background-color: #D13C47;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.modal-subtitle-container-left {
+    display: flex;
+    /* border-left: 10px solid #D13C47; */
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    gap: 0.5rem;
+    /* padding-left: 0.5rem; */
+}
+
+.modal-subtitle {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.1rem;
+    color: #303D50;
+    font-weight: 600;
+}
+
+.modal-subtitle-container-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon-registro {
+    font-size: 1.66rem;
+    color: #646c73;
+}
+
+.icon-registro:hover {
+    color: #1f79ef;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.icon-close-registro {
+    font-size: 1.66rem;
+    color: #D13C47;
+}
+
+.icon-close-registro:hover {
+    color: #a31a23;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+
+.modal-horizontal-line {
+    border-radius: 10px;
+    border-top: 2px solid #D13C47;
+    margin-top: 0.5rem;
+    opacity: 0.75;
+}
+
+.modal-title-body {
+    height: calc(100% - 72px);
+    overflow-y: auto;
+}
+
+.modal-title-body::-webkit-scrollbar {
+    width: 10px;
+}
+
+.modal-title-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.modal-title-body::-webkit-scrollbar-thumb {
+    background-color: #303D50;
+    border-radius: 10px;
+    border: 3px solid transparent;
+    background-clip: padding-box;
+}
+
+/* Hecho con DeepSeek, puede contener código innesecario :( */
+
+.icon-container {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: max-content;
+    background-color: #737a83c0;
+    color: white;
+    text-align: center;
+    border-radius: 7px;
+    padding: 6px 10px;
+    position: absolute;
+    z-index: 1000;
+    /* Posición debajo del botón, alineado a la derecha */
+    top: 100%;
+    right: 0; /* Alinea borde derecho del tooltip con borde derecho del contenedor */
+    margin-top: 8px; /* Espacio entre botón y tooltip */
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+    font-size: 0.9rem;
+}
+
+.icon-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
