@@ -1,6 +1,5 @@
 import React from 'react'
-import Encabezado from '../../lib/ui/components/Encabezado'
-import { Subtitulo } from '../../lib/ui'
+import { Encabezado, Subtitulo } from '../../lib/ui'
 import { FaHouse } from 'react-icons/fa6'
 import { VentanaTabs } from '../../lib/shared/components/VentanaTabs'
 import { TabVentana } from '../../lib/shared/components/TabVentana'

@@ -2,7 +2,7 @@
   "name": "react-ecosistema-unp",
   "author": "Ecosistema de Información - Unidad Nacional de Protección",
   "private": false,
-  "version": "0.4.5",
+  "version": "0.4.6",
   "type": "module",
   "exports": {
     ".": {

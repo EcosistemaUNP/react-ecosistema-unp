@@ -36,4 +36,4 @@ const Encabezado: React.FC<EncabezadoProps> = ({ dependencia }) => {
     </div>);
 };
 
-export default Encabezado;
+export { Encabezado };
