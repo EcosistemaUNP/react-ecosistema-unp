@@ -32,7 +32,7 @@
 .modal-subtitle-container-right {
     display: flex;
     justify-content: flex-end;
-    overflow: visible !important; /* Permite tooltips fuera del contenedor */
+    overflow: visible;
 }
 
 .animation-wrapper {
@@ -48,29 +48,25 @@
     display: flex;
     gap: 1rem;
     align-items: center;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.2s cubic-bezier(0.1, 0, 0.1, 1);
 }
 
 /* Estados iniciales */
 .buttons-group {
-    transform: translateX(0);
     opacity: 1;
 }
 
 .close-group {
-    transform: translateX(100%);
     opacity: 0;
     justify-content: flex-end; /* Alinea el botón cerrar a la derecha */
 }
 
 /* Animaciones */
 .buttons-group.hide {
-    transform: translateX(100%); /* Desplaza a la derecha */
     opacity: 0;
 }
 
 .close-group.show {
-    transform: translateX(0); /* Entra desde la derecha */
     opacity: 1;
 }
 
@@ -149,10 +145,10 @@
     right: 0; /* Alinea borde derecho del tooltip con borde derecho del contenedor */
     margin-top: 8px; /* Espacio entre botón y tooltip */
     opacity: 0;
-    transition: opacity 0.2s;
+    transition: opacity 0.1s;
     pointer-events: none;
     font-size: 0.9rem;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 .icon-container:hover .tooltip-text {
