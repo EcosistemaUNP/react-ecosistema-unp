@@ -16,7 +16,7 @@
   border-radius: 10px;
 
   box-shadow: 0 2px 12px #00000016;
-  background: #ececec;
+  background: #f7f7f9;
 }
 
 .table-scroll th, .table-scroll td {
@@ -32,7 +32,7 @@
 }
 
 .table-scroll::-webkit-scrollbar-track {
-  background: linear-gradient(to bottom right, #ececec, #f8f8f8, #ffffff);
+  background: linear-gradient(to bottom right, #f7f7f9, #f9f9f9, #ffffff);
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -62,7 +62,7 @@ thead tr th {
 }
 
 .table-header-unp {
-  background-color: #ebecee !important; /* f7f8fa */
+  background-color: #f7f7f9 !important; /* f7f8fa */
   color: #2c2c2c !important;
   font-weight: 600;
   font-size: 1.1rem;

@@ -2,8 +2,9 @@ import React, { useState, useEffect, ReactNode } from "react";
 
 import Lottie from "lottie-react";
 
+import { EncabezadoTabla } from "./EncabezadoTabla";
 import { Tabla } from "./Tabla";
-import CustomModal from "./Modal";
+import { CustomModal } from "./Modal";
 
 import noData from "../assets/animations/noData.json";
 import noInfo from "../assets/animations/noInfo.json";
@@ -11,7 +12,6 @@ import isLoadingAnimation from "../assets/animations/isLoading.json";
 
 import '../styles/Encabezado.css';
 import "../styles/Tabla.css";
-import { EncabezadoTabla } from "./EncabezadoTabla";
 
 interface Column {
   key: string;
