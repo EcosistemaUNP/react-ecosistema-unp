@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { TablaRegistros } from '../../lib/tables'
 import { Button } from 'react-bootstrap';
 import { TituloModal } from '../../lib/tables/components/TituloModal';
-import { FaBoxArchive, FaClockRotateLeft, FaKey } from 'react-icons/fa6';
+import { FaBoxArchive, FaClockRotateLeft } from 'react-icons/fa6';
 
 const Tabla: React.FC = () => {
 
@@ -60,7 +60,7 @@ const Tabla: React.FC = () => {
               setIsShowing={setIsShowing}
             >
               {showHistoricoCaso ? (
-                <>Historico del caso</>
+                <>Archivo</>
               ) : showHistoricoSer ? (
                 <>Historico de la SER</>
               ) : showRemitir ? (

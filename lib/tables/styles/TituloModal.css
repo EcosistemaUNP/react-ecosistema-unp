@@ -15,12 +15,10 @@
 
 .modal-subtitle-container-left {
     display: flex;
-    /* border-left: 10px solid #D13C47; */
     justify-content: center;
     align-items: center;
     font-weight: 500;
     gap: 0.5rem;
-    /* padding-left: 0.5rem; */
 }
 
 .modal-subtitle {
@@ -74,12 +72,6 @@
 .close-group.show {
     transform: translateX(0); /* Entra desde la derecha */
     opacity: 1;
-}
-
-/* Tooltip (asegurar que está visible) */
-.tooltip-text {
-    /* Tus estilos originales aquí */
-    z-index: 9999; /* Asegura que está por encima de todo */
 }
 
 .icon-registro {
@@ -142,6 +134,7 @@
 }
 
 .tooltip-text {
+    z-index: 9999;
     visibility: hidden;
     width: max-content;
     background-color: #737a83c0;
