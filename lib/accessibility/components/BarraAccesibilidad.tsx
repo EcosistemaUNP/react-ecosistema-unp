@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 import '../styles/BarraAccesibilidad.css';
 
-const BarraAccesibilidad = () => {
+const BarraAccesibilidad: React.FC = () => {
   const [isContrast, setIsContrast] = useState(false);
   const [fontSizeDelta, setFontSizeDelta] = useState(0);
   const [activeButton, setActiveButton] = useState<string | null>(null);
