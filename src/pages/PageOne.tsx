@@ -1,6 +1,5 @@
 import React from 'react'
 import { ContenedorTarjeta, Tarjeta } from '../../lib/ui'
-import { BarraAccesibilidad } from '../../lib/accessibility'
 const PageOne: React.FC = () => {
   return (
     <>
@@ -24,8 +23,6 @@ const PageOne: React.FC = () => {
           Contenido de la tarjeta dos...
         </ContenedorTarjeta>
       </Tarjeta>
-
-      <BarraAccesibilidad />
     </>
   )
 }
