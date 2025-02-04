@@ -96,12 +96,15 @@ const TablaRegistros: React.FC<TableProps> = ({
 
   const handleCellClick = (column: any, row: Record<string, any>) => {
     if (column.hasModal && renderModalContent) {
-      if (renderAlertContent) {
+      if (renderAlertContent && (row.estadoRegistro === 'por_gestionar' && isShared)) {
         const actionResult = renderAlertContent(row, column);
+        console.log('Estado por gestionar');
+        
         if (actionResult === null) return;
+      } else if (row.estadoRegistro === 'en_gestion' || !isShared) {
+        setModalData({ row, column });
+        setShowModal(true);
       }
-      setModalData({ row, column });
-      setShowModal(true);
     }
   };
 

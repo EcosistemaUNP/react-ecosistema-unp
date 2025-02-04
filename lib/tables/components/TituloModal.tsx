@@ -26,8 +26,13 @@ const TituloModal: React.FC<TituloModalProps> = ({ title, children, buttons, isS
     const [hideButtons, setHideButtons] = useState<boolean>(true);
 
     useEffect(() => {
-
-    }, [currentButton]);
+        if (isShowing) {
+            setTimeout(() => {
+                setHideButtons(false)
+            }, 200);
+            setHideButtons(true);
+        }
+    }, [isShowing]);
 
     return (
         <>

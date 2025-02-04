@@ -19,11 +19,13 @@ const subtituloStyle = {
   fontColor: "#303d50s",
   fontSize: "1.1rem",
   fontWeight: "700",
-  marginLeft: '0.66rem'
+  marginLeft: '0.66rem',
+  color: '#303d50'
 };
 
 const iconStyle = {
   fontSize: "1.25rem",
+  color: '#303d50'
 };
 
 const Subtitulo: React.FC<SubtituloProps> = ({

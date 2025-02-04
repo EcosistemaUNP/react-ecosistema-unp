@@ -1,39 +1,27 @@
 import React from "react";
 
+import logo from '../../assets/img/logo.png';
+
+import '../styles/Encabezado.css';
+
 interface EncabezadoProps {
-  dependencia: String;
+  titulo?: string;
+  subtitulo: string;
 }
 
-const titleStyle = {
-  borderLeft: "8px solid",
-  borderLeftColor: "#d13c47",
-  height: "65px",
-  marginBottom: "20px",
-  display: "flex",
-  alignItems: "center",
-  marginLeft: '0px'
-};
-
-const logoStyle = {
-  height: "60px",
-  marginLeft: "12px",
-  marginRight: "15px",
-  alignSelf: "center",
-};
-
-const Encabezado: React.FC<EncabezadoProps> = ({ dependencia }) => {
+const Encabezado: React.FC<EncabezadoProps> = ({ titulo = '', subtitulo = '' }) => {
   return (
-    <div style={titleStyle}>
-      <div style={{ display: "flex", justifyContent: "flex-start", alignItems: "center", }}>
-        <img src="https://i.imgur.com/MYXJbgg.png" style={logoStyle} />
-        <div style={{ display: "flex", flexDirection: "column", justifyContent: "start", }}>
-          <h4 className="d-none d-md-block" style={{ margin: "0px 0px 4px 0px", fontWeight: "700" }}> Unidad Nacional de Protección </h4>
-          <h5 className="d-block d-md-none" style={{ margin: "0px 0px 4px 0px", fontWeight: "700", fontSize: '1rem' }}> Unidad Nacional de Protección </h5>
-          <h6 className="d-none d-md-block" style={{ margin: "0px 0px 4px 0px", color: "#6b6b6b" }}> {dependencia} </h6>
-          <h6 className="d-block d-md-none" style={{ margin: "0px 0px 4px 0px", fontSize: "0.8rem", color: "#6b6b6b" }}> {dependencia} </h6>
-        </div>
+    <div className="title-container">
+      <div className="logo-subtitle-container">
+        <div className="red-section"></div>
+        <img className="img-logo" src={logo} alt="logo" />
       </div>
-    </div>);
+      <div className="subtitle-container">
+        <span className="title">{titulo ? titulo : 'Unidad Nacional de Protección'}</span>
+        <span className="subtitle">{subtitulo}</span>
+      </div>
+    </div>
+  );
 };
 
 export { Encabezado };
