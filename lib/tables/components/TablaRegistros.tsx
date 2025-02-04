@@ -10,7 +10,7 @@ import noData from "../assets/animations/noData.json";
 import noInfo from "../assets/animations/noInfo.json";
 import isLoadingAnimation from "../assets/animations/isLoading.json";
 
-import '../styles/Encabezado.css';
+import '../styles/EncabezadoTabla.css';
 import "../styles/Tabla.css";
 
 interface Column {

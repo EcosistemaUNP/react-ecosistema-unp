@@ -4,15 +4,12 @@ import './index.css'
 import App from './App.tsx'
 import { AuthProvider } from '../lib/utils.ts'
 import { BrowserRouter } from 'react-router'
-import { BarraAccesibilidad } from '../lib/accessibility.ts'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <AuthProvider>
       <BrowserRouter>
         <App />
-
-        <BarraAccesibilidad />
       </BrowserRouter>
     </AuthProvider>
   </StrictMode>,

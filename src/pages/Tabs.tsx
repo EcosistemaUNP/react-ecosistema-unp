@@ -6,14 +6,18 @@ import { TabVentana } from '../../lib/shared/components/TabVentana'
 import { Tabla } from './Tabla'
 import { TablaShared } from './TablaShared'
 import { PageOne } from './PageOne'
+import { PageTwo } from './Paginador'
 
 const Tabs: React.FC = () => {
     return (
         <VentanaTabs>
             <TabVentana eventKey="demo" title={'Pestaña 1'}>
-                <PageOne />
+                <PageTwo />
             </TabVentana>
             <TabVentana eventKey="demo2" title={'Pestaña 2'}>
+                <PageOne />
+            </TabVentana>
+            <TabVentana eventKey="demo3" title={'Pestaña 3'}>
                 <Encabezado subtitulo={'Dependencia de la UNP'} />
                 <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
                 <Encabezado titulo='Título' subtitulo='Subtítulo' />
@@ -21,10 +25,10 @@ const Tabs: React.FC = () => {
                 <Encabezado subtitulo={'Subtítulo'} />
                 <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
             </TabVentana>
-            <TabVentana eventKey="demo3" title={'Pestaña 3'}>
+            <TabVentana eventKey="demo4" title={'Pestaña 4'}>
                 <Tabla />
             </TabVentana>
-            <TabVentana eventKey="demo4" title={'Pestaña 4'}>
+            <TabVentana eventKey="demo5" title={'Pestaña 5'}>
                 <TablaShared />
             </TabVentana>
         </VentanaTabs>
