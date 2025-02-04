@@ -40,9 +40,9 @@ const BarraAccesibilidad = () => {
 
   return (
     <div className="position-fixed top-50 translate-middle-y" style={{ right: 0, zIndex: 1200 }}>
-      <div className="barra-accesibilidad-govco d-none d-lg-flex">
+      <div className="barra-accesibilidad-govco">
         <button
-          className={`contrast ${activeButton === 'contrast' ? 'active' : ''}`}
+          className={`${activeButton === 'contrast' ? 'active' : ''}`}
           aria-label="Cambiar contraste"
           onClick={handleContrast}
         >
@@ -50,7 +50,7 @@ const BarraAccesibilidad = () => {
         </button>
 
         <button
-          className={`decrease-font-size ${activeButton === 'decrease' ? 'active' : ''}`}
+          className={`${activeButton === 'decrease' ? 'active' : ''}`}
           aria-label="Disminuir letra"
           onClick={() => handleFontSize('decrease')}
           data-decrease-limit={FONT_LIMITS.MIN}
@@ -59,7 +59,7 @@ const BarraAccesibilidad = () => {
         </button>
 
         <button
-          className={`increase-font-size ${activeButton === 'increase' ? 'active' : ''}`}
+          className={`${activeButton === 'increase' ? 'active' : ''}`}
           aria-label="Aumentar letra"
           onClick={() => handleFontSize('increase')}
           data-increase-limit={FONT_LIMITS.MAX}
