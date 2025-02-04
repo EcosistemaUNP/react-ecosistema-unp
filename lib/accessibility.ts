@@ -1,0 +1,1 @@
+export { BarraAccesibilidad } from './accessibility/components/BarraAccesibilidad'

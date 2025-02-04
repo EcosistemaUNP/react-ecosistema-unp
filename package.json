@@ -24,6 +24,10 @@
     "./utils": {
       "types": "./dist/lib/utils.d.ts",
       "default": "./dist/utils.js"
+    },
+    "./accessibility": {
+      "types": "./dist/lib/accessibility.d.ts",
+      "default": "./dist/accessibility.js"
     }
   },
   "files": [

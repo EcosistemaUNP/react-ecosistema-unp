@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" width="40" height="40"/>
+  <g id="Group_23992" data-name="Group 23992">
+    <path id="Subtraction_21" data-name="Subtraction 21" d="m5.49,34.88H0L13.46,5.12h4.43l13.46,29.75h-5.4l-3-6.96h-14.48l-3,6.96h0ZM15.7,11.03l-5.44,12.66h10.89l-5.45-12.66Zm21.87-.94h-9.93c-1.37-.04-2.45-1.18-2.41-2.55.04-1.32,1.1-2.37,2.41-2.41h9.93c1.37.03,2.46,1.16,2.43,2.53-.03,1.33-1.1,2.41-2.43,2.43h0Z"/>
+  </g>
+</svg>
