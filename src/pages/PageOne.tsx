@@ -1,15 +1,28 @@
 import React from 'react'
-import { Tarjeta } from '../../lib/ui'
+import { ContenedorTarjeta, Tarjeta } from '../../lib/ui'
 const PageOne: React.FC = () => {
   return (
     <>
-    <Tarjeta title='Título de la tarjeta'>
-      Contenido de la tarjeta
-    </Tarjeta>
+      <Tarjeta title='Título de la tarjeta'>
+        <ContenedorTarjeta>
+          Contenedor
+        </ContenedorTarjeta>
+        <ContenedorTarjeta isGray={true}>
+          Contenedor gris
+        </ContenedorTarjeta>
+        <ContenedorTarjeta>
+          Contenedor blanco
+        </ContenedorTarjeta>
+        <ContenedorTarjeta isGray={true} isLast={true}>
+          Contenedor gris
+        </ContenedorTarjeta>
+      </Tarjeta>
 
-    <Tarjeta title='Título de la tarjeta dos'>
-      Contenido de la tarjeta dos...
-    </Tarjeta>
+      <Tarjeta title='Título de la tarjeta dos'>
+        <ContenedorTarjeta>
+          Contenido de la tarjeta dos...
+        </ContenedorTarjeta>
+      </Tarjeta>
     </>
   )
 }

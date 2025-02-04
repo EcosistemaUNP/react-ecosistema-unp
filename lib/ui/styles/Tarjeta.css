@@ -5,9 +5,27 @@
 
 .tarjeta-unp {
     border-radius: 12px !important;
+    box-shadow: 0 6px 10px #00000019;
+    border-bottom-left-radius: 12px;
 }
 
 .tarjeta-header-unp {
     border-top-left-radius: 12px !important;
     border-top-right-radius: 12px !important;
+    font-size: 1.075rem;
+    /* font-weight: 500; */
+}
+
+.tarjeta-container {
+    padding-top: 1.3rem !important;
+    padding-bottom: 1.35rem !important;
+}
+
+.tarjeta-container-section {
+    background-color: #f7f7f7;
+}
+
+.tarjeta-container-last {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
