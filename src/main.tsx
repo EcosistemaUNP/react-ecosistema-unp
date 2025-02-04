@@ -12,7 +12,6 @@ createRoot(document.getElementById('root')!).render(
       <BrowserRouter>
         <App />
 
-        {/* Barra de accesibilidad de MinTIC v5 convertida a React */}
         <BarraAccesibilidad />
       </BrowserRouter>
     </AuthProvider>
