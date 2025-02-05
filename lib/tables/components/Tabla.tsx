@@ -1,6 +1,6 @@
 import React from "react";
 import { Table } from "react-bootstrap";
-import { FaGripLines } from "react-icons/fa6";
+import { FaEllipsis } from "react-icons/fa6";
 
 import '../styles/Tabla.css'
 
@@ -122,23 +122,29 @@ const Tabla: React.FC<TablaProps> = ({
                     </td>
                   ))}
                 </tr>
-                {isShared && row.estadoRegistro === "en_gestion" && !filteredData.some(r => r.estadoRegistro === "en_gestion" && filteredData.indexOf(r) > rowIndex) && (
-                  <tr>
-                    <td colSpan={columns.length} className="text-center" style={{ padding: '0 2rem 0 2rem' }}>
-                      <div style={{
-                        minHeight: 20,
-                        display: 'flex',
-                        flexDirection: 'row',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        fontWeight: '600',
-                        color: '#303D50'
-                      }}>
-                        <FaGripLines style={{ color: '#a1a1a1' }} />
-                      </div>
-                    </td>
-                  </tr>
-                )}
+                {isShared &&
+                  row.estadoRegistro === "en_gestion" &&
+                  !filteredData.some(r => r.estadoRegistro === "en_gestion" &&
+                    filteredData.indexOf(r) > rowIndex) &&
+                  (
+                    <tr>
+                      <td colSpan={columns.length} className="text-center" style={{ padding: '0 0 0 0' }}>
+                        <div style={{
+                          height: '3rem',
+                          display: 'flex',
+                          flexDirection: 'row',
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          fontWeight: '600',
+                          color: (rowIndex % 2 === 0) ? '#365072' : '#303D50',
+                          backgroundColor: (rowIndex % 2 === 0) ? '#fefefe' : '#f7f7f9'
+                        }}>
+                          {/* <FaGrip style={{ fontSize: '1.25rem' }}/> */}
+                          <FaEllipsis style={{ fontSize: '2rem' }} />
+                        </div>
+                      </td>
+                    </tr>
+                  )}
               </React.Fragment>
 
             ))}
