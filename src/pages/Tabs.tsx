@@ -12,7 +12,7 @@ const Tabs: React.FC = () => {
     return (
         <VentanaTabs>
             <TabVentana eventKey="demo" title={'Pestaña 1'}>
-                <PageTwo />
+                <TablaShared />
             </TabVentana>
             <TabVentana eventKey="demo2" title={'Pestaña 2'}>
                 <PageOne />
@@ -29,7 +29,7 @@ const Tabs: React.FC = () => {
                 <Tabla />
             </TabVentana>
             <TabVentana eventKey="demo5" title={'Pestaña 5'}>
-                <TablaShared />
+                <PageTwo />
             </TabVentana>
         </VentanaTabs>
     )

@@ -4,7 +4,7 @@
     box-shadow: 1px 4px 12px 1px #00000018;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    background-color: #f9f9f9;
+    background-color: #f7f7f7 !important;
 }
 
 .paginador-content {

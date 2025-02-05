@@ -1,1 +1,31 @@
 @import url('bootstrap/dist/css/bootstrap.min.css');
+
+.btn {
+    border-radius: 7px;
+}
+
+/* :root {
+    --btncolor-cobalt: #0943B5;
+    --btncolor-white: #FFFFFF;
+    --btncolor-havelock-lue: #4672C8;
+    --btncolor-black: #000000;
+    --btncolor-tropical-blue: #B5C7E9;
+} */
+
+.btn-next {
+    color: #f3f3f3;
+    background-color: #365072;
+    border-color: #314c70
+}
+
+.btn-next:hover {
+    color: #f3f3f3;
+    background-color: #3b5f8d;
+    border-color: #314c70
+}
+
+.btn-next:active:focus {
+    color: #f3f3f3;
+    background-color: #365072;
+    border-color: #314c70
+}
