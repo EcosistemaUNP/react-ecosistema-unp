@@ -1,6 +1,7 @@
 // VentanaLienzo-V.0.1 --> desarrollador: andres.soto
 
 import React from "react";
+import { BrowserRouter } from "react-router";
 
 import { MenuLateral } from "./MenuLateral";
 
@@ -16,13 +17,13 @@ const VentanaLienzo: React.FC<VentanaLienzoProps> = ({ children }) => {
   };
 
   return (
-    <React.Fragment>
+    <BrowserRouter>
       <MenuLateral onToggle={handleToggle} isOpen={menuOpen} />
 
       <div className={`${menuOpen ? "menu-open" : ""}`}>
         <div className={`main-section`} style={{ padding: '0.5rem' }}>{children}</div>
       </div>
-    </React.Fragment>
+    </BrowserRouter>
   );
 };
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter } from "react-router";
 
 import { MenuLateral } from "./MenuLateral";
 import NotificacionUsuario from "./NotificacionUsuario";
@@ -19,7 +20,7 @@ const VentanaTabs: React.FC<VentanaUsuarioProps> = ({ children }) => {
   };
 
   return (
-    <React.Fragment>
+    <BrowserRouter>
 
       <NotificacionUsuario />
 
@@ -41,7 +42,7 @@ const VentanaTabs: React.FC<VentanaUsuarioProps> = ({ children }) => {
           </Tabs>
         </div>
       </div>
-    </React.Fragment>
+    </BrowserRouter>
   );
 };
 
