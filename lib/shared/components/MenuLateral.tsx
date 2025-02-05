@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 
 import { jwtDecode } from "jwt-decode";
-import { useFinalizarSesion } from "../../auth/hooks/useFinalizarSesion";
-import { urlCertificadoLaboral, urlBase } from "../../utils/Url";
+import { useFinalizarSesion } from "../../auth/hooks/useFinalizarSesion.js";
+import { urlCertificadoLaboral, urlBase } from "../../utils/Url.js";
 
 import {
   BiMenu,

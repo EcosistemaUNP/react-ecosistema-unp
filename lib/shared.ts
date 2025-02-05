@@ -1,3 +1,3 @@
-export { VentanaLienzo } from './shared/components/VentanaLienzo'
-export { VentanaTabs } from './shared/components/VentanaTabs'
-export { TabVentana } from './shared/components/TabVentana'
+export { VentanaLienzo } from './shared/components/VentanaLienzo.js'
+export { VentanaTabs } from './shared/components/VentanaTabs.js'
+export { TabVentana } from './shared/components/TabVentana.js'

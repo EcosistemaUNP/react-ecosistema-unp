@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router";
 
-import { useAuthId } from "./AuthHook";
-import { FinSesionService } from "../services/FinSesionService";
+import { useAuthId } from "./AuthHook.js";
+import { FinSesionService } from "../services/FinSesionService.js";
 
 import { toast } from "react-toastify";
 

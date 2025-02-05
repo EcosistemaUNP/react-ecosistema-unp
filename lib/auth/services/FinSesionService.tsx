@@ -1,4 +1,4 @@
-import { urlRequest } from "../../utils/Url";
+import { urlRequest } from "../../utils/Url.js";
 
 export const FinSesionService = async (accessToken: string) => {
   try {

@@ -1,1 +1,1 @@
-export { AuthProvider } from './auth/contexts/AuthContex'
+export { AuthProvider } from './auth/contexts/AuthContex.js'

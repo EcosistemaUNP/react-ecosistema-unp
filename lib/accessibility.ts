@@ -1,1 +1,1 @@
-export { BarraAccesibilidad } from './accessibility/components/BarraAccesibilidad'
+export { BarraAccesibilidad } from './accessibility/components/BarraAccesibilidad.js'

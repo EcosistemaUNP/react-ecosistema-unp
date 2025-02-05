@@ -1,1 +1,1 @@
-export { TablaRegistros } from './tables/components/TablaRegistros'
+export { TablaRegistros } from './tables/components/TablaRegistros.js'

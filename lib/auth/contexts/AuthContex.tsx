@@ -1,6 +1,6 @@
 import React from "react";
 import { createContext, useState, useEffect, ReactNode } from "react";
-import { AuthContextType } from "../types/AuthTypes";
+import { AuthContextType } from "../types/AuthTypes.js";
 
 // Crear contextos individuales con valores por defecto
 const AuthContext = createContext<AuthContextType | undefined>(undefined);

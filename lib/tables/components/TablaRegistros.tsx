@@ -2,9 +2,9 @@ import React, { useState, useEffect, ReactNode } from "react";
 
 import Lottie from "lottie-react";
 
-import { EncabezadoTabla } from "./EncabezadoTabla";
-import { Tabla } from "./Tabla";
-import { CustomModal } from "./Modal";
+import { EncabezadoTabla } from "./EncabezadoTabla.js";
+import { Tabla } from "./Tabla.js";
+import { CustomModal } from "./Modal.js";
 
 import noData from "../assets/animations/noData.json";
 import noInfo from "../assets/animations/noInfo.json";

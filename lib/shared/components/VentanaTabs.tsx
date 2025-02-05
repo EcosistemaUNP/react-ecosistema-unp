@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter } from "react-router";
 
-import { MenuLateral } from "./MenuLateral";
-import NotificacionUsuario from "./NotificacionUsuario";
+import { MenuLateral } from "./MenuLateral.js";
+import NotificacionUsuario from "./NotificacionUsuario.js";
 
 import { Tabs } from "react-bootstrap";
 import '../../styles/Bootstrap.css';

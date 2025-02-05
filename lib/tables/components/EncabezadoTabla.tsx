@@ -1,6 +1,6 @@
-import BusquedaInput from "./Buscador";
+import BusquedaInput from "./Buscador.js";
 
-import { Encabezado } from "../../ui";
+import { Encabezado } from "../../ui.js";
 
 interface Encabezado {
     title: string;
