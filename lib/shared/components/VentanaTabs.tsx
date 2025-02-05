@@ -7,7 +7,7 @@ import { Tabs } from "react-bootstrap";
 import '../../styles/Bootstrap.css';
 
 interface VentanaUsuarioProps {
-  children?: React.ReactElement | React.ReactElement[];
+  children?: React.ReactNode;
 }
 
 const VentanaTabs: React.FC<VentanaUsuarioProps> = ({ children }) => {

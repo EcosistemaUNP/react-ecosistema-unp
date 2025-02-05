@@ -5,7 +5,7 @@ import React from "react";
 import { MenuLateral } from "./MenuLateral";
 
 interface VentanaLienzoProps {
-  children?: React.ReactElement | React.ReactElement[];
+  children?: React.ReactNode;
 }
 
 const VentanaLienzo: React.FC<VentanaLienzoProps> = ({ children }) => {
