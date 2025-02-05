@@ -3,7 +3,9 @@ import { Tabs } from './pages/Tabs'
 
 function App() {
   return (
-    <Tabs />
+    <Routes>
+      <Route path='*' Component={Tabs} />
+    </Routes>
   )
 }
 
