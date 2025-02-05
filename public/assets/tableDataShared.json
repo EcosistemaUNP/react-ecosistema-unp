@@ -12,17 +12,6 @@
     },
     {
         "tipoRuta": "Individual",
-        "numeroRegistro": 995,
-        "numeroRadicado": "EXT25-00092345",
-        "diasHabiles": 22,
-        "nombres": "Laura Fernández",
-        "nuip": "PS BC8765432",
-        "contacto": "317 567 8901",
-        "ubicacion": "Santander, Bucaramanga",
-        "estadoRegistro": "en_gestion"
-    },
-    {
-        "tipoRuta": "Individual",
         "numeroRegistro": 1013,
         "numeroRadicado": "EXT25-00139876",
         "diasHabiles": 22,

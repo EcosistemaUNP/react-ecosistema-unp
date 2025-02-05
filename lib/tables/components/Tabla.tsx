@@ -1,6 +1,6 @@
 import React from "react";
 import { Table } from "react-bootstrap";
-import { FaEllipsis } from "react-icons/fa6";
+import { FaGrip } from "react-icons/fa6"; // FaEllipsis, FaGripLines
 
 import '../styles/Tabla.css'
 
@@ -139,8 +139,9 @@ const Tabla: React.FC<TablaProps> = ({
                           color: (rowIndex % 2 === 0) ? '#365072' : '#303D50',
                           backgroundColor: (rowIndex % 2 === 0) ? '#fefefe' : '#f7f7f9'
                         }}>
-                          {/* <FaGrip style={{ fontSize: '1.25rem' }}/> */}
-                          <FaEllipsis style={{ fontSize: '2rem' }} />
+                          {/* <FaGripLines style={{ fontSize: '1.5rem' }} /> */}
+                          <FaGrip style={{ fontSize: '1.3rem' }}/>
+                          {/* <FaEllipsis style={{ fontSize: '2rem' }} /> */}
                         </div>
                       </td>
                     </tr>
