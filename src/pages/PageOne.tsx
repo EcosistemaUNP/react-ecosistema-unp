@@ -5,7 +5,7 @@ import { FaHouse } from 'react-icons/fa6'
 const PageOne: React.FC = () => {
   return (
     <>
-      <Tarjeta title='Título de la tarjeta'>
+      <Tarjeta title='Título de la tarjeta' hasBody={false}>
         <ContenedorTarjeta>
           <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
           <TarjetaAgregar onClick={() => console.log('Hola')} title='Nuevo elemento'>
@@ -36,9 +36,7 @@ const PageOne: React.FC = () => {
       </Tarjeta>
 
       <Tarjeta title='Título de la tarjeta dos'>
-        <ContenedorTarjeta>
-          Contenido de la tarjeta dos...
-        </ContenedorTarjeta>
+        Contenido de la tarjeta dos...
       </Tarjeta>
 
       {/* <BarraAccesibilidad /> */}
