@@ -1,6 +1,6 @@
 .input-with-icon {
-  border-radius: 12px;
-  padding-right: 40px;
+  border-radius: 11px !important;
+  padding-right: 40px !important;
   box-shadow: 0 1px 6px #00000012;
 }
 

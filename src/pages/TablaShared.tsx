@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { TablaRegistros } from '../../lib/tables'
 import { Button } from 'react-bootstrap';
-import { TituloModal } from '../../lib/tables/components/TituloModal';
+import { ContenidoModal } from '../../lib/ui/components/ContenidoModal';
 import { FaBoxArchive, FaClockRotateLeft } from 'react-icons/fa6';
 
 const TablaShared: React.FC = () => {
@@ -53,7 +53,7 @@ const TablaShared: React.FC = () => {
       case "numeroRegistro":
         return (
           <>
-            <TituloModal
+            <ContenidoModal
               title={row.numeroRegistro}
               buttons={buttons}
               isShowing={isShowing}
@@ -72,7 +72,7 @@ const TablaShared: React.FC = () => {
                   <Button onClick={() => { setShowRemitir(true); setIsShowing(true) }}>Remitir</Button>
                 </>
               )}
-            </TituloModal>
+            </ContenidoModal>
           </>
         );
       case "nombres":

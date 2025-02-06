@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TituloModal } from "../../../../lib/ui";
+import { ContenidoModal } from "../../../../lib/ui";
 import { FaBoxArchive, FaClockRotateLeft } from "react-icons/fa6";
 import { Button } from "react-bootstrap";
 
@@ -61,7 +61,7 @@ export const renderModalContent2 = (row: Record<string, any>, column: any, onHid
         case "numeroRegistro":
             return (
                 <>
-                    <TituloModal
+                    <ContenidoModal
                         title={row.numeroRegistro}
                         buttons={buttons}
                         isShowing={isShowing}
@@ -79,7 +79,7 @@ export const renderModalContent2 = (row: Record<string, any>, column: any, onHid
                                 <Button onClick={() => { setShowTres(true); setIsShowing(true) }}>Contenido tres</Button>
                             </div>
                         )}
-                    </TituloModal>
+                    </ContenidoModal>
                 </>
             );
         default:

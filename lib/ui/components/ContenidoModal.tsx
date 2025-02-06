@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { IconType } from 'react-icons';
 import { FaEyeSlash } from 'react-icons/fa6';
 
-import '../styles/TituloModal.css';
+import '../styles/ContenidoModal.css';
 
 interface ButtonArray {
     title: string;
@@ -12,7 +12,7 @@ interface ButtonArray {
 }
 
 // Props
-interface TituloModalProps {
+interface ContenidoModalProps {
     title: string;
     children: React.ReactNode;
     buttons?: ButtonArray[];
@@ -20,7 +20,7 @@ interface TituloModalProps {
     setIsShowing?: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const TituloModal: React.FC<TituloModalProps> = ({ title, children, buttons, isShowing, setIsShowing = (() => { }) }) => {
+const ContenidoModal: React.FC<ContenidoModalProps> = ({ title, children, buttons, isShowing, setIsShowing = (() => { }) }) => {
 
     const [currentButton, setCurrentButton] = useState<number | null>(0);
     const [hideButtons, setHideButtons] = useState<boolean>(true);
@@ -96,4 +96,4 @@ const TituloModal: React.FC<TituloModalProps> = ({ title, children, buttons, isS
     );
 };
 
-export { TituloModal };
+export { ContenidoModal };

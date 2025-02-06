@@ -1,5 +1,5 @@
 import React from 'react'
-import { Encabezado, Subtitulo } from '../../lib/ui'
+import { Encabezado, IconoTipoSolicitud, Subtitulo } from '../../lib/ui'
 import { FaHouse } from 'react-icons/fa6'
 import { VentanaTabs } from '../../lib/shared/components/VentanaTabs'
 import { TabVentana } from '../../lib/shared/components/TabVentana'
@@ -12,23 +12,27 @@ const Tabs: React.FC = () => {
     return (
         <VentanaTabs>
             <TabVentana eventKey="demo" title={'Pestaña 1'}>
-                <TablaShared />
-            </TabVentana>
-            <TabVentana eventKey="demo2" title={'Pestaña 2'}>
-                <PageOne />
-            </TabVentana>
-            <TabVentana eventKey="demo3" title={'Pestaña 3'}>
                 <Encabezado subtitulo={'Dependencia de la UNP'} />
                 <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
                 <Encabezado titulo='Título' subtitulo='Subtítulo' />
                 <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
                 <Encabezado subtitulo={'Subtítulo'} />
                 <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
+                <IconoTipoSolicitud tipoSolicitud='Individual' />
+                <IconoTipoSolicitud tipoSolicitud='Individual' porGestionar={true} />
+                <IconoTipoSolicitud tipoSolicitud='Colectivo' />
+                <IconoTipoSolicitud tipoSolicitud='Colectivo' porGestionar={true} />
             </TabVentana>
-            <TabVentana eventKey="demo4" title={'Pestaña 4'}>
+            <TabVentana eventKey="demo6" title={'Pestaña 6'}>
+                <TablaShared />
+            </TabVentana>
+            <TabVentana eventKey="demo7" title={'Pestaña 7'}>
+                <PageOne />
+            </TabVentana>
+            <TabVentana eventKey="demo9" title={'Pestaña 9'}>
                 <Tabla />
             </TabVentana>
-            <TabVentana eventKey="demo5" title={'Pestaña 5'}>
+            <TabVentana eventKey="demo10" title={'Pestaña 10'}>
                 <PageTwo />
             </TabVentana>
         </VentanaTabs>
