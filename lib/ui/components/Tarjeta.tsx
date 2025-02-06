@@ -56,15 +56,15 @@ const Tarjeta: React.FC<TarjetaProps> = ({
                 ) : (
                     <>
                         {children}
-                        <ContenedorTarjeta>
-                            {method !== "GET" && (
+                        {method !== "GET" && (
+                            <ContenedorTarjeta>
                                 <Row className="d-flex justify-content-end me-0">
                                     <Button style={btnSendStyle} type="submit">
                                         Enviar
                                     </Button>
                                 </Row>
-                            )}
-                        </ContenedorTarjeta>
+                            </ContenedorTarjeta>
+                        )}
                     </>
                 )}
             </form>
