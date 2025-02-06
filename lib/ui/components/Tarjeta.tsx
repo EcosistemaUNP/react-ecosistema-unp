@@ -9,7 +9,7 @@ interface TarjetaProps {
     children: React.ReactNode;
     method?: string;
     validated?: boolean;
-    onSubmit?: () => void;
+    onSubmit?: any;
     hasBody?: boolean;
 }
 
