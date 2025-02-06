@@ -33,4 +33,6 @@
 
 .tab-content {
     padding: 0.5rem;
+    height: calc(100vh - 61px);
+    overflow-y: scroll;
 }

@@ -11,6 +11,9 @@ import { PageTwo } from './Paginador'
 const Tabs: React.FC = () => {
     return (
         <VentanaTabs>
+            <TabVentana eventKey="demo7" title={'Pestaña 7'}>
+                <PageOne />
+            </TabVentana>
             <TabVentana eventKey="demo" title={'Pestaña 1'}>
                 <Encabezado subtitulo={'Dependencia de la UNP'} />
                 <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
@@ -25,9 +28,6 @@ const Tabs: React.FC = () => {
             </TabVentana>
             <TabVentana eventKey="demo6" title={'Pestaña 6'}>
                 <TablaShared />
-            </TabVentana>
-            <TabVentana eventKey="demo7" title={'Pestaña 7'}>
-                <PageOne />
             </TabVentana>
             <TabVentana eventKey="demo9" title={'Pestaña 9'}>
                 <Tabla />

@@ -3,14 +3,23 @@ import React, { useState } from 'react';
 import { FaUser, FaUsers } from 'react-icons/fa6';
 
 import '../styles/IconoTipoSolicitud.css';
+// import { IconType } from 'react-icons';
+
+// interface IconTooltip {
+//     icon: IconType;
+//     color: string;
+//     tooltipText: string;
+// }
 
 interface IconoTipoSolicitudProps {
     tipoSolicitud: string;
     porGestionar?: boolean;
+    // custom: IconTooltip;
 }
 
 const IconoTipoSolicitud: React.FC<IconoTipoSolicitudProps> = ({ tipoSolicitud, porGestionar = false }) => {
     const [showTooltip, setShowTooltip] = useState(false);
+
 
     let tooltipText = '';
     let color = {};
