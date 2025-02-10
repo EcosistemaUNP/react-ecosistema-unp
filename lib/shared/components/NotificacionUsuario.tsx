@@ -8,7 +8,7 @@ import '../styles/NotificacionUsuario.css'
 const NotificacionUsuario: React.FC = () => {
   return (
     <div className="position-absolute top-0 end-0" style={{
-      marginTop: '9px'
+      marginTop: '6px'
     }}>
       <NavDropdown title={
         <FaBell className="icono-notificaciones" />

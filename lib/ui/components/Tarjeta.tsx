@@ -42,7 +42,7 @@ const Tarjeta: React.FC<TarjetaProps> = ({
                 className={validated ? "was-validated" : ""}
             >
                 {hasBody ? (
-                    <CardBody>
+                    <CardBody className="pt-0">
                         {children}
 
                         {method !== "GET" && (

@@ -2,7 +2,8 @@ import React from 'react'
 import { ContenedorTarjeta, Subtitulo, Tarjeta, TarjetaAgregar } from '../../lib/ui'
 import { FaHouse } from 'react-icons/fa6'
 // import { BarraAccesibilidad } from '../../lib/accessibility'
-const PageOne: React.FC = () => {
+
+const TabTarjetas: React.FC = () => {
   return (
     <>
       <Tarjeta title='Título de la tarjeta' hasBody={false}>
@@ -15,6 +16,10 @@ const PageOne: React.FC = () => {
             <br />
             Input
           </TarjetaAgregar>
+          <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
+          Contenido
+          <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
+          Contenido
         </ContenedorTarjeta>
         <ContenedorTarjeta isGray={true}>
           <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
@@ -44,4 +49,4 @@ const PageOne: React.FC = () => {
   )
 }
 
-export { PageOne }
+export { TabTarjetas }

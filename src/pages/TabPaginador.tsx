@@ -1,7 +1,8 @@
 import React from 'react'
 import { Paginador } from '../../lib/ui'
 import { FaPerson } from 'react-icons/fa6'
-const PageTwo: React.FC = () => {
+
+const TabPaginador: React.FC = () => {
 
     const form = [
         {
@@ -55,4 +56,4 @@ const PageTwo: React.FC = () => {
     )
 }
 
-export { PageTwo }
+export { TabPaginador }

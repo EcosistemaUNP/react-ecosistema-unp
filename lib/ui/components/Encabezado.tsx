@@ -1,6 +1,6 @@
 import React from "react";
 
-import logo from '../../assets/img/logo.png';
+import logo from '../../assets/img/logo_unp_gris.svg';
 
 import '../styles/Encabezado.css';
 

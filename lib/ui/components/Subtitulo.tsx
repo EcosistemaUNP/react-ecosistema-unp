@@ -11,8 +11,8 @@ const divStyle = {
   display: 'flex',
   justifyContent: 'start',
   alignItems: 'center',
-  marginTop: '1rem',
-  marginBottom: '1.25rem'
+  marginTop: '1.2rem',
+  marginBottom: '0.9rem'
 }
 
 const subtituloStyle = {

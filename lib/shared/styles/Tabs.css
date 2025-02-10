@@ -1,10 +1,10 @@
 .nav {
     background: #f8f9fa;
-    padding-top: 1rem;
+    padding-top: 0.75rem;
 }
 
 .nav-tabs {
-    padding-left: 1.75rem;
+    padding-left: 0.75rem;
     padding-right: 1.75rem;
     
     --bs-nav-tabs-link-active-color: #074470;
@@ -13,7 +13,7 @@
     /* --bs-nav-tabs-link-active-border-color: #000000; */
     --bs-nav-link-color: #697580;
     --bs-nav-link-hover-color: #344754;
-    
+
 }
 
 .nav-item {
@@ -34,5 +34,5 @@
 .tab-content {
     padding: 0.5rem;
     height: calc(100vh - 61px);
-    overflow-y: scroll;
+    overflow-y: auto;
 }

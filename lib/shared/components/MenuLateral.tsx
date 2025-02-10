@@ -75,7 +75,7 @@ const MenuLateral: React.FC<MenuLateralProps> = ({ onToggle, isOpen }) => {
       <div className={sidebarClass}>
         <div className="logo_details">
           <img
-            src="https://i.imgur.com/g7HnbOv.png"
+            src="/logo-unp-gris.png"
             alt="Logo"
             className="icon logo-image"
           />
