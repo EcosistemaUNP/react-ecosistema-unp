@@ -26,36 +26,36 @@ const IconoTipoSolicitud: React.FC<IconoTipoSolicitudProps> = ({ tipoSolicitud, 
     let Icon = null;
 
     const baseColor = !porGestionar ? '#287cd1' : '#D3D3D3';
-    const iconColor = !porGestionar ? '#ffffff' : 'darkgray';
+    // const iconColor = !porGestionar ? '#ffffff' : 'darkgray';
 
     switch (tipoSolicitud) {
         case 'Individual':
             tooltipText = !porGestionar ? 'Individual' : 'Nuevo registro';
-            color = { backgroundColor: baseColor, color: iconColor };
+            color = { backgroundColor: 'transparent', color: baseColor };
             Icon = FaUser;
             break;
         case 'Colectivo':
             tooltipText = !porGestionar ? 'Colectivo' : 'Nuevo registro';
-            color = { backgroundColor: baseColor, color: iconColor };
+            color = { backgroundColor: 'transparent', color: baseColor };
             // color = { backgroundColor: baseColor, color: iconColor };
             Icon = FaUsers;
             break;
         case 'Jurídico':
             tooltipText = !porGestionar ? 'Jurídico' : 'Nuevo registro';
             // color = { backgroundColor: !porGestionar ? '#652edb' : '#D3D3D3', color: iconColor };
-            color = { backgroundColor: baseColor, color: iconColor };
+            color = { backgroundColor: 'transparent', color: baseColor };
             Icon = FaScaleBalanced;
             break;
         case 'Emergencia':
             tooltipText = !porGestionar ? 'Emergencia' : 'Nuevo registro';
             // color = { backgroundColor: !porGestionar ? '#cf3c3c' : '#D3D3D3', color: iconColor };
-            color = { backgroundColor: baseColor, color: iconColor };
+            color = { backgroundColor: 'transparent', color: baseColor };
             Icon = FaTriangleExclamation;
             break;
         case 'Reasignación':
             tooltipText = !porGestionar ? 'Reasignación' : 'Nuevo registro';
             // color = { backgroundColor: !porGestionar ? '#ed874c' : '#D3D3D3', color: iconColor };
-            color = { backgroundColor: baseColor, color: iconColor };
+            color = { backgroundColor: 'transparent', color: baseColor };
             Icon = FaArrowsRotate;
             break; 
         default:
@@ -84,7 +84,7 @@ const IconoTipoSolicitud: React.FC<IconoTipoSolicitudProps> = ({ tipoSolicitud, 
                         top: "50%", 
                         left: "110%", 
                         transform: "translateY(-50%)", 
-                        backgroundColor: "#333",
+                        backgroundColor: "#eb7575",
                         color: "#fff",
                         padding: "8px 12px",
                         borderRadius: "8px",

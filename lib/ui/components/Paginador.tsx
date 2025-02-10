@@ -49,7 +49,7 @@ const Paginador: React.FC<PaginadorProps> = ({ stepContent, onSubmit }) => {
       <div className="paginador-buttons" style={{ display: 'flex', justifyContent: 'space-between' }}>
         {currentStep > 0 && (
           <Button
-            variant="secondary"
+            variant="unp_secondary"
             onClick={() => setCurrentStep(currentStep - 1)}
           >
             Anterior
@@ -57,7 +57,7 @@ const Paginador: React.FC<PaginadorProps> = ({ stepContent, onSubmit }) => {
         )}
         {currentStep < stepContent.length - 1 && (
           <Button
-            variant="primary"
+            variant="unp_primary"
             style={{ justifySelf: 'end' }}
             onClick={() => {
               setCurrentStep(currentStep + 1);

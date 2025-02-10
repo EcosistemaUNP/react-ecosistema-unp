@@ -7,7 +7,7 @@ import '../styles/Tarjeta.css';
 interface TarjetaAgregarProps {
     title?: string;
     children: React.ReactNode;
-    onClick: () => void;
+    onClose: any;
 }
 
 const titleStyle = {
@@ -18,7 +18,7 @@ const titleStyle = {
     color: '#303d50'
 };
 
-const TarjetaAgregar: React.FC<TarjetaAgregarProps> = ({ title, children, onClick }) => {
+const TarjetaAgregar: React.FC<TarjetaAgregarProps> = ({ title, children, onClose }) => {
     return (
         <div 
         className="border border-gray-300 rounded-3" 
@@ -32,7 +32,7 @@ const TarjetaAgregar: React.FC<TarjetaAgregarProps> = ({ title, children, onClic
         >
             <Button
                 variant="link"
-                onClick={onClick}
+                onClick={onClose}
                 style={{
                     position: "absolute",
                     top: "10px",

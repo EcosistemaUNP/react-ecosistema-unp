@@ -18,12 +18,12 @@ const Tabla: React.FC = () => {
 
   const buttons = [
     {
-      title: 'Archivo',
+      title: 'Contenido uno',
       icon: FaBoxArchive,
       onShow: () => { setShowHistoricoSer(true); setIsShowing(true); }
     },
     {
-      title: 'Histórico de la SER y SIGOB',
+      title: 'Contenido dos',
       icon: FaClockRotateLeft,
       onShow: () => { setShowHistoricoCaso(true); setIsShowing(true); }
     }
@@ -58,16 +58,16 @@ const Tabla: React.FC = () => {
               setIsShowing={setIsShowing}
             >
               {showHistoricoCaso ? (
-                <>Archivo</>
+                <>Contenido dos</>
               ) : showHistoricoSer ? (
-                <>Historico de la SER</>
+                <>Contenido uno</>
               ) : showRemitir ? (
                 <>Remitir</>
               ) : (
                 <>
                   <Button onClick={onHide}>Cerrar</Button>
                   <br />
-                  <Button onClick={() => { setShowRemitir(true); setIsShowing(true) }}>Remitir</Button>
+                  {/* <Button onClick={() => { setShowRemitir(true); setIsShowing(true) }}>Remitir</Button> */}
                 </>
               )}
             </ContenidoModal>

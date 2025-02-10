@@ -4,12 +4,17 @@ import { FaHouse } from 'react-icons/fa6'
 // import { BarraAccesibilidad } from '../../lib/accessibility'
 
 const TabTarjetas: React.FC = () => {
+
+  const click = () => {
+    console.log('Hola!');
+  }
+
   return (
     <>
       <Tarjeta title='Título de la tarjeta' hasBody={false}>
         <ContenedorTarjeta>
           <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
-          <TarjetaAgregar onClick={() => console.log('Hola')} title='Nuevo elemento'>
+          <TarjetaAgregar onClose={() => console.log('Hola')} title='Nuevo elemento'>
             Contenido de la tarjeta para agregar
             <br />
             Input
@@ -20,27 +25,22 @@ const TabTarjetas: React.FC = () => {
           Contenido
           <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
           Contenido
-        </ContenedorTarjeta>
-        <ContenedorTarjeta isGray={true}>
-          <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
-          Contenedor gris
-          <TarjetaAgregar onClick={() => console.log('Hola')} title='Nuevo elemento'>
-            Contenido de la tarjeta para agregar
-            <br />
-            Input
-            <br />
-            Input
-          </TarjetaAgregar>
-        </ContenedorTarjeta>
-        <ContenedorTarjeta>
-          Contenedor blanco
         </ContenedorTarjeta>
         <ContenedorTarjeta isGray={true} isLast={true}>
-          Contenedor gris (isLast = true)
+          <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
+          Contenedor gris
+          <TarjetaAgregar onClose={click}>
+            Contenido de la tarjeta para agregar
+            <br />
+            Input
+            <br />
+            Input
+          </TarjetaAgregar>
         </ContenedorTarjeta>
       </Tarjeta>
 
       <Tarjeta title='Título de la tarjeta dos'>
+        <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
         Contenido de la tarjeta dos...
       </Tarjeta>
 

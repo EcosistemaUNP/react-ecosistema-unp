@@ -8,19 +8,19 @@ import { TabTarjetas } from './pages/TabTarjetas'
 function App() {
   return (
     <VentanaTabs>
-      <TabVentana eventKey="demo7" title={'Tarjetas'}>
-        <TabTarjetas />
-      </TabVentana>
-      <TabVentana eventKey="demo" title={'Elementos UI'}>
+      <TabVentana eventKey="ui" title={'Elementos UI'}>
         <TabElementosUi />
       </TabVentana>
-      <TabVentana eventKey="demo6" title={'Tabla compartida'}>
+      <TabVentana eventKey="tarjetas" title={'Tarjetas'}>
+        <TabTarjetas />
+      </TabVentana>
+      <TabVentana eventKey="shared" title={'Tabla compartida'}>
         <TablaShared />
       </TabVentana>
-      <TabVentana eventKey="demo9" title={'Tabla'}>
+      <TabVentana eventKey="table" title={'Tabla'}>
         <Tabla />
       </TabVentana>
-      <TabVentana eventKey="demo10" title={'Paginador'}>
+      <TabVentana eventKey="stepper" title={'Paginador'}>
         <TabPaginador />
       </TabVentana>
     </VentanaTabs>
