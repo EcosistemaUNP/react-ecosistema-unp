@@ -130,14 +130,14 @@ const Tabla: React.FC<TablaProps> = ({
                     <tr>
                       <td colSpan={columns.length} className="text-center" style={{ padding: '0 0 0 0' }}>
                         <div style={{
-                          height: '3rem',
+                          height: '2rem',
                           display: 'flex',
                           flexDirection: 'row',
                           justifyContent: 'center',
                           alignItems: 'center',
                           fontWeight: '600',
                           color: (rowIndex % 2 === 0) ? '#365072' : '#303D50',
-                          backgroundColor: (rowIndex % 2 === 0) ? '#fefefe' : '#f7f7f9'
+                          backgroundColor: (rowIndex % 2 === 0) ? '#fefefe' : '#ebebec'
                         }}>
                           {/* <FaGripLines style={{ fontSize: '1.5rem' }} /> */}
                           <FaGrip style={{ fontSize: '1.3rem' }}/>

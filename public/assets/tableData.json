@@ -10,7 +10,7 @@
         "ubicacion": "Guainía, Inírida"
     },
     {
-        "tipoRuta": "Individual",
+        "tipoRuta": "Colectivo",
         "numeroRegistro": 1003,
         "numeroRadicado": "EXT25-00084567",
         "diasHabiles": 25,
@@ -30,7 +30,7 @@
         "ubicacion": "Bolívar, Cartagena"
     },
     {
-        "tipoRuta": "Individual",
+        "tipoRuta": "Jurídico",
         "numeroRegistro": 1009,
         "numeroRadicado": "EXT25-00123456",
         "diasHabiles": 23,
@@ -40,7 +40,7 @@
         "ubicacion": "Norte de Santander, Cúcuta"
     },
     {
-        "tipoRuta": "Individual",
+        "tipoRuta": "Emergencia",
         "numeroRegistro": 995,
         "numeroRadicado": "EXT25-00092345",
         "diasHabiles": 22,
@@ -50,7 +50,7 @@
         "ubicacion": "Santander, Bucaramanga"
     },
     {
-        "tipoRuta": "Individual",
+        "tipoRuta": "Reasignación",
         "numeroRegistro": 1013,
         "numeroRadicado": "EXT25-00139876",
         "diasHabiles": 22,
@@ -60,7 +60,7 @@
         "ubicacion": "Guaviare, San José del Guaviare"
     },
     {
-        "tipoRuta": "Individual",
+        "tipoRuta": "Reasignación",
         "numeroRegistro": 1007,
         "numeroRadicado": "EXT25-00123457",
         "diasHabiles": 20,
@@ -70,7 +70,7 @@
         "ubicacion": "La Guajira, Riohacha"
     },
     {
-        "tipoRuta": "Individual",
+        "tipoRuta": "Jurídico",
         "numeroRegistro": 999,
         "numeroRadicado": "EXT25-00093210",
         "diasHabiles": 20,
@@ -80,7 +80,7 @@
         "ubicacion": "Huila, Neiva"
     },
     {
-        "tipoRuta": "Individual",
+        "tipoRuta": "Jurídico",
         "numeroRegistro": 1010,
         "numeroRadicado": "EXT25-00157890",
         "diasHabiles": 18,
@@ -90,7 +90,7 @@
         "ubicacion": "Chocó, Quibdó"
     },
     {
-        "tipoRuta": "Individual",
+        "tipoRuta": "Emergencia",
         "numeroRegistro": 1005,
         "numeroRadicado": "EXT25-00101342",
         "diasHabiles": 18,
@@ -100,7 +100,7 @@
         "ubicacion": "Quindío, Armenia"
     },
     {
-        "tipoRuta": "Individual",
+        "tipoRuta": "Colectivo",
         "numeroRegistro": 1001,
         "numeroRadicado": "EXT25-00072784",
         "diasHabiles": 17,
@@ -120,7 +120,7 @@
         "ubicacion": "Vichada, Puerto Carreño"
     },
     {
-        "tipoRuta": "Individual",
+        "tipoRuta": "Emergencia",
         "numeroRegistro": 1006,
         "numeroRadicado": "EXT25-00105467",
         "diasHabiles": 15,
@@ -150,7 +150,7 @@
         "ubicacion": "Arauca, Arauca"
     },
     {
-        "tipoRuta": "Individual",
+        "tipoRuta": "Reasignación",
         "numeroRegistro": 1004,
         "numeroRadicado": "EXT25-00093456",
         "diasHabiles": 12,
@@ -160,7 +160,7 @@
         "ubicacion": "Magdalena, Santa Marta"
     },
     {
-        "tipoRuta": "Individual",
+        "tipoRuta": "Reasignación",
         "numeroRegistro": 1008,
         "numeroRadicado": "EXT25-00125678",
         "diasHabiles": 10,
@@ -170,7 +170,7 @@
         "ubicacion": "Putumayo, Mocoa"
     },
     {
-        "tipoRuta": "Individual",
+        "tipoRuta": "Reasignación",
         "numeroRegistro": 992,
         "numeroRadicado": "EXT25-00054781",
         "diasHabiles": 10,
@@ -180,7 +180,7 @@
         "ubicacion": "Cundinamarca, Bogotá"
     },
     {
-        "tipoRuta": "Individual",
+        "tipoRuta": "Jurídico",
         "numeroRegistro": 1019,
         "numeroRadicado": "EXT25-00145678",
         "diasHabiles": 9,
@@ -200,7 +200,7 @@
         "ubicacion": "San Andrés y Providencia, San Andrés"
     },
     {
-        "tipoRuta": "Individual",
+        "tipoRuta": "Jurídico",
         "numeroRegistro": 1011,
         "numeroRadicado": "EXT25-00128901",
         "diasHabiles": 7,
@@ -210,7 +210,7 @@
         "ubicacion": "Cauca, Popayán"
     },
     {
-        "tipoRuta": "Individual",
+        "tipoRuta": "Jurídico",
         "numeroRegistro": 1002,
         "numeroRadicado": "EXT25-00075893",
         "diasHabiles": 6,
@@ -220,7 +220,7 @@
         "ubicacion": "Boyacá, Tunja"
     },
     {
-        "tipoRuta": "Individual",
+        "tipoRuta": "Jurídico",
         "numeroRegistro": 997,
         "numeroRadicado": "EXT25-00098734",
         "diasHabiles": 5,
@@ -230,7 +230,7 @@
         "ubicacion": "Caldas, Manizales"
     },
     {
-        "tipoRuta": "Individual",
+        "tipoRuta": "Reasignación",
         "numeroRegistro": 994,
         "numeroRadicado": "EXT25-00089012",
         "diasHabiles": 5,
@@ -250,7 +250,7 @@
         "ubicacion": "Amazonas, Leticia"
     },
     {
-        "tipoRuta": "Individual",
+        "tipoRuta": "Jurídico",
         "numeroRegistro": 996,
         "numeroRadicado": "EXT25-00115467",
         "diasHabiles": 3,
@@ -260,7 +260,7 @@
         "ubicacion": "Nariño, Pasto"
     },
     {
-        "tipoRuta": "Individual",
+        "tipoRuta": "Emergencia",
         "numeroRegistro": 993,
         "numeroRadicado": "EXT25-00071245",
         "diasHabiles": 3,
@@ -270,7 +270,7 @@
         "ubicacion": "Valle del Cauca, Cali"
     },
     {
-        "tipoRuta": "Individual",
+        "tipoRuta": "Emergencia",
         "numeroRegistro": 991,
         "numeroRadicado": "EXT25-00020030",
         "diasHabiles": 2,
@@ -290,7 +290,7 @@
         "ubicacion": "Meta, Villavicencio"
     },
     {
-        "tipoRuta": "Individual",
+        "tipoRuta": "Emergencia",
         "numeroRegistro": 1000,
         "numeroRadicado": "EXT25-00110321",
         "diasHabiles": 1,

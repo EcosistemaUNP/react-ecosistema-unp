@@ -11,7 +11,7 @@
         "estadoRegistro": "en_gestion"
     },
     {
-        "tipoRuta": "Individual",
+        "tipoRuta": "Emergencia",
         "numeroRegistro": 1013,
         "numeroRadicado": "EXT25-00139876",
         "diasHabiles": 22,
@@ -22,7 +22,7 @@
         "estadoRegistro": "en_gestion"
     },
     {
-        "tipoRuta": "Individual",
+        "tipoRuta": "Colectivo",
         "numeroRegistro": 1006,
         "numeroRadicado": "EXT25-00105467",
         "diasHabiles": 15,
@@ -33,7 +33,7 @@
         "estadoRegistro": "en_gestion"
     },
     {
-        "tipoRuta": "Individual",
+        "tipoRuta": "Jurídico",
         "numeroRegistro": 1014,
         "numeroRadicado": "EXT25-00140124",
         "diasHabiles": 14,
@@ -44,7 +44,7 @@
         "estadoRegistro": "en_gestion"
     },
     {
-        "tipoRuta": "Individual",
+        "tipoRuta": "Reasignación",
         "numeroRegistro": 1012,
         "numeroRadicado": "EXT25-00139012",
         "diasHabiles": 12,
@@ -77,7 +77,7 @@
         "estadoRegistro": "por_gestionar"
     },
     {
-        "tipoRuta": "Individual",
+        "tipoRuta": "Jurídico",
         "numeroRegistro": 992,
         "numeroRadicado": "EXT25-00054781",
         "diasHabiles": 10,
@@ -88,7 +88,7 @@
         "estadoRegistro": "por_gestionar"
     },
     {
-        "tipoRuta": "Individual",
+        "tipoRuta": "Colectivo",
         "numeroRegistro": 1019,
         "numeroRadicado": "EXT25-00145678",
         "diasHabiles": 9,
@@ -99,7 +99,7 @@
         "estadoRegistro": "por_gestionar"
     },
     {
-        "tipoRuta": "Individual",
+        "tipoRuta": "Emergencia",
         "numeroRegistro": 1018,
         "numeroRadicado": "EXT25-00134567",
         "diasHabiles": 8,
@@ -110,7 +110,7 @@
         "estadoRegistro": "por_gestionar"
     },
     {
-        "tipoRuta": "Individual",
+        "tipoRuta": "Reasignación",
         "numeroRegistro": 993,
         "numeroRadicado": "EXT25-00071245",
         "diasHabiles": 3,

@@ -3,6 +3,7 @@ import { TablaRegistros } from '../../lib/tables'
 import { Button } from 'react-bootstrap';
 import { ContenidoModal } from '../../lib/ui/components/ContenidoModal';
 import { FaBoxArchive, FaClockRotateLeft } from 'react-icons/fa6';
+import { IconoTipoSolicitud } from '../../lib/ui';
 
 const Tabla: React.FC = () => {
 
@@ -32,12 +33,9 @@ const Tabla: React.FC = () => {
     {
       key: 'tipoRuta',
       label: 'Solicitud',
-      // renderComponent: (rowData: any) => (
-      //   <IconTooltip
-      //     solicitud={rowData.tipoRuta}
-      //     estado={rowData.estadoRegistro}
-      //   />
-      // )
+      renderComponent: (rowData: any) => (
+        <IconoTipoSolicitud tipoSolicitud={rowData.tipoRuta} />
+      )
     },
     { key: 'numeroRegistro', label: 'Registro', hasModal: true },
     { key: 'numeroRadicado', label: 'Radicado' },

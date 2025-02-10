@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { FaUser, FaUsers } from 'react-icons/fa6';
+import { FaArrowsRotate, FaScaleBalanced, FaTriangleExclamation, FaUser, FaUsers } from 'react-icons/fa6';
 
 import '../styles/IconoTipoSolicitud.css';
 // import { IconType } from 'react-icons';
@@ -25,7 +25,7 @@ const IconoTipoSolicitud: React.FC<IconoTipoSolicitudProps> = ({ tipoSolicitud, 
     let color = {};
     let Icon = null;
 
-    const baseColor = !porGestionar ? '#2f70d8' : '#D3D3D3';
+    const baseColor = !porGestionar ? '#287cd1' : '#D3D3D3';
     const iconColor = !porGestionar ? '#ffffff' : 'darkgray';
 
     switch (tipoSolicitud) {
@@ -37,8 +37,27 @@ const IconoTipoSolicitud: React.FC<IconoTipoSolicitudProps> = ({ tipoSolicitud, 
         case 'Colectivo':
             tooltipText = !porGestionar ? 'Colectivo' : 'Nuevo registro';
             color = { backgroundColor: baseColor, color: iconColor };
+            // color = { backgroundColor: baseColor, color: iconColor };
             Icon = FaUsers;
             break;
+        case 'Jurídico':
+            tooltipText = !porGestionar ? 'Jurídico' : 'Nuevo registro';
+            // color = { backgroundColor: !porGestionar ? '#652edb' : '#D3D3D3', color: iconColor };
+            color = { backgroundColor: baseColor, color: iconColor };
+            Icon = FaScaleBalanced;
+            break;
+        case 'Emergencia':
+            tooltipText = !porGestionar ? 'Emergencia' : 'Nuevo registro';
+            // color = { backgroundColor: !porGestionar ? '#cf3c3c' : '#D3D3D3', color: iconColor };
+            color = { backgroundColor: baseColor, color: iconColor };
+            Icon = FaTriangleExclamation;
+            break;
+        case 'Reasignación':
+            tooltipText = !porGestionar ? 'Reasignación' : 'Nuevo registro';
+            // color = { backgroundColor: !porGestionar ? '#ed874c' : '#D3D3D3', color: iconColor };
+            color = { backgroundColor: baseColor, color: iconColor };
+            Icon = FaArrowsRotate;
+            break; 
         default:
             return null;
     }
