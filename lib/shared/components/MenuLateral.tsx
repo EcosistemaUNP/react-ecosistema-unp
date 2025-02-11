@@ -6,6 +6,8 @@ import { jwtDecode } from "jwt-decode";
 import { useFinalizarSesion } from "../../auth/hooks/useFinalizarSesion.js";
 import { urlCertificadoLaboral, urlBase } from "../../utils/Url.js";
 
+import logo from '../../assets/img/ecosistema/logo_ei_blanco_fondo.svg';
+
 import {
   BiMenu,
   BiMenuAltRight,
@@ -75,7 +77,7 @@ const MenuLateral: React.FC<MenuLateralProps> = ({ onToggle, isOpen }) => {
       <div className={sidebarClass}>
         <div className="logo_details">
           <img
-            src="/logo-unp-gris.png"
+            src={logo}
             alt="Logo"
             className="icon logo-image"
           />

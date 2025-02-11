@@ -1,8 +1,7 @@
 import React from "react";
 
-import logo from '../../assets/img/logo_unp_gris.svg';
-
 import '../styles/Encabezado.css';
+import { Logo } from "./Logo";
 
 interface EncabezadoProps {
   titulo?: string;
@@ -14,7 +13,7 @@ const Encabezado: React.FC<EncabezadoProps> = ({ titulo = '', subtitulo = '' }) 
     <div className="title-container">
       <div className="logo-subtitle-container">
         <div className="red-section"></div>
-        <img className="img-logo" src={logo} alt="logo" />
+        <Logo type="entidad" variant="siglas" color="gris" height='62' />
       </div>
       <div className="subtitle-container">
         <span className="title">{titulo ? titulo : 'Unidad Nacional de Protección'}</span>

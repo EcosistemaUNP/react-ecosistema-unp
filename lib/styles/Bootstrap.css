@@ -21,13 +21,13 @@
     --btnunp-secondary-dos: #8b8b8b;
     --btnunp-secondary-tres: #848484;
 
-    --btnunp-tertiary-uno: #178250;
-    --btnunp-tertiary-dos: #0f7043;
-    --btnunp-tertiary-tres: #0f7043;
-
-    /* --btnunp-tertiary-uno: #cc5159;
+    --btnunp-tertiary-uno: #cc5159;
     --btnunp-tertiary-dos: #b34950;
-    --btnunp-tertiary-tres: #af444b; */
+    --btnunp-tertiary-tres: #af444b;
+
+    --btnunp-send-uno: #178250;
+    --btnunp-send-dos: #0f7043;
+    --btnunp-send-tres: #0f7043;
 }
 
 .btn-unp_primary {
@@ -79,6 +79,23 @@
     --bs-btn-disabled-color: #fff;
     --bs-btn-disabled-bg: var(--btnunp-tertiary-uno);
     --bs-btn-disabled-border-color: var(--btnunp-tertiary-uno);
+}
+
+.btn-unp_send {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--btnunp-send-uno);
+    --bs-btn-border-color: var(--btnunp-send-uno);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--btnunp-send-dos);
+    --bs-btn-hover-border-color: var(--btnunp-send-tres);
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--btnunp-send-tres);
+    --bs-btn-active-border-color: var(--btnunp-send-tres);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--btnunp-send-uno);
+    --bs-btn-disabled-border-color: var(--btnunp-send-uno);
 }
 
 .btn-next {
