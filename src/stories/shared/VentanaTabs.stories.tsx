@@ -2,8 +2,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { BrowserRouter } from 'react-router';
 
 import { AuthProvider } from '../../../lib/utils';
-import { VentanaTabs } from '../../../lib/shared/components/VentanaTabs';
-import { TabVentana } from '../../../lib/shared/components/TabVentana';
+import { VentanaTabs } from '../../../lib/shared/ventana-tabs/VentanaTabs';
+import { TabVentana } from '../../../lib/shared/ventana-tabs/TabVentana';
 
 const meta: Meta<typeof VentanaTabs> = {
     title: 'Shared/Ventana tabs',

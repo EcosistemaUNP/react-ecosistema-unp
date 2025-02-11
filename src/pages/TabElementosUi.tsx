@@ -11,17 +11,17 @@ const TabElementosUi: React.FC = () => {
             <Encabezado subtitulo={'Subtítulo'} />
 
             <Subtitulo icon={FaHouse} subtitulo={'Logos'} />
-            <Logo type='entidad' variant='siglas' color='rojo' />
-            <Logo type='entidad' variant='siglas' color='gris' />
-            <Logo type='entidad' variant='siglas' color='blanco' />
+            <Logo type='entidad' variant='unp' color='rojo' />
+            <Logo type='entidad' variant='unp' color='gris' />
+            <Logo type='entidad' variant='unp' color='blanco' />
             <br /><br />
-            <Logo type='entidad' variant='completo' color='rojo' />
-            <Logo type='entidad' variant='completo' color='gris' />
-            <Logo type='entidad' variant='completo' color='blanco' />
+            <Logo type='entidad' variant='unidad' color='rojo' />
+            <Logo type='entidad' variant='unidad' color='gris' />
+            <Logo type='entidad' variant='unidad' color='blanco' />
             <br /><br />
-            <Logo type='ministerio' variant='completo' color='rojo' />
-            <Logo type='ministerio' variant='completo' color='gris' />
-            <Logo type='ministerio' variant='completo' color='blanco' />
+            <Logo type='ministerio' variant='interior' color='rojo' />
+            <Logo type='ministerio' variant='interior' color='gris' />
+            <Logo type='ministerio' variant='interior' color='blanco' />
             <br /><br />
             <Logo type='ecosistema' variant='escudo' color='azul' />
             <Logo type='ecosistema' variant='escudo' color='azul_sin_fondo' />

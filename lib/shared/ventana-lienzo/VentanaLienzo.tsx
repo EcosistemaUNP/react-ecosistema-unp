@@ -3,7 +3,7 @@
 import React from "react";
 import { BrowserRouter } from "react-router";
 
-import { MenuLateral } from "./MenuLateral.js";
+import { MenuLateral } from "../menu-lateral/MenuLateral.js";
 
 interface VentanaLienzoProps {
   children?: React.ReactNode;

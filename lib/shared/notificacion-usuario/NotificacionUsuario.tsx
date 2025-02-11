@@ -3,7 +3,7 @@ import { NavDropdown } from "react-bootstrap";
 
 import { FaBell } from "react-icons/fa";
 
-import '../styles/NotificacionUsuario.css'
+import './NotificacionUsuario.css'
 
 const NotificacionUsuario: React.FC = () => {
   return (

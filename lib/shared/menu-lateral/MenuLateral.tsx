@@ -6,7 +6,7 @@ import { jwtDecode } from "jwt-decode";
 import { useFinalizarSesion } from "../../auth/hooks/useFinalizarSesion.js";
 import { urlCertificadoLaboral, urlBase } from "../../utils/Url.js";
 
-import logo from '../../assets/img/ecosistema/logo_ei_blanco_fondo.svg';
+import logo from '../../assets/img/ecosistema/logo_escudo_blanco.svg';
 
 import {
   BiMenu,
@@ -24,7 +24,7 @@ import {
   BiSolidPlaneAlt,
   BiFile,
 } from "react-icons/bi";
-import "../styles/MenuLateral.css";
+import "./MenuLateral.css";
 
 interface MenuLateralProps {
   onToggle: () => void;

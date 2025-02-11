@@ -1,4 +1,4 @@
-export { VentanaLienzo } from './shared/components/VentanaLienzo.js'
+export { VentanaLienzo } from './shared/ventana-lienzo/VentanaLienzo.js'
 
-export { VentanaTabs } from './shared/components/VentanaTabs.js'
-export { TabVentana } from './shared/components/TabVentana.js'
+export { VentanaTabs } from './shared/ventana-tabs/VentanaTabs.js'
+export { TabVentana } from './shared/ventana-tabs/TabVentana.js'

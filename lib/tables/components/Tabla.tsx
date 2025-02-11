@@ -137,7 +137,7 @@ const Tabla: React.FC<TablaProps> = ({
                           alignItems: 'center',
                           fontWeight: '600',
                           color: (rowIndex % 2 === 0) ? '#365072' : '#303D50',
-                          backgroundColor: (rowIndex % 2 === 0) ? '#fefefe' : '#ebebec'
+                          backgroundColor: (rowIndex % 2 === 0) ? '#fefefe' : '#f9fafa'
                         }}>
                           {/* <FaGripLines style={{ fontSize: '1.5rem' }} /> */}
                           <FaGrip style={{ fontSize: '1.3rem' }}/>

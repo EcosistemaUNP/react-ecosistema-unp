@@ -32,7 +32,7 @@
 }
 
 .table-scroll::-webkit-scrollbar-track {
-  background: linear-gradient(to bottom right, #ebebec, #f1f1f1, #ffffff);
+  background: linear-gradient(to bottom right, #f9fafa, #f9fafa, #ffffff);
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -62,7 +62,7 @@ thead tr th {
 }
 
 .table-header-unp {
-  background-color: #ebebec !important; /* f7f8fa */
+  background-color: #f9fafa !important; /* f7f8fa */
   color: #2c2c2c !important;
   font-weight: 600;
   font-size: 1.1rem;

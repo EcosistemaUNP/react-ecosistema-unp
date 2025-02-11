@@ -13,7 +13,7 @@ const Encabezado: React.FC<EncabezadoProps> = ({ titulo = '', subtitulo = '' }) 
     <div className="title-container">
       <div className="logo-subtitle-container">
         <div className="red-section"></div>
-        <Logo type="entidad" variant="siglas" color="gris" height='62' />
+        <Logo type="entidad" variant="unp" color="gris" height='62' />
       </div>
       <div className="subtitle-container">
         <span className="title">{titulo ? titulo : 'Unidad Nacional de Protección'}</span>
