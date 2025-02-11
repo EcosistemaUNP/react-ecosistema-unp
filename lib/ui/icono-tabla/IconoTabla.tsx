@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { FaArrowsRotate, FaScaleBalanced, FaTriangleExclamation, FaUser, FaUsers } from 'react-icons/fa6';
 
-import './IconoTipoSolicitud.css';
+import './IconoTabla.css';
 // import { IconType } from 'react-icons';
 
 // interface IconTooltip {
@@ -11,13 +11,13 @@ import './IconoTipoSolicitud.css';
 //     tooltipText: string;
 // }
 
-interface IconoTipoSolicitudProps {
+interface IconoTablaProps {
     tipoSolicitud: string;
     porGestionar?: boolean;
     // custom: IconTooltip;
 }
 
-const IconoTipoSolicitud: React.FC<IconoTipoSolicitudProps> = ({ tipoSolicitud, porGestionar = false }) => {
+const IconoTabla: React.FC<IconoTablaProps> = ({ tipoSolicitud, porGestionar = false }) => {
     const [showTooltip, setShowTooltip] = useState(false);
 
 
@@ -104,4 +104,4 @@ const IconoTipoSolicitud: React.FC<IconoTipoSolicitudProps> = ({ tipoSolicitud, 
     );
 };
 
-export { IconoTipoSolicitud };
+export { IconoTabla };

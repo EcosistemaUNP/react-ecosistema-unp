@@ -1,19 +1,23 @@
 import React from "react";
 
-import { CardBody } from "react-bootstrap";
 import './ContenedorTarjeta.css';
+import { Container } from "react-bootstrap";
 
 interface ContenedorTarjetaProps {
     isGray?: boolean;
     children: React.ReactNode;
-    isLast?: boolean;
 }
 
-const ContenedorTarjeta: React.FC<ContenedorTarjetaProps> = ({ isGray = false, children, isLast = false }) => {
+const ContenedorTarjeta: React.FC<ContenedorTarjetaProps> = ({ isGray = true, children }) => {
     return (
-        <CardBody className={`${isGray ? 'tarjeta-container-section' : ''} ${isLast ? 'tarjeta-container-last' : ''} tarjeta-container`}>
+        <Container
+            className="contenedor-gris-tarjeta"
+            style={{
+                backgroundColor: isGray ? '#f7f7f7' : '#ffffff'
+            }}
+        >
             {children}
-        </CardBody>
+        </Container>
     );
 };
 

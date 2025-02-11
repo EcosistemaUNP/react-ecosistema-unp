@@ -8,20 +8,20 @@ const TabPaginador: React.FC = () => {
         {
             label: 'Uno',
             icon: FaPerson,
-            content: <>Contenido de la página uno</>
-            // handleNextClick: (e: any) => void;
+            content: <>Contenido de la página uno</>,
+            handleNextClick: () => console.log('Uno')
         },
         {
             label: 'Dos',
             icon: FaPerson,
-            content: <>Contenido de la página dos</>
-            // handleNextClick: (e: any) => void;
+            content: <>Contenido de la página dos</>,
+            handleNextClick: () => console.log('Dos')
         },
         {
             label: 'Tres',
             icon: FaPerson,
-            content: <>Contenido de la página tres</>
-            // handleNextClick: (e: any) => void;
+            content: <>Contenido de la página tres</>,
+            handleNextClick: () => console.log('Tres')
         },
         {
             label: 'Cuatro',

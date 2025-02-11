@@ -8,12 +8,12 @@ interface StepContent {
   label: string;
   icon: IconType;
   content: React.ReactElement | React.ReactElement[];
-  // handleNextClick?: (e: any) => void; // Falta definir el tipado
+  handleNextClick?: (...args: any[]) => any;
 }
 
 interface PaginadorProps {
   stepContent: StepContent[];
-  onSubmit?: (e: any) => void; // Falta definir el tipado
+  onSubmit?: (...args: any[]) => any; // Falta definir el tipado
 }
 
 const Paginador: React.FC<PaginadorProps> = ({ stepContent, onSubmit }) => {
@@ -60,6 +60,7 @@ const Paginador: React.FC<PaginadorProps> = ({ stepContent, onSubmit }) => {
             variant="unp_primary"
             style={{ justifySelf: 'end' }}
             onClick={() => {
+              stepContent[currentStep].handleNextClick && stepContent[currentStep].handleNextClick();
               setCurrentStep(currentStep + 1);
             }}
           >

@@ -2,7 +2,7 @@ import React from "react";
 
 import { Button, Card, CardBody, CardHeader, Row } from "react-bootstrap";
 import './Tarjeta.css';
-import { ContenedorTarjeta } from "../contenedor-tarjeta/ContenedorTarjeta";
+import { SeccionTarjeta } from "../seccion-tarjeta/SeccionTarjeta";
 
 interface TarjetaProps {
     title: string;
@@ -57,13 +57,13 @@ const Tarjeta: React.FC<TarjetaProps> = ({
                     <>
                         {children}
                         {method !== "GET" && (
-                            <ContenedorTarjeta>
+                            <SeccionTarjeta>
                                 <Row className="d-flex justify-content-end me-0">
                                     <Button style={btnSendStyle} type="submit">
                                         Enviar
                                     </Button>
                                 </Row>
-                            </ContenedorTarjeta>
+                            </SeccionTarjeta>
                         )}
                     </>
                 )}

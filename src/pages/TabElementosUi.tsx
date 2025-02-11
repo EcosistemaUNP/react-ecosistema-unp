@@ -1,5 +1,5 @@
 import React from 'react'
-import { Encabezado, IconoTipoSolicitud, Logo, Subtitulo } from '../../lib/ui'
+import { Encabezado, IconoTabla, Logo, Subtitulo } from '../../lib/ui'
 import { FaBars, FaHouse } from 'react-icons/fa6'
 import { Button } from 'react-bootstrap'
 
@@ -32,20 +32,20 @@ const TabElementosUi: React.FC = () => {
             <Logo type='ecosistema' variant='letras' color='blanco' height='50px' />
 
             <Subtitulo icon={FaBars} subtitulo={'Iconos tabla'} />
-            <IconoTipoSolicitud tipoSolicitud='Individual' />
-            <IconoTipoSolicitud tipoSolicitud='Individual' porGestionar={true} />
+            <IconoTabla tipoSolicitud='Individual' />
+            <IconoTabla tipoSolicitud='Individual' porGestionar={true} />
             <br /><br />
-            <IconoTipoSolicitud tipoSolicitud='Colectivo' />
-            <IconoTipoSolicitud tipoSolicitud='Colectivo' porGestionar={true} />
+            <IconoTabla tipoSolicitud='Colectivo' />
+            <IconoTabla tipoSolicitud='Colectivo' porGestionar={true} />
             <br /><br />
-            <IconoTipoSolicitud tipoSolicitud='Emergencia' />
-            <IconoTipoSolicitud tipoSolicitud='Emergencia' porGestionar={true} />
+            <IconoTabla tipoSolicitud='Emergencia' />
+            <IconoTabla tipoSolicitud='Emergencia' porGestionar={true} />
             <br /><br />
-            <IconoTipoSolicitud tipoSolicitud='Jurídico' />
-            <IconoTipoSolicitud tipoSolicitud='Jurídico' porGestionar={true} />
+            <IconoTabla tipoSolicitud='Jurídico' />
+            <IconoTabla tipoSolicitud='Jurídico' porGestionar={true} />
             <br /><br />
-            <IconoTipoSolicitud tipoSolicitud='Reasignación' />
-            <IconoTipoSolicitud tipoSolicitud='Reasignación' porGestionar={true} />
+            <IconoTabla tipoSolicitud='Reasignación' />
+            <IconoTabla tipoSolicitud='Reasignación' porGestionar={true} />
 
             <Subtitulo icon={FaBars} subtitulo={'Botones'} />
             <Button variant='unp_primary'>Primario</Button>

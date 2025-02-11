@@ -6,7 +6,8 @@ import { Button } from "react-bootstrap";
 interface TarjetaAgregarProps {
     title?: string;
     children: React.ReactNode;
-    onClose: any;
+    onClose: (...args: any[]) => any;
+    isGray?: boolean;
 }
 
 const titleStyle = {
@@ -17,7 +18,7 @@ const titleStyle = {
     color: '#303d50'
 };
 
-const TarjetaAgregar: React.FC<TarjetaAgregarProps> = ({ title, children, onClose }) => {
+const TarjetaAgregar: React.FC<TarjetaAgregarProps> = ({ title, children, onClose, isGray = false }) => {
     return (
         <div 
         className="border border-gray-300 rounded-3" 
@@ -26,7 +27,7 @@ const TarjetaAgregar: React.FC<TarjetaAgregarProps> = ({ title, children, onClos
             padding: '1rem',
             marginTop: '0.5rem',
             marginBottom: '0.5rem',
-            background: '#ffffff'
+            background: !isGray ? '#ffffff' : '#f7f7f7'
         }}
         >
             <Button
