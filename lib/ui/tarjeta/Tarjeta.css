@@ -15,17 +15,3 @@
     font-size: 1.075rem;
     /* font-weight: 500; */
 }
-
-.tarjeta-container {
-    padding-top: 0.1rem !important;
-    padding-bottom: 1.35rem !important;
-}
-
-.tarjeta-container-section {
-    background-color: #f7f7f7;
-}
-
-.tarjeta-container-last {
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-}

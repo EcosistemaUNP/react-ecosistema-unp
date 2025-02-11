@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, Card } from "react-bootstrap";
 import { IconType } from "react-icons";
 
-import '../styles/Paginador.css'
+import './Paginador.css'
 
 interface StepContent {
   label: string;

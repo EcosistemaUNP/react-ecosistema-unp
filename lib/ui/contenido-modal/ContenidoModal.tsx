@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { IconType } from 'react-icons';
 import { FaEyeSlash } from 'react-icons/fa6';
 
-import '../styles/ContenidoModal.css';
+import './ContenidoModal.css';
 
 interface ButtonArray {
     title: string;

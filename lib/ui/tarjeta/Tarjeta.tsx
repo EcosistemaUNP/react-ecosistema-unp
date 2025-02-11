@@ -1,8 +1,8 @@
 import React from "react";
 
 import { Button, Card, CardBody, CardHeader, Row } from "react-bootstrap";
-import '../styles/Tarjeta.css';
-import { ContenedorTarjeta } from "./ContenedorTarjeta";
+import './Tarjeta.css';
+import { ContenedorTarjeta } from "../contenedor-tarjeta/ContenedorTarjeta";
 
 interface TarjetaProps {
     title: string;

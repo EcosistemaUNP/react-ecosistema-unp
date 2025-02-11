@@ -19,7 +19,7 @@ import escudo_ei_blanco_sinfondo from '../../assets/img/ecosistema/logo_escudo_b
 import ecosistema_azul from '../../assets/img/ecosistema/logo_letras_azul.svg';
 import ecosistema_blanco from '../../assets/img/ecosistema/logo_letras_blanco.svg';
 
-import '../styles/Logo.css';
+import './Logo.css';
 
 type LogoType = 'entidad' | 'ecosistema' | 'ministerio';
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { FaArrowsRotate, FaScaleBalanced, FaTriangleExclamation, FaUser, FaUsers } from 'react-icons/fa6';
 
-import '../styles/IconoTipoSolicitud.css';
+import './IconoTipoSolicitud.css';
 // import { IconType } from 'react-icons';
 
 // interface IconTooltip {

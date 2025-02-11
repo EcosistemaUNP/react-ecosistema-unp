@@ -1,14 +1,14 @@
-export { Encabezado } from './ui/components/Encabezado.js'
-export { Subtitulo } from './ui/components/Subtitulo.js'
+export { Encabezado } from './ui/encabezado/Encabezado.js'
+export { Subtitulo } from './ui/subtitulo/Subtitulo.js'
 
-export { ContenidoModal } from './ui/components/ContenidoModal.js'
+export { ContenidoModal } from './ui/contenido-modal/ContenidoModal.js'
 
-export { Tarjeta } from './ui/components/Tarjeta.js'
-export { ContenedorTarjeta } from './ui/components/ContenedorTarjeta.js'
-export { TarjetaAgregar } from './ui/components/TarjetaAgregar.js'
+export { Tarjeta } from './ui/tarjeta/Tarjeta.js'
+export { ContenedorTarjeta } from './ui/contenedor-tarjeta/ContenedorTarjeta.js'
+export { TarjetaAgregar } from './ui/tarjeta-agregar/TarjetaAgregar.js'
 
-export { Paginador } from './ui/components/Paginador.js'
+export { Paginador } from './ui/paginador/Paginador.js'
 
-export { IconoTipoSolicitud } from './ui/components/IconoTipoSolicitud.js'
+export { IconoTipoSolicitud } from './ui/icono-tabla/IconoTipoSolicitud.js'
 
-export { Logo } from './ui/components/Logo.js'
+export { Logo } from './ui/logo/Logo.js'

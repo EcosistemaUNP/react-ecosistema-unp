@@ -2,7 +2,6 @@ import React from "react";
 
 import { FaTrash } from "react-icons/fa6";
 import { Button } from "react-bootstrap";
-import '../styles/Tarjeta.css';
 
 interface TarjetaAgregarProps {
     title?: string;

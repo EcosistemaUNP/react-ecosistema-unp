@@ -1,7 +1,7 @@
 import React from "react";
 
 import { CardBody } from "react-bootstrap";
-import '../styles/Tarjeta.css';
+import './ContenedorTarjeta.css';
 
 interface ContenedorTarjetaProps {
     isGray?: boolean;

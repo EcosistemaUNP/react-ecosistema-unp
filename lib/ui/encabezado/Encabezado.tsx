@@ -1,7 +1,8 @@
 import React from "react";
 
-import '../styles/Encabezado.css';
-import { Logo } from "./Logo";
+import { Logo } from "../logo/Logo";
+
+import './Encabezado.css';
 
 interface EncabezadoProps {
   titulo?: string;
