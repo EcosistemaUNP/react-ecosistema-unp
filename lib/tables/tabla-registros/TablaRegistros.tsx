@@ -2,16 +2,16 @@ import React, { useState, useEffect, ReactNode } from "react";
 
 import Lottie from "lottie-react";
 
-import { EncabezadoTabla } from "./EncabezadoTabla.js";
-import { Tabla } from "./Tabla.js";
-import { CustomModal } from "./Modal.js";
+import { Tabla } from "./tabla/Tabla.js";
+import { CustomModal } from "./modal/Modal.js";
+import { EncabezadoTabla } from "./encabezado/EncabezadoTabla.js";
 
-import noData from "../assets/animations/noData.json";
-import noInfo from "../assets/animations/noInfo.json";
-import isLoadingAnimation from "../assets/animations/isLoading.json";
+import noData from "../../assets/animations/noData.json";
+import noInfo from "../../assets/animations/noInfo.json";
+import isLoadingAnimation from "../../assets/animations/isLoading.json";
 
-import '../styles/EncabezadoTabla.css';
-import "../styles/Tabla.css";
+import './encabezado/EncabezadoTabla.css';
+import "./tabla/Tabla.css";
 
 interface Column {
   key: string;

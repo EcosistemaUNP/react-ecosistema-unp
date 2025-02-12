@@ -1,7 +1,8 @@
 import React from 'react'
-import { Encabezado, IconoTabla, Logo, Subtitulo } from '../../lib/ui'
+import { Encabezado, Logo, Subtitulo } from '../../lib/ui'
 import { FaBars, FaHouse } from 'react-icons/fa6'
 import { Button } from 'react-bootstrap'
+import { IconoTabla } from '../../lib/tables'
 
 const TabElementosUi: React.FC = () => {
     return (

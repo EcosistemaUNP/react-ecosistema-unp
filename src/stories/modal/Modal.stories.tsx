@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { CustomModal } from '../../../lib/tables/components/Modal';
+import { CustomModal } from '../../../lib/tables/tabla-registros/modal/Modal';
 import { TituloModal } from '../../../lib/ui';
 import { Button } from 'react-bootstrap';
 import { useEffect, useState } from 'react';

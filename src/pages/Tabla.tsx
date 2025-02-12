@@ -3,7 +3,7 @@ import { TablaRegistros } from '../../lib/tables'
 import { Button } from 'react-bootstrap';
 import { ContenidoModal } from '../../lib/ui/contenido-modal/ContenidoModal';
 import { FaBoxArchive, FaClockRotateLeft } from 'react-icons/fa6';
-import { IconoTabla } from '../../lib/ui';
+import { IconoTabla } from '../../lib/tables';
 
 const Tabla: React.FC = () => {
 

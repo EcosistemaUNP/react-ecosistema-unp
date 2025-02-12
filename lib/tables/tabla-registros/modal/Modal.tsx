@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../styles/Modal.css";
+import "./Modal.css";
 
 interface CustomModalProps {
   show: boolean;

@@ -1,25 +1,26 @@
 import React, { useState } from 'react';
 
+import { IconType } from 'react-icons';
+
 import { FaArrowsRotate, FaScaleBalanced, FaTriangleExclamation, FaUser, FaUsers } from 'react-icons/fa6';
 
 import './IconoTabla.css';
-// import { IconType } from 'react-icons';
 
-// interface IconTooltip {
-//     icon: IconType;
-//     color: string;
-//     tooltipText: string;
-// }
+interface IconTooltip {
+    icon: IconType;
+    color: string;
+    tooltipText: string;
+}
 
 interface IconoTablaProps {
     tipoSolicitud: string;
     porGestionar?: boolean;
-    // custom: IconTooltip;
+    customIcon?: IconTooltip;
 }
 
 const IconoTabla: React.FC<IconoTablaProps> = ({ tipoSolicitud, porGestionar = false }) => {
+    
     const [showTooltip, setShowTooltip] = useState(false);
-
 
     let tooltipText = '';
     let color = {};

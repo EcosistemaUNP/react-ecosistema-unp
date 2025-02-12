@@ -3,7 +3,7 @@ import React from "react";
 import { FormControl, FormGroup } from "react-bootstrap";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 
-import "../styles/Buscador.css";
+import "./Buscador.css";
 
 interface BusquedaInputProps {
   onSearch: (value: string) => void;
@@ -34,4 +34,4 @@ const BusquedaInput: React.FC<BusquedaInputProps> = ({ onSearch }) => {
   );
 };
 
-export default BusquedaInput;
+export { BusquedaInput };

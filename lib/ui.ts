@@ -10,8 +10,6 @@ export { ContenedorTarjeta } from './ui/tarjeta/contenedor-tarjeta/ContenedorTar
 
 export { Paginador } from './ui/paginador/Paginador.js'
 
-export { IconoTabla } from './ui/icono-tabla/IconoTabla.js'
-
 export { Logo } from './ui/logo/Logo.js'
 
 export { TarjetaLectura } from './ui/tarjeta-lectura/TarjetaLectura.js'

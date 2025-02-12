@@ -2,7 +2,7 @@ import React from "react";
 import { Table } from "react-bootstrap";
 import { FaGrip } from "react-icons/fa6"; // FaEllipsis, FaGripLines
 
-import '../styles/Tabla.css'
+import './Tabla.css'
 
 interface Column {
   key: string;
