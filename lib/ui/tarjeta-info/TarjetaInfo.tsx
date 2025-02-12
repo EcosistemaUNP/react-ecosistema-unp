@@ -1,19 +1,26 @@
-import React, { useState } from "react";
-
+import React, { useState, useRef, useEffect } from "react";
 import { FaCircleChevronDown, FaCircleChevronRight } from "react-icons/fa6";
-
 import './TarjetaInfo.css';
 
 interface TarjetaInfoProps {
     icon: any;
     label: string;
     children: React.ReactNode;
-    show?: boolean
+    show?: boolean;
 }
 
 const TarjetaInfo: React.FC<TarjetaInfoProps> = ({ icon: Icon, label, show = false, children }) => {
-
     const [showDatos, setShowDatos] = useState(show);
+    const [height, setHeight] = useState(0);
+    const contentRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (showDatos && contentRef.current) {
+            setHeight(contentRef.current.scrollHeight);
+        } else {
+            setHeight(0);
+        }
+    }, [showDatos]);
 
     return (
         <div className='tarjeta-info-container'>
@@ -38,10 +45,15 @@ const TarjetaInfo: React.FC<TarjetaInfoProps> = ({ icon: Icon, label, show = fal
                 </div>
             </div>
 
-            <div className={`tarjeta-info-children-container ${showDatos ? 'open' : ''}`}>
-                {children}
+            <div
+                className="tarjeta-info-children-container"
+                style={{ height: `${height}px` }}
+                ref={contentRef}
+            >
+                <div className="tarjeta-info-content">
+                    {children}
+                </div>
             </div>
-
         </div>
     );
 };
