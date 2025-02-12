@@ -1,8 +1,8 @@
 .icon-solicitud {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.4em;
-    padding: 0.5rem;
-    border-radius: 10px;
+    font-size: 1.45em;
+    padding: 5px;
+    /* color: #287cd1; */
 }

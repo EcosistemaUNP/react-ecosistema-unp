@@ -19,46 +19,48 @@ interface IconoTablaProps {
 }
 
 const IconoTabla: React.FC<IconoTablaProps> = ({ tipoSolicitud, porGestionar = false }) => {
-    
+
     const [showTooltip, setShowTooltip] = useState(false);
 
     let tooltipText = '';
-    let color = {};
+    let tooltipColor = {};
     let Icon = null;
+    let iconColor = { color: !porGestionar ? '#287cd1' : '#c8c8c8' };
 
-    const baseColor = !porGestionar ? '#287cd1' : '#D3D3D3';
-    // const iconColor = !porGestionar ? '#ffffff' : 'darkgray';
+    const individualColor = '#28a19d';
+    const colectivoColor = '#ed7e3e';
+    const juridicoColor = '#3e52edf8';
+    const emergenciaColor = '#ed3e49f8';
+    const reasignacionColor = '#d4c146';
+
+    const nuevoColor = '#666666f4';
 
     switch (tipoSolicitud) {
         case 'Individual':
             tooltipText = !porGestionar ? 'Individual' : 'Nuevo registro';
-            color = { backgroundColor: 'transparent', color: baseColor };
+            tooltipColor = { backgroundColor: !porGestionar ? individualColor : nuevoColor, color: '#f7f7f7' };
             Icon = FaUser;
             break;
         case 'Colectivo':
             tooltipText = !porGestionar ? 'Colectivo' : 'Nuevo registro';
-            color = { backgroundColor: 'transparent', color: baseColor };
-            // color = { backgroundColor: baseColor, color: iconColor };
+            tooltipColor = { backgroundColor: !porGestionar ? colectivoColor : nuevoColor, color: '#f7f7f7' };
             Icon = FaUsers;
             break;
         case 'Jurídico':
             tooltipText = !porGestionar ? 'Jurídico' : 'Nuevo registro';
-            // color = { backgroundColor: !porGestionar ? '#652edb' : '#D3D3D3', color: iconColor };
-            color = { backgroundColor: 'transparent', color: baseColor };
+            tooltipColor = { backgroundColor: !porGestionar ? juridicoColor : nuevoColor, color: '#f7f7f7' };
             Icon = FaScaleBalanced;
             break;
         case 'Emergencia':
             tooltipText = !porGestionar ? 'Emergencia' : 'Nuevo registro';
-            // color = { backgroundColor: !porGestionar ? '#cf3c3c' : '#D3D3D3', color: iconColor };
-            color = { backgroundColor: 'transparent', color: baseColor };
+            tooltipColor = { backgroundColor: !porGestionar ? emergenciaColor : nuevoColor, color: '#f7f7f7' };
             Icon = FaTriangleExclamation;
             break;
         case 'Reasignación':
             tooltipText = !porGestionar ? 'Reasignación' : 'Nuevo registro';
-            // color = { backgroundColor: !porGestionar ? '#ed874c' : '#D3D3D3', color: iconColor };
-            color = { backgroundColor: 'transparent', color: baseColor };
+            tooltipColor = { backgroundColor: !porGestionar ? reasignacionColor : nuevoColor, color: '#f7f7f7' };
             Icon = FaArrowsRotate;
-            break; 
+            break;
         default:
             return null;
     }
@@ -72,7 +74,7 @@ const IconoTabla: React.FC<IconoTablaProps> = ({ tipoSolicitud, porGestionar = f
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 style={{
-                    ...color,
+                    ...iconColor,
                 }}
                 className='icon-solicitud'
             >
@@ -82,20 +84,21 @@ const IconoTabla: React.FC<IconoTablaProps> = ({ tipoSolicitud, porGestionar = f
                 <div
                     style={{
                         position: "absolute",
-                        top: "50%", 
-                        left: "110%", 
-                        transform: "translateY(-50%)", 
+                        top: "50%",
+                        left: "110%",
+                        transform: "translateY(-50%)",
                         backgroundColor: "#eb7575",
                         color: "#fff",
                         padding: "8px 12px",
                         borderRadius: "8px",
                         fontSize: "0.9em",
                         whiteSpace: "nowrap",
-                        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.15)", 
-                        opacity: showTooltip ? 1 : 0, 
-                        visibility: showTooltip ? "visible" : "hidden", 
-                        zIndex: 1000, 
+                        boxShadow: "0 2px 6px rgba(0, 0, 0, 0.15)",
+                        opacity: showTooltip ? 1 : 0,
+                        visibility: showTooltip ? "visible" : "hidden",
+                        zIndex: 1000,
                         transition: "opacity 0.3s ease, visibility 0.3s ease",
+                        ...tooltipColor
                     }}
                 >
                     {tooltipText}
