@@ -1,7 +1,7 @@
 export { Encabezado } from './ui/encabezado/Encabezado.js'
 export { Subtitulo } from './ui/subtitulo/Subtitulo.js'
 
-export { ContenidoModal } from './ui/contenido-modal/ContenidoModal.js'
+export { ContenidoModal } from './tables/tabla-registros/contenido-modal/ContenidoModal.js'
 
 export { Tarjeta } from './ui/tarjeta/Tarjeta.js'
 export { SeccionTarjeta } from './ui/tarjeta/seccion-tarjeta/SeccionTarjeta.js'

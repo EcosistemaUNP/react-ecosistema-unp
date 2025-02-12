@@ -1,31 +1,90 @@
 import React, { useEffect, useState } from 'react'
 import { TablaRegistros } from '../../lib/tables'
 import { Button } from 'react-bootstrap';
-import { ContenidoModal } from '../../lib/ui/contenido-modal/ContenidoModal';
+import { ContenidoModal } from '../../lib/tables/tabla-registros/contenido-modal/ContenidoModal';
 import { FaBoxArchive, FaClockRotateLeft } from 'react-icons/fa6';
 import { IconoTabla } from '../../lib/tables';
+import { ContenedorTarjeta } from '../../lib/ui';
 
 const Tabla: React.FC = () => {
 
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const [showHistoricoCaso, setShowHistoricoCaso] = useState(false);
-  const [showHistoricoSer, setShowHistoricoSer] = useState(false);
-  const [showRemitir, setShowRemitir] = useState(false);
-
-  const [isShowing, setIsShowing] = useState(false);
-
-  const buttons = [
+  const modalContent = [
     {
-      title: 'Contenido uno',
-      icon: FaBoxArchive,
-      onShow: () => { setShowHistoricoSer(true); setIsShowing(true); }
+      label: 'Contenido principal',
+      content: (setView: (view: number) => void) => {
+        return (
+          <>
+            Contenido principal
+            <br /><br />
+            <Button onClick={() => setView(3)}>Ir al contenido cuatro</Button>
+            <br /><br />
+            <Button onClick={() => setView(4)}>Ir al contenido cinco</Button>
+            <br /><br />
+
+            <ContenedorTarjeta>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mollis arcu. Suspendisse non turpis non ligula congue euismod ut quis lorem.
+            </ContenedorTarjeta>
+
+            <br /><br />
+
+            <ContenedorTarjeta>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mollis arcu. Suspendisse non turpis non ligula congue euismod ut quis lorem.
+            </ContenedorTarjeta>
+
+            <br />
+
+            <ContenedorTarjeta>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mollis arcu. Suspendisse non turpis non ligula congue euismod ut quis lorem.
+            </ContenedorTarjeta>
+
+            <br />
+
+            <ContenedorTarjeta>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mollis arcu. Suspendisse non turpis non ligula congue euismod ut quis lorem.
+            </ContenedorTarjeta>
+
+            <br /><br />
+
+            <ContenedorTarjeta>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mollis arcu. Suspendisse non turpis non ligula congue euismod ut quis lorem.
+            </ContenedorTarjeta>
+
+            <br /><br />
+
+            <ContenedorTarjeta>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mollis arcu. Suspendisse non turpis non ligula congue euismod ut quis lorem.
+            </ContenedorTarjeta>
+
+            <br /><br />
+
+            <ContenedorTarjeta>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mollis arcu. Suspendisse non turpis non ligula congue euismod ut quis lorem.
+            </ContenedorTarjeta>
+          </>
+        )
+      }
+
     },
     {
-      title: 'Contenido dos',
+      label: 'Contenido dos',
       icon: FaClockRotateLeft,
-      onShow: () => { setShowHistoricoCaso(true); setIsShowing(true); }
+      content: <>Contenido dos</>
+    },
+    {
+      label: 'Contenido tres',
+      icon: FaBoxArchive,
+      content: <>Contenido tres</>
+    },
+    {
+      label: 'Contenido cuatro',
+      content: <>Contenido cuatro</>
+    },
+    {
+      label: 'Contenido cinco',
+      content: <>Contenido cinco</>
     }
   ];
 
@@ -50,33 +109,61 @@ const Tabla: React.FC = () => {
     switch (column.key) {
       case "numeroRegistro":
         return (
-          <>
-            <ContenidoModal
-              title={row.numeroRegistro}
-              buttons={buttons}
-              isShowing={isShowing}
-              setIsShowing={setIsShowing}
-            >
-              {showHistoricoCaso ? (
-                <>Contenido dos</>
-              ) : showHistoricoSer ? (
-                <>Contenido uno</>
-              ) : showRemitir ? (
-                <>Remitir</>
-              ) : (
-                <>
-                  <Button onClick={onHide}>Cerrar</Button>
-                  <br />
-                  {/* <Button onClick={() => { setShowRemitir(true); setIsShowing(true) }}>Remitir</Button> */}
-                </>
-              )}
-            </ContenidoModal>
-          </>
+          <ContenidoModal
+            title={row.numeroRegistro}
+            modalContent={modalContent}
+          />
         );
       case "nombres":
-        return (<></>);
+        return (
+          <ContenidoModal title={row.numeroRegistro}>
+            <Button onClick={onHide}>Cerrar</Button>
+          </ContenidoModal>
+        );
       case "ubicacion":
-        return (<></>);
+        return (
+          <>
+            <ContenedorTarjeta>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mollis arcu. Suspendisse non turpis non ligula congue euismod ut quis lorem.
+            </ContenedorTarjeta>
+
+            <br /><br />
+
+            <ContenedorTarjeta>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mollis arcu. Suspendisse non turpis non ligula congue euismod ut quis lorem.
+            </ContenedorTarjeta>
+
+            <br />
+
+            <ContenedorTarjeta>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mollis arcu. Suspendisse non turpis non ligula congue euismod ut quis lorem.
+            </ContenedorTarjeta>
+
+            <br />
+
+            <ContenedorTarjeta>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mollis arcu. Suspendisse non turpis non ligula congue euismod ut quis lorem.
+            </ContenedorTarjeta>
+
+            <br /><br />
+
+            <ContenedorTarjeta>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mollis arcu. Suspendisse non turpis non ligula congue euismod ut quis lorem.
+            </ContenedorTarjeta>
+
+            <br /><br />
+
+            <ContenedorTarjeta>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mollis arcu. Suspendisse non turpis non ligula congue euismod ut quis lorem.
+            </ContenedorTarjeta>
+
+            <br /><br />
+
+            <ContenedorTarjeta>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mollis arcu. Suspendisse non turpis non ligula congue euismod ut quis lorem.
+            </ContenedorTarjeta>
+          </>
+        );
       default:
         return <p>No hay información adicional disponible.</p>;
     }
@@ -101,14 +188,6 @@ const Tabla: React.FC = () => {
       fetchData();
     }, 2500)
   }, [])
-
-  useEffect(() => {
-    if (!isShowing) {
-      setShowHistoricoCaso(false);
-      setShowHistoricoSer(false);
-      setShowRemitir(false);
-    }
-  }, [isShowing])
 
   return (
     <>

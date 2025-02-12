@@ -11,6 +11,12 @@ interface ButtonArray {
     onShow: () => void;
 }
 
+// interface ModalContent {
+//     label: string;
+//     icon: IconType;
+//     content: React.ReactElement | React.ReactElement[];
+// }
+
 // Props
 interface ContenidoModalProps {
     title: string;
