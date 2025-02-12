@@ -4,7 +4,6 @@ import { Button } from 'react-bootstrap';
 import { ContenidoModal } from '../../lib/tables/tabla-registros/contenido-modal/ContenidoModal';
 import { FaBoxArchive, FaClockRotateLeft } from 'react-icons/fa6';
 import { IconoTabla } from '../../lib/tables';
-import { ContenedorTarjeta } from '../../lib/ui';
 
 const Tabla: React.FC = () => {
 
@@ -19,50 +18,9 @@ const Tabla: React.FC = () => {
           <>
             Contenido principal
             <br /><br />
-            <Button onClick={() => setView(3)}>Ir al contenido cuatro</Button>
+            <Button onClick={() => setView(3)} variant='unp_tertiary'>Ir al contenido cuatro</Button>
             <br /><br />
-            <Button onClick={() => setView(4)}>Ir al contenido cinco</Button>
-            <br /><br />
-
-            <ContenedorTarjeta>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mollis arcu. Suspendisse non turpis non ligula congue euismod ut quis lorem.
-            </ContenedorTarjeta>
-
-            <br /><br />
-
-            <ContenedorTarjeta>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mollis arcu. Suspendisse non turpis non ligula congue euismod ut quis lorem.
-            </ContenedorTarjeta>
-
-            <br />
-
-            <ContenedorTarjeta>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mollis arcu. Suspendisse non turpis non ligula congue euismod ut quis lorem.
-            </ContenedorTarjeta>
-
-            <br />
-
-            <ContenedorTarjeta>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mollis arcu. Suspendisse non turpis non ligula congue euismod ut quis lorem.
-            </ContenedorTarjeta>
-
-            <br /><br />
-
-            <ContenedorTarjeta>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mollis arcu. Suspendisse non turpis non ligula congue euismod ut quis lorem.
-            </ContenedorTarjeta>
-
-            <br /><br />
-
-            <ContenedorTarjeta>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mollis arcu. Suspendisse non turpis non ligula congue euismod ut quis lorem.
-            </ContenedorTarjeta>
-
-            <br /><br />
-
-            <ContenedorTarjeta>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mollis arcu. Suspendisse non turpis non ligula congue euismod ut quis lorem.
-            </ContenedorTarjeta>
+            <Button onClick={() => setView(4)} variant='unp_send'>Ir al contenido cinco</Button>
           </>
         )
       }
@@ -123,45 +81,6 @@ const Tabla: React.FC = () => {
       case "ubicacion":
         return (
           <>
-            <ContenedorTarjeta>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mollis arcu. Suspendisse non turpis non ligula congue euismod ut quis lorem.
-            </ContenedorTarjeta>
-
-            <br /><br />
-
-            <ContenedorTarjeta>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mollis arcu. Suspendisse non turpis non ligula congue euismod ut quis lorem.
-            </ContenedorTarjeta>
-
-            <br />
-
-            <ContenedorTarjeta>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mollis arcu. Suspendisse non turpis non ligula congue euismod ut quis lorem.
-            </ContenedorTarjeta>
-
-            <br />
-
-            <ContenedorTarjeta>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mollis arcu. Suspendisse non turpis non ligula congue euismod ut quis lorem.
-            </ContenedorTarjeta>
-
-            <br /><br />
-
-            <ContenedorTarjeta>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mollis arcu. Suspendisse non turpis non ligula congue euismod ut quis lorem.
-            </ContenedorTarjeta>
-
-            <br /><br />
-
-            <ContenedorTarjeta>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mollis arcu. Suspendisse non turpis non ligula congue euismod ut quis lorem.
-            </ContenedorTarjeta>
-
-            <br /><br />
-
-            <ContenedorTarjeta>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mollis arcu. Suspendisse non turpis non ligula congue euismod ut quis lorem.
-            </ContenedorTarjeta>
           </>
         );
       default:

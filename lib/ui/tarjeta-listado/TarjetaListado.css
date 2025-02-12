@@ -1,0 +1,72 @@
+.listado-tarjetas {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tarjeta-listado-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.tarjeta-listado-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 1px solid #F4F4F4;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px #00000014;
+    color: #303D50;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.tarjeta-listado-container:hover {
+    background-color: #303D50;
+    border: 1px solid #303D50;
+    color: white;
+    transition: all 0.2s ease-in-out
+}
+
+.tarjeta-listado-label-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.tarjeta-listado-process-menu {
+    font-size: 20px;
+}
+
+.tarjeta-listado-state-container {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tarjeta-listado-download-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 10px;
+    border: 1px solid #F4F4F4;
+    box-shadow: 0 2px 4px #00000014;
+    padding: 1rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+.tarjeta-listado-download-container:hover {
+    background-color: #303D50;
+    border: 1px solid #303D50;
+    color: white;
+    transition: all 0.2s ease-in-out
+}
+
+.tarjeta-listado-download-icon {
+    font-size: 25px;
+}

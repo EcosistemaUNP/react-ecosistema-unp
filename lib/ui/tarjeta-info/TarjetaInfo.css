@@ -1,0 +1,83 @@
+.tarjeta-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border: 1px solid #F4F4F4;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px #00000014;
+}
+
+.tarjeta-info-titulo-container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    padding: 1rem;
+    color: #303D50;
+    font-weight: 500;
+}
+
+.tarjeta-info-label-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.tarjeta-info-icon {
+    font-size: 20px;
+}
+
+.tarjeta-info-label {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-left: 0.66rem;
+    color: #303d50;
+}
+
+.tarjeta-info-show-container {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tarjeta-info-show-button {
+    background-color: transparent !important;
+    font-size: 1.25rem !important;
+    color: #303D50;
+    padding: 0rem !important;
+    cursor: pointer;
+}
+
+.tarjeta-info-show-button:hover {
+    color: #697586;
+    transition: all 0.3s ease-in-out;
+}
+
+.tarjeta-info-children-container {
+    padding: 0 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s linear;
+}
+
+.tarjeta-info-children-container.open {
+    padding-bottom: 1rem;
+    max-height: 100vh;
+    overflow: auto;
+}
+
+.tarjeta-info-children-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.tarjeta-info-children-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.tarjeta-info-children-container::-webkit-scrollbar-thumb {
+    background-color: #303D50;
+    border-radius: 10px;
+    border: 3px solid transparent;
+    background-clip: padding-box;
+}

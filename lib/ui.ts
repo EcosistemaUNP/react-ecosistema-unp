@@ -14,3 +14,6 @@ export { Logo } from './ui/logo/Logo.js'
 
 export { TarjetaLectura } from './ui/tarjeta-lectura/TarjetaLectura.js'
 export { SeccionTarjetaLectura } from './ui/tarjeta-lectura/seccion-tarjeta-lectura/SeccionTarjetaLectura.js'
+
+export { TarjetaListado } from './ui/tarjeta-listado/TarjetaListado.js'
+export { TarjetaInfo } from './ui/tarjeta-info/TarjetaInfo.js'

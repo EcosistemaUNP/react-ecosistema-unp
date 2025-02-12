@@ -1,4 +1,5 @@
 import { TabVentana, VentanaTabs } from '../lib/shared'
+import { TabElementosModal } from './pages/TabElementosModal'
 import { TabElementosUi } from './pages/TabElementosUi'
 import { Tabla } from './pages/Tabla'
 import { TablaShared } from './pages/TablaShared'
@@ -9,6 +10,9 @@ import { TabTarjetas } from './pages/TabTarjetas'
 function App() {
   return (
     <VentanaTabs>
+      <TabVentana eventKey="modal" title={'Elementos modal'}>
+        <TabElementosModal />
+      </TabVentana>
       <TabVentana eventKey="lectura" title={'Tarjeta lectura'}>
         <TabLectura />
       </TabVentana>
