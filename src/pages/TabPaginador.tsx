@@ -20,19 +20,53 @@ const TabPaginador: React.FC = () => {
         {
             label: 'Dos',
             icon: FaPerson,
-            content: <>Contenido de la página dos</>,
+            content:
+                <>
+                    <Tarjeta title='Título de la tarjeta'>
+                        <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
+                        Contenido de la tarjeta
+                    </Tarjeta>
+                    <Tarjeta title='Título de la tarjeta'>
+                        <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
+                        Contenido de la tarjeta
+                    </Tarjeta>
+                    <Tarjeta title='Título de la tarjeta'>
+                        <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
+                        Contenido de la tarjeta
+                    </Tarjeta>
+                </>,
             handleNextClick: () => console.log('Dos')
         },
         {
             label: 'Tres',
             icon: FaPerson,
-            content: <>Contenido de la página tres</>,
+            content:
+                <>
+                    <Tarjeta title='Título de la tarjeta'>
+                        <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
+                        Contenido de la tarjeta
+                    </Tarjeta>
+                    <Tarjeta title='Título de la tarjeta'>
+                        <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
+                        Contenido de la tarjeta
+                    </Tarjeta>
+                    <Tarjeta title='Título de la tarjeta'>
+                        <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
+                        Contenido de la tarjeta
+                    </Tarjeta>
+                </>,
             handleNextClick: () => console.log('Tres')
         },
         {
             label: 'Cuatro',
             icon: FaPerson,
-            content: <>Contenido de la página cuatro</>
+            content:
+                <>
+                    <Tarjeta title='Título de la tarjeta'>
+                        <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
+                        Contenido de la tarjeta
+                    </Tarjeta>
+                </>,
             // handleNextClick: (e: any) => void;
         },
         {
@@ -55,11 +89,17 @@ const TabPaginador: React.FC = () => {
         }
     ]
     return (
-        <Paginador
-            stepContent={form}
-            onSubmit={() => console.log('Enviado!!!')}
+        <>
+            {/* <Tarjeta title='Título de la tarjeta'>
+                <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
+                Contenido de la tarjeta
+            </Tarjeta> */}
+            <Paginador
+                stepContent={form}
+                onSubmit={() => console.log('Enviado!!!')}
             // canJump={true}
-        />
+            />
+        </>
     )
 }
 

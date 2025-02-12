@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Button, Card } from "react-bootstrap";
 import { IconType } from "react-icons";
 
@@ -18,13 +18,23 @@ interface PaginadorProps {
 }
 
 const Paginador: React.FC<PaginadorProps> = ({ stepContent, onSubmit, canJump = true }) => {
-
   const [currentStep, setCurrentStep] = useState(0);
+
+  const paginadorRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (paginadorRef.current) {
+      paginadorRef.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+  }, [currentStep]);
 
   return (
     <>
       {/* Tarjeta con el páginador */}
-      <Card className="border-0 paginador-card">
+      <Card ref={paginadorRef} className="border-0 paginador-card">
         <ul id="progressbar">
           {stepContent.map((step, index) => (
             <li

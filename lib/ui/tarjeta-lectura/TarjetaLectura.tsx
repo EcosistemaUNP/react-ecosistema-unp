@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Button } from "react-bootstrap";
 import { IconType } from "react-icons";
 
@@ -27,8 +27,18 @@ type TarjetaLecturaProps = ({
 })
 
 const TarjetaLectura: React.FC<TarjetaLecturaProps> = ({ title, subtitle, headerContent, stepContent, children }) => {
-
   const [currentStep, setCurrentStep] = useState(0);
+
+  const paginadorRef = useRef<HTMLUListElement>(null);
+
+  useEffect(() => {
+    if (paginadorRef.current) {
+      paginadorRef.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+  }, [currentStep]);
 
   return (
     <>
@@ -52,7 +62,7 @@ const TarjetaLectura: React.FC<TarjetaLecturaProps> = ({ title, subtitle, header
         {stepContent ? (
           <>
             <SeccionTarjetaLectura title="Secciones">
-              <ul id="paginador-tarjeta-lectura">
+              <ul ref={paginadorRef} id="paginador-tarjeta-lectura">
                 {stepContent.map((step, index) => (
                   <li
                     key={index}
