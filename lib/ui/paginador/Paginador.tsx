@@ -13,10 +13,11 @@ interface StepContent {
 
 interface PaginadorProps {
   stepContent: StepContent[];
-  onSubmit?: (...args: any[]) => any; // Falta definir el tipado
+  onSubmit: (...args: any[]) => any;
+  canJump?: boolean;
 }
 
-const Paginador: React.FC<PaginadorProps> = ({ stepContent, onSubmit }) => {
+const Paginador: React.FC<PaginadorProps> = ({ stepContent, onSubmit, canJump = true }) => {
 
   const [currentStep, setCurrentStep] = useState(0);
 
@@ -29,7 +30,17 @@ const Paginador: React.FC<PaginadorProps> = ({ stepContent, onSubmit }) => {
             <li
               key={index}
               className={index <= currentStep ? "active" : ""}
-              onClick={() => setCurrentStep(index)}
+              onClick={() => {
+                if (!canJump) {
+                  if (index === (currentStep + 1)) {
+                    setCurrentStep(index);
+                  } else if (index < currentStep) {
+                    setCurrentStep(index);
+                  }
+                } else if (canJump) {
+                  setCurrentStep(index);
+                }
+              }}
             >
               <div className={`step ${index <= currentStep ? "active" : ""}`}>
                 <step.icon />
@@ -46,11 +57,14 @@ const Paginador: React.FC<PaginadorProps> = ({ stepContent, onSubmit }) => {
       </div>
 
       {/* Sección con botones */}
-      <div className="paginador-buttons" style={{ display: 'flex', justifyContent: 'space-between' }}>
+      <div className="paginador-buttons" style={{ display: 'flex', justifyContent: 'end' }}>
         {currentStep > 0 && (
           <Button
             variant="unp_secondary"
             onClick={() => setCurrentStep(currentStep - 1)}
+            style={{
+              marginRight: '1rem'
+            }}
           >
             Anterior
           </Button>
@@ -70,7 +84,7 @@ const Paginador: React.FC<PaginadorProps> = ({ stepContent, onSubmit }) => {
         {currentStep === stepContent.length - 1 && (
           <Button
             type="submit"
-            variant="success"
+            variant="unp_send"
             onClick={onSubmit}
           >
             Enviar

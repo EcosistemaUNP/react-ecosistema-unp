@@ -2,7 +2,7 @@ import React from "react";
 
 import { Button, Card, CardBody, CardHeader, Row } from "react-bootstrap";
 import './Tarjeta.css';
-import { SeccionTarjeta } from "../seccion-tarjeta/SeccionTarjeta";
+import { SeccionTarjeta } from "./seccion-tarjeta/SeccionTarjeta";
 
 interface TarjetaProps {
     title: string;

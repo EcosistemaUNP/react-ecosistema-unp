@@ -1,6 +1,6 @@
 import React from 'react'
-import { Paginador } from '../../lib/ui'
-import { FaPerson } from 'react-icons/fa6'
+import { Paginador, Subtitulo, Tarjeta } from '../../lib/ui'
+import { FaHouse, FaPerson } from 'react-icons/fa6'
 
 const TabPaginador: React.FC = () => {
 
@@ -8,7 +8,13 @@ const TabPaginador: React.FC = () => {
         {
             label: 'Uno',
             icon: FaPerson,
-            content: <>Contenido de la página uno</>,
+            content:
+                <>
+                    <Tarjeta title='Título de la tarjeta'>
+                        <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
+                        Contenido de la tarjeta
+                    </Tarjeta>
+                </>,
             handleNextClick: () => console.log('Uno')
         },
         {
@@ -52,6 +58,7 @@ const TabPaginador: React.FC = () => {
         <Paginador
             stepContent={form}
             onSubmit={() => console.log('Enviado!!!')}
+            // canJump={true}
         />
     )
 }
