@@ -109,7 +109,7 @@ body.contrast-govco * {
     color: var(--govcolor-white);
     background-color: var(--govcolor-havelock-lue);
     white-space: nowrap;
-    display: flex;
+    display: none; /* No cambiar a flex */
     opacity: 0;
 
     /* transition: opacity 0.2s ease, visibility 0.2s ease !important;
