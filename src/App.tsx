@@ -10,14 +10,14 @@ import { TabTarjetas } from './pages/TabTarjetas'
 function App() {
   return (
     <VentanaTabs>
+      <TabVentana eventKey="ui" title={'Elementos UI'}>
+        <TabElementosUi />
+      </TabVentana>
       <TabVentana eventKey="modal" title={'Elementos modal'}>
         <TabElementosModal />
       </TabVentana>
       <TabVentana eventKey="lectura" title={'Tarjeta lectura'}>
         <TabLectura />
-      </TabVentana>
-      <TabVentana eventKey="ui" title={'Elementos UI'}>
-        <TabElementosUi />
       </TabVentana>
       <TabVentana eventKey="tarjetas" title={'Tarjetas'}>
         <TabTarjetas />

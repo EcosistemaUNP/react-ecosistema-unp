@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 
-import '../styles/BarraAccesibilidad.css';
+import './BarraAccesibilidad.css';
 
-const BarraAccesibilidad: React.FC = () => {
+const BarraAccesibilidad = () => {
   const [isContrast, setIsContrast] = useState(false);
   const [fontSizeDelta, setFontSizeDelta] = useState(0);
   const [activeButton, setActiveButton] = useState<string | null>(null);
-  const FONT_LIMITS = { MIN: -5, MAX: 5 };
+  const FONT_LIMITS = { MIN: -2, MAX: 5 };
 
   // Efecto para modo contraste
   useEffect(() => {
@@ -40,9 +40,9 @@ const BarraAccesibilidad: React.FC = () => {
 
   return (
     <div className="position-fixed top-50 translate-middle-y" style={{ right: 0, zIndex: 1200 }}>
-      <div className="barra-accesibilidad-govco">
+      <div className="barra-accesibilidad-govco d-none d-lg-flex">
         <button
-          className={`${activeButton === 'contrast' ? 'active' : ''}`}
+          className={`contrast ${activeButton === 'contrast' ? 'active' : ''}`}
           aria-label="Cambiar contraste"
           onClick={handleContrast}
         >
@@ -50,7 +50,7 @@ const BarraAccesibilidad: React.FC = () => {
         </button>
 
         <button
-          className={`${activeButton === 'decrease' ? 'active' : ''}`}
+          className={`decrease-font-size ${activeButton === 'decrease' ? 'active' : ''}`}
           aria-label="Disminuir letra"
           onClick={() => handleFontSize('decrease')}
           data-decrease-limit={FONT_LIMITS.MIN}
@@ -59,7 +59,7 @@ const BarraAccesibilidad: React.FC = () => {
         </button>
 
         <button
-          className={`${activeButton === 'increase' ? 'active' : ''}`}
+          className={`increase-font-size ${activeButton === 'increase' ? 'active' : ''}`}
           aria-label="Aumentar letra"
           onClick={() => handleFontSize('increase')}
           data-increase-limit={FONT_LIMITS.MAX}

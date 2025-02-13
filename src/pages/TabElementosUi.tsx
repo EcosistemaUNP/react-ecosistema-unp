@@ -3,6 +3,7 @@ import { Encabezado, Logo, Subtitulo } from '../../lib/ui'
 import { FaBars, FaHouse } from 'react-icons/fa6'
 import { Button } from 'react-bootstrap'
 import { IconoTabla } from '../../lib/tables'
+import { BarraAccesibilidad } from '../../lib/accessibility'
 
 const TabElementosUi: React.FC = () => {
     return (
@@ -56,6 +57,8 @@ const TabElementosUi: React.FC = () => {
             <Button variant='unp_tertiary'>Terciario</Button>
             <br /><br />
             <Button variant='unp_send'>Enviar</Button>
+
+            <BarraAccesibilidad />
         </>
     )
 }
