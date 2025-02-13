@@ -39,8 +39,8 @@ const BarraAccesibilidad = () => {
   };
 
   return (
-    <div className="position-fixed top-50 translate-middle-y" style={{ right: 0, zIndex: 1200 }}>
-      <div className="barra-accesibilidad-govco d-none d-lg-flex">
+    <div className="">
+      <div className="barra-accesibilidad-govco">
         <button
           className={`contrast ${activeButton === 'contrast' ? 'active' : ''}`}
           aria-label="Cambiar contraste"
