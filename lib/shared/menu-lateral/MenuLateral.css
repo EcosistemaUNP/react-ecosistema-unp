@@ -16,7 +16,7 @@
 }
 
 body {
-  min-height: calc(100vh - 8px);
+  min-height: calc(100vh - 0.5rem);
 }
 
 /* sidebar-bar-panel */

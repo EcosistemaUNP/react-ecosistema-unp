@@ -47,9 +47,9 @@ const ContenidoModal: React.FC<ContenidoModalProps> = ({ title, modalContent, ch
                                 {hideButtons && (
                                     <div className={`buttons-group ${isShowing ? "hide" : "show"}`}>
                                         {modalContent.slice(1).map((content, i) => (
-                                            <>
+                                            <React.Fragment key={i}>
                                                 {content.icon && (
-                                                    <div key={i + 1} className="icon-container">
+                                                    <div className="icon-container">
                                                         <content.icon
                                                             className='icon-registro'
                                                             onClick={() => {
@@ -63,7 +63,7 @@ const ContenidoModal: React.FC<ContenidoModalProps> = ({ title, modalContent, ch
                                                         <span className="tooltip-text">{content.label}</span>
                                                     </div>
                                                 )}
-                                            </>
+                                            </React.Fragment>
                                         ))}
                                     </div>
                                 )}
