@@ -5,7 +5,7 @@ export { ContenidoModal } from './tables/tabla-registros/contenido-modal/Conteni
 
 export { Tarjeta } from './ui/tarjeta/Tarjeta.js'
 export { SeccionTarjeta } from './ui/tarjeta/seccion-tarjeta/SeccionTarjeta.js'
-export { TarjetaAgregar } from './ui/tarjeta/tarjeta-agregar/TarjetaAgregar.js'
+export { NuevoElemento } from './ui/tarjeta/nuevo-elemento/NuevoElemento.js'
 export { ContenedorTarjeta } from './ui/tarjeta/contenedor-tarjeta/ContenedorTarjeta.js'
 
 export { Paginador } from './ui/paginador/Paginador.js'

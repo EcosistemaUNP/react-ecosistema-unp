@@ -1,5 +1,5 @@
 import React from 'react'
-import { ContenedorTarjeta, SeccionTarjeta, Subtitulo, Tarjeta, TarjetaAgregar } from '../../lib/ui'
+import { ContenedorTarjeta, SeccionTarjeta, Subtitulo, Tarjeta, NuevoElemento } from '../../lib/ui'
 import { FaHouse } from 'react-icons/fa6'
 // import { BarraAccesibilidad } from '../../lib/accessibility'
 
@@ -11,23 +11,23 @@ const TabTarjetas: React.FC = () => {
 
   return (
     <>
-      {/* <Tarjeta title='Título de la tarjeta' hasBody={false}>
+      <Tarjeta title='Título de la tarjeta'>
         <SeccionTarjeta>
           <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
-          <TarjetaAgregar onClose={() => console.log('Hola')} title='Nuevo elemento 1' isGray={true}>
+          <NuevoElemento onClose={() => console.log('Hola')} title='Nuevo elemento 1' isGray={true}>
             Contenido de la tarjeta para agregar
             <br />
             Input
             <br />
             Input
-          </TarjetaAgregar>
-          <TarjetaAgregar onClose={() => console.log('Hola')} title='Nuevo elemento 2' isGray={true}>
+          </NuevoElemento>
+          <NuevoElemento onClose={() => console.log('Hola')} title='Nuevo elemento 2' isGray={true}>
             Contenido de la tarjeta para agregar
             <br />
             Input
             <br />
             Input
-          </TarjetaAgregar>
+          </NuevoElemento>
           <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
           Contenido
           <ContenedorTarjeta>
@@ -42,39 +42,39 @@ const TabTarjetas: React.FC = () => {
             Contenido en el contenedor blanco
           </ContenedorTarjeta>
           Contenedor gris
-          <TarjetaAgregar onClose={click}>
+          <NuevoElemento onClose={click}>
             Contenido de la tarjeta para agregar
             <br />
             Input
             <br />
             Input
-          </TarjetaAgregar>
-          <TarjetaAgregar onClose={click}>
+          </NuevoElemento>
+          <NuevoElemento onClose={click}>
             Contenido de la tarjeta para agregar
             <br />
             Input
             <br />
             Input
-          </TarjetaAgregar>
+          </NuevoElemento>
         </SeccionTarjeta>
       </Tarjeta>
 
       <Tarjeta title='Título de la tarjeta dos'>
         <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
-        <TarjetaAgregar onClose={() => console.log('Hola')} title='Nuevo elemento 1' isGray={true}>
+        <NuevoElemento onClose={() => console.log('Hola')} title='Nuevo elemento 1' isGray={true}>
           Contenido de la tarjeta para agregar
           <br />
           Input
           <br />
           Input
-        </TarjetaAgregar>
-        <TarjetaAgregar onClose={() => console.log('Hola')} title='Nuevo elemento 2' isGray={true}>
+        </NuevoElemento>
+        <NuevoElemento onClose={() => console.log('Hola')} title='Nuevo elemento 2' isGray={true}>
           Contenido de la tarjeta para agregar
           <br />
           Input
           <br />
           Input
-        </TarjetaAgregar>
+        </NuevoElemento>
         <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
         Contenido
         <ContenedorTarjeta>
@@ -82,7 +82,7 @@ const TabTarjetas: React.FC = () => {
         </ContenedorTarjeta>
         <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
         Contenido
-      </Tarjeta> */}
+      </Tarjeta>
 
       <Tarjeta title="Ejemplo con secciones" method='post' onSubmit={() => console.log('Enviado!!')}>
         <SeccionTarjeta>

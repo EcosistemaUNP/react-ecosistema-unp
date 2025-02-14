@@ -3,7 +3,7 @@ import React from "react";
 import { FaTrash } from "react-icons/fa6";
 import { Button } from "react-bootstrap";
 
-interface TarjetaAgregarProps {
+interface NuevoElementoProps {
     title?: string;
     children: React.ReactNode;
     onClose: (...args: any[]) => any;
@@ -18,7 +18,7 @@ const titleStyle = {
     color: '#303d50'
 };
 
-const TarjetaAgregar: React.FC<TarjetaAgregarProps> = ({ title, children, onClose, isGray = false }) => {
+const NuevoElemento: React.FC<NuevoElementoProps> = ({ title, children, onClose, isGray = false }) => {
     return (
         <div 
         className="border border-gray-300 rounded-3" 
@@ -57,4 +57,4 @@ const TarjetaAgregar: React.FC<TarjetaAgregarProps> = ({ title, children, onClos
     );
 };
 
-export { TarjetaAgregar };
+export { NuevoElemento };

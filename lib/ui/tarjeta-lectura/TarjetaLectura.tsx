@@ -29,20 +29,25 @@ type TarjetaLecturaProps = ({
 const TarjetaLectura: React.FC<TarjetaLecturaProps> = ({ title, subtitle, headerContent, stepContent, children }) => {
   const [currentStep, setCurrentStep] = useState(0);
 
-  const paginadorRef = useRef<HTMLUListElement>(null);
+  const tarjetaRef = useRef<HTMLFormElement>(null);
+  const paginadorRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (paginadorRef.current) {
+    if (paginadorRef.current && currentStep > 0) {
       paginadorRef.current.scrollIntoView({
         behavior: 'smooth',
-        block: 'start'
       })
     }
+    // else if ( tarjetaRef.current && currentStep < 1) {
+    //   tarjetaRef.current.scrollIntoView({
+    //     behavior: 'smooth',
+    //   })
+    // }
   }, [currentStep]);
 
   return (
     <>
-      <form className="form_qy">
+      <form ref={tarjetaRef} className="form_qy">
         {/* Encabezado de la tarjeta */}
         <div className='main_title_container_qy'>
           <div className='subtitle_container_qy'>
@@ -60,9 +65,9 @@ const TarjetaLectura: React.FC<TarjetaLecturaProps> = ({ title, subtitle, header
 
         {/* Si hay paginador */}
         {stepContent ? (
-          <>
+          <div ref={paginadorRef}>
             <SeccionTarjetaLectura title="Secciones">
-              <ul ref={paginadorRef} id="paginador-tarjeta-lectura">
+              <ul id="paginador-tarjeta-lectura">
                 {stepContent.map((step, index) => (
                   <li
                     key={index}
@@ -82,7 +87,7 @@ const TarjetaLectura: React.FC<TarjetaLecturaProps> = ({ title, subtitle, header
             <div>
               {stepContent[currentStep].content}
             </div>
-          </>
+          </div>
         ) : children && (
           <>
             {/* Contenido de la página */}
