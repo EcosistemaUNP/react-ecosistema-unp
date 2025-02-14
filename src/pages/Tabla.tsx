@@ -51,7 +51,7 @@ const Tabla: React.FC = () => {
       key: 'tipoRuta',
       label: 'Solicitud',
       renderComponent: (rowData: any) => (
-        <IconoTabla tipoSolicitud={rowData.tipoRuta} />
+        <IconoTabla recordType={rowData.tipoRuta} />
       )
     },
     { key: 'numeroRegistro', label: 'Registro', hasModal: true },

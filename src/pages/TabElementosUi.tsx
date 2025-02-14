@@ -1,6 +1,6 @@
 import React from 'react'
 import { Encabezado, Logo, Subtitulo } from '../../lib/ui'
-import { FaBars, FaHouse } from 'react-icons/fa6'
+import { FaBars, FaHouse, FaMap, FaShield } from 'react-icons/fa6'
 import { Button } from 'react-bootstrap'
 import { IconoTabla } from '../../lib/tables'
 import { BarraAccesibilidad } from '../../lib/accessibility'
@@ -34,20 +34,29 @@ const TabElementosUi: React.FC = () => {
             <Logo type='ecosistema' variant='letras' color='blanco' height='50px' />
 
             <Subtitulo icon={FaBars} subtitulo={'Iconos tabla'} />
-            <IconoTabla tipoSolicitud='Individual' />
-            <IconoTabla tipoSolicitud='Individual' porGestionar={true} />
+            <IconoTabla recordType='Individual' />
+            <IconoTabla recordType='Individual' taken={false} />
             <br /><br />
-            <IconoTabla tipoSolicitud='Colectivo' />
-            <IconoTabla tipoSolicitud='Colectivo' porGestionar={true} />
+            <IconoTabla recordType='Colectivo' />
+            <IconoTabla recordType='Colectivo' taken={false} />
             <br /><br />
-            <IconoTabla tipoSolicitud='Emergencia' />
-            <IconoTabla tipoSolicitud='Emergencia' porGestionar={true} />
+            <IconoTabla recordType='Emergencia' />
+            <IconoTabla recordType='Emergencia' taken={false} />
             <br /><br />
-            <IconoTabla tipoSolicitud='Jurídico' />
-            <IconoTabla tipoSolicitud='Jurídico' porGestionar={true} />
+            <IconoTabla recordType='Jurídico' />
+            <IconoTabla recordType='Jurídico' taken={false} />
             <br /><br />
-            <IconoTabla tipoSolicitud='Reasignación' />
-            <IconoTabla tipoSolicitud='Reasignación' porGestionar={true} />
+            <IconoTabla recordType='Reasignación' />
+            <IconoTabla recordType='Reasignación' taken={false} />
+            <br /><br />
+            <IconoTabla recordType='No encontrado' />
+            <IconoTabla recordType='No encontrado' taken={false} />
+            <br /><br />
+            <IconoTabla customIcon={{icon: FaShield, color: '#e1ff00', tooltipText: 'Custom text & color'}} />
+            <IconoTabla customIcon={{icon: FaShield, color: '#e1ff00', tooltipText: 'Custom text & color'}} taken={false} />
+            <br /><br />
+            <IconoTabla customIcon={{icon: FaMap, color: '#2b0f54', tooltipText: 'Custom text & color'}} />
+            <IconoTabla customIcon={{icon: FaMap, color: '#2b0f54', tooltipText: 'Custom text & color'}} taken={false} />
 
             <Subtitulo icon={FaBars} subtitulo={'Botones'} />
             <Button variant='unp_primary'>Primario</Button>

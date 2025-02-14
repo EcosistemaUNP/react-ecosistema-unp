@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { IconType } from 'react-icons';
 
-import { FaArrowsRotate, FaScaleBalanced, FaTriangleExclamation, FaUser, FaUsers } from 'react-icons/fa6';
+import { FaArrowsRotate, FaFolder, FaScaleBalanced, FaTriangleExclamation, FaUser, FaUsers } from 'react-icons/fa6';
 
 import './IconoTabla.css';
 
@@ -12,57 +12,102 @@ interface IconTooltip {
     tooltipText: string;
 }
 
-interface IconoTablaProps {
-    tipoSolicitud: string;
-    porGestionar?: boolean;
-    customIcon?: IconTooltip;
-}
+type IconoTablaProps = ({
+    recordType: string;
+    taken?: boolean;
+    customIcon?: never;
+} | {
+    recordType?: never;
+    taken?: boolean;
+    customIcon: IconTooltip;
+})
 
-const IconoTabla: React.FC<IconoTablaProps> = ({ tipoSolicitud, porGestionar = false }) => {
+const IconoTabla: React.FC<IconoTablaProps> = ({ recordType, taken = true, customIcon }) => {
 
     const [showTooltip, setShowTooltip] = useState(false);
 
     let tooltipText = '';
     let tooltipColor = {};
     let Icon = null;
-    let iconColor = { color: !porGestionar ? '#287cd1' : '#c8c8c8' };
+    let iconColor = { color: taken ? '#287cd1' : '#c8c8c8' };
 
     const individualColor = '#28a19d';
     const colectivoColor = '#ed7e3e';
     const juridicoColor = '#3e52edf8';
     const emergenciaColor = '#ed3e49f8';
-    const reasignacionColor = '#d4c146';
+    const reasignacionColor = '#edd958';
+    const defaultColor = '#6b6e6e';
 
     const nuevoColor = '#666666f4';
 
-    switch (tipoSolicitud) {
-        case 'Individual':
-            tooltipText = !porGestionar ? 'Individual' : 'Nuevo registro';
-            tooltipColor = { backgroundColor: !porGestionar ? individualColor : nuevoColor, color: '#f7f7f7' };
-            Icon = FaUser;
-            break;
-        case 'Colectivo':
-            tooltipText = !porGestionar ? 'Colectivo' : 'Nuevo registro';
-            tooltipColor = { backgroundColor: !porGestionar ? colectivoColor : nuevoColor, color: '#f7f7f7' };
-            Icon = FaUsers;
-            break;
-        case 'Jurídico':
-            tooltipText = !porGestionar ? 'Jurídico' : 'Nuevo registro';
-            tooltipColor = { backgroundColor: !porGestionar ? juridicoColor : nuevoColor, color: '#f7f7f7' };
-            Icon = FaScaleBalanced;
-            break;
-        case 'Emergencia':
-            tooltipText = !porGestionar ? 'Emergencia' : 'Nuevo registro';
-            tooltipColor = { backgroundColor: !porGestionar ? emergenciaColor : nuevoColor, color: '#f7f7f7' };
-            Icon = FaTriangleExclamation;
-            break;
-        case 'Reasignación':
-            tooltipText = !porGestionar ? 'Reasignación' : 'Nuevo registro';
-            tooltipColor = { backgroundColor: !porGestionar ? reasignacionColor : nuevoColor, color: '#f7f7f7' };
-            Icon = FaArrowsRotate;
-            break;
-        default:
-            return null;
+    const getLuminance = (color: string): number => {
+        const hex = color.replace(/^#/, '');
+        const r = parseInt(hex.slice(0, 2), 16) / 255;
+        const g = parseInt(hex.slice(2, 4), 16) / 255;
+        const b = parseInt(hex.slice(4, 6), 16) / 255;
+    
+        // Calcula la luminancia
+        return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+    };
+
+    if (!customIcon) {
+        switch (recordType) {
+            case 'Individual':
+                tooltipText = taken ? 'Individual' : 'Nuevo registro';
+                tooltipColor = { 
+                    backgroundColor: taken ? individualColor : nuevoColor, 
+                    color: '#fcfcfc'
+                };
+                Icon = FaUser;
+                break;
+            case 'Colectivo':
+                tooltipText = taken ? 'Colectivo' : 'Nuevo registro';
+                tooltipColor = { 
+                    backgroundColor: taken ? colectivoColor : nuevoColor, 
+                    color: '#fcfcfc'
+                };
+                Icon = FaUsers;
+                break;
+            case 'Jurídico':
+                tooltipText = taken ? 'Jurídico' : 'Nuevo registro';
+                tooltipColor = { 
+                    backgroundColor: taken ? juridicoColor : nuevoColor, 
+                    color: taken ? getLuminance(juridicoColor) > 0.5 ? '#141414' : '#fcfcfc' : '#fcfcfc' 
+                };
+                Icon = FaScaleBalanced;
+                break;
+            case 'Emergencia':
+                tooltipText = taken ? 'Emergencia' : 'Nuevo registro';
+                tooltipColor = { 
+                    backgroundColor: taken ? emergenciaColor : nuevoColor, 
+                    color: taken ? getLuminance(emergenciaColor) > 0.5 ? '#141414' : '#fcfcfc' : '#fcfcfc' 
+                };
+                Icon = FaTriangleExclamation;
+                break;
+            case 'Reasignación':
+                tooltipText = taken ? 'Reasignación' : 'Nuevo registro';
+                tooltipColor = { 
+                    backgroundColor: taken ? reasignacionColor : nuevoColor, 
+                    color: taken ? getLuminance(reasignacionColor) > 0.5 ? '#141414' : '#fcfcfc' : '#fcfcfc' 
+                };
+                Icon = FaArrowsRotate;
+                break;
+            default:
+                tooltipText = taken ? 'Registro' : 'Nuevo registro';
+                tooltipColor = { 
+                    backgroundColor: taken ? defaultColor : nuevoColor, 
+                    color: taken ? getLuminance(defaultColor) > 0.5 ? '#141414' : '#fcfcfc' : '#fcfcfc' 
+                };
+                Icon = FaFolder;
+                break;
+        }
+    } else {
+        tooltipText = taken ? customIcon.tooltipText : 'Nuevo registro';
+        tooltipColor = { 
+            backgroundColor: taken ? customIcon.color : nuevoColor, 
+            color: taken ? getLuminance(customIcon.color) > 0.5 ? '#141414' : '#fcfcfc' : '#fcfcfc' 
+        };
+        Icon = customIcon.icon;
     }
 
     const handleMouseEnter = () => setShowTooltip(true);
@@ -88,10 +133,9 @@ const IconoTabla: React.FC<IconoTablaProps> = ({ tipoSolicitud, porGestionar = f
                         left: "110%",
                         transform: "translateY(-50%)",
                         backgroundColor: "#eb7575",
-                        color: "#fff",
                         padding: "8px 12px",
                         borderRadius: "8px",
-                        fontSize: "0.9em",
+                        fontSize: "15px",
                         whiteSpace: "nowrap",
                         boxShadow: "0 2px 6px rgba(0, 0, 0, 0.15)",
                         opacity: showTooltip ? 1 : 0,

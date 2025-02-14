@@ -51,7 +51,7 @@ const TablaShared: React.FC = () => {
       key: 'tipoRuta',
       label: 'Solicitud',
       renderComponent: (rowData: any) => (
-        <IconoTabla tipoSolicitud={rowData.tipoRuta} porGestionar={rowData.estadoRegistro !== 'en_gestion' ? true : false} />
+        <IconoTabla recordType={rowData.tipoRuta} taken={rowData.estadoRegistro === 'en_gestion' ? true : false} />
       )
     },
     { key: 'numeroRegistro', label: 'Registro', hasModal: true },
