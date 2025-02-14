@@ -1,0 +1,25 @@
+.subtitulo-contenedor-fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.2rem;
+    margin-bottom: 0.9rem;
+}
+
+.subtitulo-contenedor-icon-subtitle {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.subtitulo-icon {
+    font-size: 1.25rem;
+    color: #303d50;
+    margin-right: 0.66rem;
+}
+
+.subtitulo-subtitle {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #303d50;
+}

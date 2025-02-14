@@ -2,43 +2,27 @@ import React from "react";
 
 import { IconType } from "react-icons";
 
+import './Subtitulo.css';
+
 interface SubtituloProps {
-  subtitulo: string;
-  icon: IconType;
+  subtitle: string;
+  icon?: IconType;
+  extraInput?: React.ReactNode;
 }
-
-const divStyle = {
-  display: 'flex',
-  justifyContent: 'start',
-  alignItems: 'center',
-  marginTop: '1.2rem',
-  marginBottom: '0.9rem'
-}
-
-const subtituloStyle = {
-  fontColor: "#303d50s",
-  fontSize: "1.1rem",
-  fontWeight: "700",
-  marginLeft: '0.66rem',
-  color: '#303d50'
-};
-
-const iconStyle = {
-  fontSize: "1.25rem",
-  color: '#303d50'
-};
 
 const Subtitulo: React.FC<SubtituloProps> = ({
-  subtitulo,
+  subtitle,
   icon: Icon,
+  extraInput
 }) => {
   return (
-    <>
-      <div style={divStyle}>
-        <Icon style={iconStyle} />
-        <span style={subtituloStyle}>{subtitulo}</span>
+    <div className="subtitulo-contenedor-fila">
+      <div className="subtitulo-contenedor-icon-subtitle">
+        {Icon && (<Icon className="subtitulo-icon" />)}
+        <span className="subtitulo-subtitle">{subtitle}</span>
       </div>
-    </>
+      {extraInput}
+    </div>
   );
 };
 

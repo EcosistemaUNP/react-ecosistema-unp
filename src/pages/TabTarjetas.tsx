@@ -13,7 +13,7 @@ const TabTarjetas: React.FC = () => {
     <>
       <Tarjeta title='Título de la tarjeta'>
         <SeccionTarjeta>
-          <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
+          <Subtitulo icon={FaHouse} subtitle={'Subtítulo aquí...'} />
           <NuevoElemento onClose={() => console.log('Hola')} label='Nuevo elemento 1' isGray={true}>
             Contenido de la tarjeta para agregar
             <br />
@@ -28,7 +28,7 @@ const TabTarjetas: React.FC = () => {
             <br />
             Input
           </NuevoElemento>
-          <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
+          <Subtitulo icon={FaHouse} subtitle={'Subtítulo aquí...'} />
           Contenido
           <ContenedorTarjeta>
             Contenido en el contenedor gris
@@ -36,7 +36,7 @@ const TabTarjetas: React.FC = () => {
           Contenido
         </SeccionTarjeta>
         <SeccionTarjeta> {/* Esta tarjeta es gris */}
-          <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
+          <Subtitulo icon={FaHouse} subtitle={'Subtítulo aquí...'} />
           <ContenedorTarjeta isGray={false}>
             Contenido en el contenedor blanco
           </ContenedorTarjeta>
@@ -59,7 +59,7 @@ const TabTarjetas: React.FC = () => {
       </Tarjeta>
 
       <Tarjeta title='Título de la tarjeta dos'>
-        <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
+        <Subtitulo icon={FaHouse} subtitle={'Subtítulo aquí...'} />
         <NuevoElemento onClose={() => console.log('Hola')} label='Nuevo elemento 1' isGray={true}>
           Contenido de la tarjeta para agregar
           <br />
@@ -74,18 +74,18 @@ const TabTarjetas: React.FC = () => {
           <br />
           Input
         </NuevoElemento>
-        <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
+        <Subtitulo icon={FaHouse} subtitle={'Subtítulo aquí...'} />
         Contenido
         <ContenedorTarjeta>
           Contenido en el contenedor gris
         </ContenedorTarjeta>
-        <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
+        <Subtitulo icon={FaHouse} subtitle={'Subtítulo aquí...'} />
         Contenido
       </Tarjeta>
 
       <Tarjeta title="Ejemplo con secciones" method='post' onSubmit={() => console.log('Enviado!!')}>
         <SeccionTarjeta>
-          <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
+          <Subtitulo icon={FaHouse} subtitle={'Subtítulo aquí...'} />
           Sección blanca automática (índice par)
           Acá si iría con padding top 0 por que estoy usando el subtítulo
         </SeccionTarjeta>
@@ -95,13 +95,13 @@ const TabTarjetas: React.FC = () => {
         </SeccionTarjeta>
         <SeccionTarjeta>
           Sección blanca automática (índice par)
-          <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
+          <Subtitulo icon={FaHouse} subtitle={'Subtítulo aquí...'} />
           Acá íria SIN el padding top 0 porque el primer elemento no es un subtítulo
         </SeccionTarjeta>
         <SeccionTarjeta>
-          <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
+          <Subtitulo icon={FaHouse} subtitle={'Subtítulo aquí...'} />
           Última sección con borde corregido
-          <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
+          <Subtitulo icon={FaHouse} subtitle={'Subtítulo aquí...'} />
           Acá si iría con padding top 0 por que estoy usando el subtítulo como primer elemento
         </SeccionTarjeta>
       </Tarjeta>
@@ -111,7 +111,7 @@ const TabTarjetas: React.FC = () => {
       </Tarjeta>
 
       <Tarjeta title="Ejemplo sin secciones">
-        <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
+        <Subtitulo icon={FaHouse} subtitle={'Subtítulo aquí...'} />
         Contenido normal con body automático
       </Tarjeta>
 

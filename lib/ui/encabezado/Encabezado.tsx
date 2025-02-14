@@ -5,11 +5,11 @@ import { Logo } from "../logo/Logo";
 import './Encabezado.css';
 
 interface EncabezadoProps {
-  titulo?: string;
-  subtitulo: string;
+  title?: string;
+  subtitle: string;
 }
 
-const Encabezado: React.FC<EncabezadoProps> = ({ titulo = '', subtitulo = '' }) => {
+const Encabezado: React.FC<EncabezadoProps> = ({ title = '', subtitle = '' }) => {
   return (
     <div className="title-container">
       <div className="logo-subtitle-container">
@@ -17,8 +17,8 @@ const Encabezado: React.FC<EncabezadoProps> = ({ titulo = '', subtitulo = '' }) 
         <Logo type="entidad" variant="unp" color="gris" height='62' />
       </div>
       <div className="subtitle-container">
-        <span className="title">{titulo ? titulo : 'Unidad Nacional de Protección'}</span>
-        <span className="subtitle">{subtitulo}</span>
+        <span className="title">{title ? title : 'Unidad Nacional de Protección'}</span>
+        <span className="subtitle">{subtitle}</span>
       </div>
     </div>
   );

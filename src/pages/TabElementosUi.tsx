@@ -8,11 +8,18 @@ import { BarraAccesibilidad } from '../../lib/accessibility'
 const TabElementosUi: React.FC = () => {
     return (
         <>
-            <Encabezado titulo='Título' subtitulo='Subtítulo' />
-            <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
-            <Encabezado subtitulo={'Subtítulo'} />
+            <Encabezado title='Título' subtitle='Subtítulo' />
+            <Subtitulo icon={FaHouse} subtitle={'Subtítulo aquí...'} />
+            <Encabezado subtitle={'Subtítulo'} />
 
-            <Subtitulo icon={FaHouse} subtitulo={'Logos'} />
+            <Subtitulo
+                icon={FaHouse}
+                subtitle={'Subtítulo con un elemento al final'}
+                extraInput={<Button variant='unp_primary'>Botón</Button>}
+            />
+            <Subtitulo subtitle={'Subtítulo sin icono'} />
+
+            <Subtitulo icon={FaHouse} subtitle={'Logos'} />
             <Logo type='entidad' variant='unp' color='rojo' />
             <Logo type='entidad' variant='unp' color='gris' />
             <Logo type='entidad' variant='unp' color='blanco' />
@@ -32,8 +39,10 @@ const TabElementosUi: React.FC = () => {
             <br /><br />
             <Logo type='ecosistema' variant='letras' color='azul' height='50px' />
             <Logo type='ecosistema' variant='letras' color='blanco' height='50px' />
+            <br /><br />
+            <Logo type='ecosistema' variant='unp' color='rojo' height='50px' />
 
-            <Subtitulo icon={FaBars} subtitulo={'Iconos tabla'} />
+            <Subtitulo icon={FaBars} subtitle={'Iconos tabla'} />
             <IconoTabla recordType='Individual' />
             <IconoTabla recordType='Individual' taken={false} />
             <br /><br />
@@ -52,13 +61,13 @@ const TabElementosUi: React.FC = () => {
             <IconoTabla recordType='No encontrado' />
             <IconoTabla recordType='No encontrado' taken={false} />
             <br /><br />
-            <IconoTabla customIcon={{icon: FaShield, color: '#e1ff00', tooltipText: 'Custom text & color'}} />
-            <IconoTabla customIcon={{icon: FaShield, color: '#e1ff00', tooltipText: 'Custom text & color'}} taken={false} />
+            <IconoTabla customIcon={{ icon: FaShield, color: '#e1ff00', tooltipText: 'Custom text & color' }} />
+            <IconoTabla customIcon={{ icon: FaShield, color: '#e1ff00', tooltipText: 'Custom text & color' }} taken={false} />
             <br /><br />
-            <IconoTabla customIcon={{icon: FaMap, color: '#2b0f54', tooltipText: 'Custom text & color'}} />
-            <IconoTabla customIcon={{icon: FaMap, color: '#2b0f54', tooltipText: 'Custom text & color'}} taken={false} />
+            <IconoTabla customIcon={{ icon: FaMap, color: '#2b0f54', tooltipText: 'Custom text & color' }} />
+            <IconoTabla customIcon={{ icon: FaMap, color: '#2b0f54', tooltipText: 'Custom text & color' }} taken={false} />
 
-            <Subtitulo icon={FaBars} subtitulo={'Botones'} />
+            <Subtitulo icon={FaBars} subtitle={'Botones'} />
             <Button variant='unp_primary'>Primario</Button>
             <br /><br />
             <Button variant='unp_secondary'>Secundario</Button>

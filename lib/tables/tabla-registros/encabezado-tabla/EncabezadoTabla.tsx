@@ -19,7 +19,7 @@ const EncabezadoTabla: React.FC<EncabezadoTablaProps> = ({
 }) => {
     return (
         <div className="unp-row">
-            <Encabezado titulo={title} subtitulo={subtitle} />
+            <Encabezado title={title} subtitle={subtitle} />
 
             <div className="inputs-container">
                 {data.length > 0 && (

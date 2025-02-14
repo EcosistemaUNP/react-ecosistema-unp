@@ -135,7 +135,6 @@ const IconoTabla: React.FC<IconoTablaProps> = ({ recordType, taken = true, custo
                         backgroundColor: "#eb7575",
                         padding: "8px 12px",
                         borderRadius: "8px",
-                        fontSize: "15px",
                         whiteSpace: "nowrap",
                         boxShadow: "0 2px 6px rgba(0, 0, 0, 0.15)",
                         opacity: showTooltip ? 1 : 0,

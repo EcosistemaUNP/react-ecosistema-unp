@@ -11,7 +11,7 @@ const TabPaginador: React.FC = () => {
             content:
                 <>
                     <Tarjeta title='Título de la tarjeta'>
-                        <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
+                        <Subtitulo icon={FaHouse} subtitle={'Subtítulo...'} />
                         Contenido de la tarjeta
                     </Tarjeta>
                 </>,
@@ -23,15 +23,15 @@ const TabPaginador: React.FC = () => {
             content:
                 <>
                     <Tarjeta title='Título de la tarjeta'>
-                        <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
+                        <Subtitulo icon={FaHouse} subtitle={'Subtítulo...'} />
                         Contenido de la tarjeta
                     </Tarjeta>
                     <Tarjeta title='Título de la tarjeta'>
-                        <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
+                        <Subtitulo icon={FaHouse} subtitle={'Subtítulo...'} />
                         Contenido de la tarjeta
                     </Tarjeta>
                     <Tarjeta title='Título de la tarjeta'>
-                        <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
+                        <Subtitulo icon={FaHouse} subtitle={'Subtítulo...'} />
                         Contenido de la tarjeta
                     </Tarjeta>
                 </>,
@@ -43,15 +43,15 @@ const TabPaginador: React.FC = () => {
             content:
                 <>
                     <Tarjeta title='Título de la tarjeta'>
-                        <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
+                        <Subtitulo icon={FaHouse} subtitle={'Subtítulo...'} />
                         Contenido de la tarjeta
                     </Tarjeta>
                     <Tarjeta title='Título de la tarjeta'>
-                        <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
+                        <Subtitulo icon={FaHouse} subtitle={'Subtítulo...'} />
                         Contenido de la tarjeta
                     </Tarjeta>
                     <Tarjeta title='Título de la tarjeta'>
-                        <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
+                        <Subtitulo icon={FaHouse} subtitle={'Subtítulo...'} />
                         Contenido de la tarjeta
                     </Tarjeta>
                 </>,
@@ -63,7 +63,7 @@ const TabPaginador: React.FC = () => {
             content:
                 <>
                     <Tarjeta title='Título de la tarjeta'>
-                        <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
+                        <Subtitulo icon={FaHouse} subtitle={'Subtítulo...'} />
                         Contenido de la tarjeta
                     </Tarjeta>
                 </>,
@@ -91,7 +91,7 @@ const TabPaginador: React.FC = () => {
     return (
         <>
             {/* <Tarjeta title='Título de la tarjeta'>
-                <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
+                <Subtitulo icon={FaHouse} subtitle={'Subtítulo...'} />
                 Contenido de la tarjeta
             </Tarjeta> */}
             <Paginador
