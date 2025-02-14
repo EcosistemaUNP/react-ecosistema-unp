@@ -1,74 +1,73 @@
 import React from "react";
 
-import { Button, Card, CardBody, CardHeader, Row } from "react-bootstrap";
+import { SeccionTarjetaProps } from "./seccion-tarjeta/SeccionTarjeta";
+
+import { Button, Card, CardBody, CardHeader } from "react-bootstrap";
 import './Tarjeta.css';
-import { SeccionTarjeta } from "./seccion-tarjeta/SeccionTarjeta";
 
 interface TarjetaProps {
     title: string;
     children: React.ReactNode;
     method?: string;
     validated?: boolean;
-    onSubmit?: any;
-    hasBody?: boolean;
+    onSubmit?: (...args: any[]) => any;
 }
 
 const btnSendStyle = {
-    color: "#f3f3f3",
-    backgroundColor: "#38a729",
-    borderColor: "#33a024",
-    marginTop: "20px",
-    marginBottom: "15px",
+    marginBottom: "20px",
     width: "100px",
 };
 
 const Tarjeta: React.FC<TarjetaProps> = ({
     title,
     children,
-    method = 'GET',
-    validated = false,
-    onSubmit = () => { },
-    hasBody = true
+    method,
+    onSubmit
 }) => {
-    return (
-        <Card className="border-0 mb-4 tarjeta-unp">
-            <CardHeader className="d-flex justify-content-between align-items-center bg-unp text-light py-3 tarjeta-header-unp">
-                {title}
-            </CardHeader>
-            <form
-                method={method}
-                onSubmit={onSubmit}
-                noValidate
-                className={validated ? "was-validated" : ""}
-            >
-                {hasBody ? (
-                    <CardBody className="pt-0">
-                        {children}
+    const childrenArray = React.Children.toArray(children);
 
-                        {method !== "GET" && (
-                            <Row className="d-flex justify-content-end me-0">
-                                <Button style={btnSendStyle} type="submit">
-                                    Enviar
-                                </Button>
-                            </Row>
-                        )}
-                    </CardBody>
+    // Para detectar si el primer elemento es un sibtítulo
+    const firstChildIsSubtitulo = childrenArray[0] &&
+        React.isValidElement(childrenArray[0]) &&
+        (childrenArray[0].type as any).displayName === 'Subtitulo';
+
+    const secciones = childrenArray.filter(child =>
+        React.isValidElement<SeccionTarjetaProps>(child) && (child.type as any).displayName === 'SeccionTarjeta'
+    );
+    const hasSeccionTarjeta = secciones.length > 0;
+
+    const processedChildren = React.Children.map(children, (child, index) => {
+        if (React.isValidElement<SeccionTarjetaProps>(child) && (child.type as any).displayName === 'SeccionTarjeta') {
+            return React.cloneElement(child, {
+                isGray: child.props.isGray ?? index % 2 === 1,
+                isLast: child.props.isLast ?? index === secciones.length - 1
+            });
+        }
+        return child;
+    });
+
+    return (
+        <>
+            <Card className="border-0 mb-4 tarjeta-unp">
+                <CardHeader className="d-flex justify-content-between align-items-center bg-unp text-light py-3 tarjeta-header-unp">
+                    {title}
+                </CardHeader>
+                {hasSeccionTarjeta ? (
+                    processedChildren
                 ) : (
-                    <>
+                    <CardBody className={`${firstChildIsSubtitulo ? 'pt-0' : ''}`}>
                         {children}
-                        {method !== "GET" && (
-                            <SeccionTarjeta>
-                                <Row className="d-flex justify-content-end me-0">
-                                    <Button style={btnSendStyle} type="submit">
-                                        Enviar
-                                    </Button>
-                                </Row>
-                            </SeccionTarjeta>
-                        )}
-                    </>
+                    </CardBody>
                 )}
-            </form>
-        </Card>
+            </Card>
+            {method === 'POST' || method === 'post' && (
+                <div style={{ display: 'flex', justifyContent: 'end' }}>
+                    <Button variant="unp_send" style={btnSendStyle} onClick={onSubmit}>
+                        Enviar
+                    </Button>
+                </div>
+            )}
+        </>
     );
 };
 

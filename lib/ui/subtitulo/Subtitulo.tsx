@@ -42,4 +42,6 @@ const Subtitulo: React.FC<SubtituloProps> = ({
   );
 };
 
+Subtitulo.displayName = "Subtitulo";
+
 export { Subtitulo };
