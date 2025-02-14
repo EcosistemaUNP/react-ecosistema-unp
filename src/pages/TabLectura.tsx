@@ -11,6 +11,22 @@ const TabLectura: React.FC = () => {
             content:
                 <>
                     <SeccionTarjetaLectura title='Título de la tarjeta'>
+
+                        Contenido de la tarjeta
+                    </SeccionTarjetaLectura>
+                    <SeccionTarjetaLectura title='Título de la tarjeta'>
+                        <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
+                        Contenido de la tarjeta
+                    </SeccionTarjetaLectura>
+                    <SeccionTarjetaLectura title='Título de la tarjeta'>
+                        <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
+                        Contenido de la tarjeta
+                    </SeccionTarjetaLectura>
+                    <SeccionTarjetaLectura title='Título de la tarjeta'>
+                        <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
+                        Contenido de la tarjeta
+                    </SeccionTarjetaLectura>
+                    <SeccionTarjetaLectura title='Título de la tarjeta'>
                         <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
                         Contenido de la tarjeta
                     </SeccionTarjetaLectura>
@@ -32,12 +48,36 @@ const TabLectura: React.FC = () => {
                     <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
                     Contenido de la tarjeta
                 </SeccionTarjetaLectura>
+                <SeccionTarjetaLectura title='Título de la tarjeta'>
+                    <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
+                    Contenido de la tarjeta
+                </SeccionTarjetaLectura>
+                <SeccionTarjetaLectura title='Título de la tarjeta'>
+                    <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
+                    Contenido de la tarjeta
+                </SeccionTarjetaLectura>
+                <SeccionTarjetaLectura title='Título de la tarjeta'>
+                    <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
+                    Contenido de la tarjeta
+                </SeccionTarjetaLectura>
+                <SeccionTarjetaLectura title='Título de la tarjeta'>
+                    <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
+                    Contenido de la tarjeta
+                </SeccionTarjetaLectura>
             </>
         },
         {
             label: 'Tres',
             icon: FaPerson,
             content: <>
+                <SeccionTarjetaLectura title='Título de la tarjeta'>
+                    <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
+                    Contenido de la tarjeta
+                </SeccionTarjetaLectura>
+                <SeccionTarjetaLectura title='Título de la tarjeta'>
+                    <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
+                    Contenido de la tarjeta
+                </SeccionTarjetaLectura>
                 <SeccionTarjetaLectura title='Título de la tarjeta'>
                     <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
                     Contenido de la tarjeta
@@ -58,6 +98,22 @@ const TabLectura: React.FC = () => {
             label: 'Cinco',
             icon: FaPerson,
             content: <>
+                <SeccionTarjetaLectura title='Título de la tarjeta'>
+                    <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
+                    Contenido de la tarjeta
+                </SeccionTarjetaLectura>
+                <SeccionTarjetaLectura title='Título de la tarjeta'>
+                    <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
+                    Contenido de la tarjeta
+                </SeccionTarjetaLectura>
+                <SeccionTarjetaLectura title='Título de la tarjeta'>
+                    <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
+                    Contenido de la tarjeta
+                </SeccionTarjetaLectura>
+                <SeccionTarjetaLectura title='Título de la tarjeta'>
+                    <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
+                    Contenido de la tarjeta
+                </SeccionTarjetaLectura>
                 <SeccionTarjetaLectura title='Título de la tarjeta'>
                     <Subtitulo icon={FaHouse} subtitulo={'Subtítulo...'} />
                     Contenido de la tarjeta
@@ -83,6 +139,7 @@ const TabLectura: React.FC = () => {
             >
                 <SeccionTarjetaLectura title='Sección de mi tarjeta'>
                     <Subtitulo icon={FaHouse} subtitulo='Subtítulo aquí...' />
+                    Contenido aquí
                 </SeccionTarjetaLectura>
             </TarjetaLectura>
         </>

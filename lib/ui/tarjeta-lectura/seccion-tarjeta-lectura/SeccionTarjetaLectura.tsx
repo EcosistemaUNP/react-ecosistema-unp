@@ -8,12 +8,18 @@ interface SeccionTarjetaLecturaProps {
 }
 
 const SeccionTarjetaLectura: React.FC<SeccionTarjetaLecturaProps> = ({ title, children }) => {
+    // Identificación de subtítulo como primer componente para quitar padding superior
+    const childrenArray = React.Children.toArray(children);
+    const firstChildIsSubtitulo = childrenArray[0] &&
+        React.isValidElement(childrenArray[0]) &&
+        (childrenArray[0].type as any).displayName === 'Subtitulo';
+
     return (
         <>
             <div className="section_header_qy">
                 <span>{title}</span>
             </div>
-            <div className="section_container_qy">
+            <div style={{ padding: `${firstChildIsSubtitulo ? '0rem' : '1.25rem'} 1.25rem 1.25rem 1.25rem` }}>
                 {children}
             </div>
         </>

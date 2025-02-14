@@ -9,7 +9,6 @@ interface TarjetaProps {
     title: string;
     children: React.ReactNode;
     method?: string;
-    validated?: boolean;
     onSubmit?: (...args: any[]) => any;
 }
 
