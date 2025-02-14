@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { BrowserRouter } from 'react-router';
+import { BrowserRouter } from 'react-router-dom';
 
 import { AuthProvider } from '../../../lib/utils';
 import { VentanaLienzo } from '../../../lib/shared';

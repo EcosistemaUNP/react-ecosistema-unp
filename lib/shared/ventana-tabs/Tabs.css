@@ -1,10 +1,10 @@
 .nav {
     background: #f8f9fa;
-    padding-top: 0.75rem;
+    padding-top: 0.66rem;
 }
 
 .nav-tabs {
-    padding-left: 0.75rem;
+    padding-left: 0.66rem;
     padding-right: 1.75rem;
 
     --bs-nav-tabs-link-active-color: #074470;

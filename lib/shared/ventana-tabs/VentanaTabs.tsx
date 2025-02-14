@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter } from "react-router";
+import { BrowserRouter } from "react-router-dom";
 
 import { MenuLateral } from "../menu-lateral/MenuLateral.js";
 import NotificacionUsuario from "../notificacion-usuario/NotificacionUsuario.js";
@@ -22,7 +22,6 @@ const VentanaTabs: React.FC<VentanaUsuarioProps> = ({ children }) => {
 
   return (
     <BrowserRouter>
-
       <NotificacionUsuario />
 
       <MenuLateral onToggle={handleToggle} isOpen={menuOpen} />

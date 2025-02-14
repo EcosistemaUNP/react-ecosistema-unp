@@ -1,5 +1,5 @@
 import React from "react";
-import { Navigate, Outlet, useLocation } from "react-router";
+import { Navigate, Outlet, useLocation } from "react-router-dom";
 import { useAuthId } from "../../auth/hooks/AuthHook";
 import { jwtDecode } from "jwt-decode";
 

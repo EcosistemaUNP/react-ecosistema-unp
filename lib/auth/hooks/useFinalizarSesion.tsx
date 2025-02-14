@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 import { useAuthId } from "./AuthHook.js";
 import { FinSesionService } from "../services/FinSesionService.js";
