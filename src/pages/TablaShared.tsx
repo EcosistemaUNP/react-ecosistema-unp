@@ -3,7 +3,7 @@ import { TablaRegistros } from '../../lib/tables'
 import { Button } from 'react-bootstrap';
 import { ContenidoModal } from '../../lib/ui/contenido-modal/ContenidoModal';
 import { FaBoxArchive, FaClockRotateLeft } from 'react-icons/fa6';
-import { IconoTabla } from '../../lib/tables';
+import { IconoTooltip } from '../../lib/ui';
 
 const TablaShared: React.FC = () => {
 
@@ -51,7 +51,7 @@ const TablaShared: React.FC = () => {
       key: 'tipoRuta',
       label: 'Solicitud',
       renderComponent: (rowData: any) => (
-        <IconoTabla recordType={rowData.tipoRuta} taken={rowData.estadoRegistro === 'en_gestion' ? true : false} />
+        <IconoTooltip recordType={rowData.tipoRuta} taken={rowData.estadoRegistro === 'en_gestion' ? true : false} />
       )
     },
     { key: 'numeroRegistro', label: 'Registro', hasModal: true },
