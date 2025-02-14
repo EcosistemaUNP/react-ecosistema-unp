@@ -2,7 +2,7 @@ import React from 'react'
 import { Encabezado, Logo, Subtitulo } from '../../lib/ui'
 import { FaBars, FaHouse, FaMap, FaShield } from 'react-icons/fa6'
 import { Button } from 'react-bootstrap'
-import { IconoTabla } from '../../lib/tables'
+import { IconoTooltip } from '../../lib/ui'
 import { BarraAccesibilidad } from '../../lib/accessibility'
 
 const TabElementosUi: React.FC = () => {
@@ -43,29 +43,29 @@ const TabElementosUi: React.FC = () => {
             <Logo type='ecosistema' variant='unp' color='rojo' height='50px' />
 
             <Subtitulo icon={FaBars} subtitle={'Iconos tabla'} />
-            <IconoTabla recordType='Individual' />
-            <IconoTabla recordType='Individual' taken={false} />
+            <IconoTooltip recordType='Individual' />
+            <IconoTooltip recordType='Individual' taken={false} />
             <br /><br />
-            <IconoTabla recordType='Colectivo' />
-            <IconoTabla recordType='Colectivo' taken={false} />
+            <IconoTooltip recordType='Colectivo' />
+            <IconoTooltip recordType='Colectivo' taken={false} />
             <br /><br />
-            <IconoTabla recordType='Emergencia' />
-            <IconoTabla recordType='Emergencia' taken={false} />
+            <IconoTooltip recordType='Emergencia' />
+            <IconoTooltip recordType='Emergencia' taken={false} />
             <br /><br />
-            <IconoTabla recordType='Jurídico' />
-            <IconoTabla recordType='Jurídico' taken={false} />
+            <IconoTooltip recordType='Jurídico' />
+            <IconoTooltip recordType='Jurídico' taken={false} />
             <br /><br />
-            <IconoTabla recordType='Reasignación' />
-            <IconoTabla recordType='Reasignación' taken={false} />
+            <IconoTooltip recordType='Reasignación' />
+            <IconoTooltip recordType='Reasignación' taken={false} />
             <br /><br />
-            <IconoTabla recordType='No encontrado' />
-            <IconoTabla recordType='No encontrado' taken={false} />
+            <IconoTooltip recordType='No encontrado' />
+            <IconoTooltip recordType='No encontrado' taken={false} />
             <br /><br />
-            <IconoTabla customIcon={{ icon: FaShield, color: '#e1ff00', tooltipText: 'Custom text & color' }} />
-            <IconoTabla customIcon={{ icon: FaShield, color: '#e1ff00', tooltipText: 'Custom text & color' }} taken={false} />
+            <IconoTooltip customIcon={{ icon: FaShield, color: '#e1ff00', tooltipText: 'Custom text & color' }} />
+            <IconoTooltip customIcon={{ icon: FaShield, color: '#e1ff00', tooltipText: 'Custom text & color' }} taken={false} />
             <br /><br />
-            <IconoTabla customIcon={{ icon: FaMap, color: '#3b26d9', tooltipText: 'Custom text & color' }} />
-            <IconoTabla customIcon={{ icon: FaMap, color: '#3b26d9', tooltipText: 'Custom text & color' }} taken={false} />
+            <IconoTooltip customIcon={{ icon: FaMap, color: '#3b26d9', tooltipText: 'Custom text & color' }} />
+            <IconoTooltip customIcon={{ icon: FaMap, color: '#3b26d9', tooltipText: 'Custom text & color' }} taken={false} />
 
             <Subtitulo icon={FaBars} subtitle={'Botones'} />
             <Button variant='unp_primary'>Primario</Button>

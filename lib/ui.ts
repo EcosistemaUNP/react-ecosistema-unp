@@ -17,3 +17,5 @@ export { SeccionTarjetaLectura } from './ui/tarjeta-lectura/seccion-tarjeta-lect
 
 export { ItemsModal } from './ui/items-modal/ItemsModal.js'
 export { TarjetaInfo } from './ui/tarjeta-info/TarjetaInfo.js'
+
+export { IconoTooltip } from './ui/icono-tooltip/IconoTooltip.js'

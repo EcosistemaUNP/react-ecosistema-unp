@@ -4,7 +4,7 @@ import { IconType } from 'react-icons';
 
 import { FaArrowsRotate, FaFolder, FaScaleBalanced, FaTriangleExclamation, FaUser, FaUsers } from 'react-icons/fa6';
 
-import './IconoTabla.css';
+import './IconoTooltip.css';
 
 interface IconTooltip {
     icon: IconType;
@@ -22,7 +22,7 @@ type IconoTablaProps = ({
     customIcon: IconTooltip;
 })
 
-const IconoTabla: React.FC<IconoTablaProps> = ({ recordType, taken = true, customIcon }) => {
+const IconoTooltip: React.FC<IconoTablaProps> = ({ recordType, taken = true, customIcon }) => {
 
     const [showTooltip, setShowTooltip] = useState(false);
 
@@ -151,4 +151,4 @@ const IconoTabla: React.FC<IconoTablaProps> = ({ recordType, taken = true, custo
     );
 };
 
-export { IconoTabla };
+export { IconoTooltip };
