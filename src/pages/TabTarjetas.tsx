@@ -14,14 +14,14 @@ const TabTarjetas: React.FC = () => {
       <Tarjeta title='Título de la tarjeta'>
         <SeccionTarjeta>
           <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
-          <NuevoElemento onClose={() => console.log('Hola')} title='Nuevo elemento 1' isGray={true}>
+          <NuevoElemento onClose={() => console.log('Hola')} label='Nuevo elemento 1' isGray={true}>
             Contenido de la tarjeta para agregar
             <br />
             Input
             <br />
             Input
           </NuevoElemento>
-          <NuevoElemento onClose={() => console.log('Hola')} title='Nuevo elemento 2' isGray={true}>
+          <NuevoElemento onClose={click} label='Nuevo elemento 2' isGray={true}>
             Contenido de la tarjeta para agregar
             <br />
             Input
@@ -33,10 +33,9 @@ const TabTarjetas: React.FC = () => {
           <ContenedorTarjeta>
             Contenido en el contenedor gris
           </ContenedorTarjeta>
-          <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
           Contenido
         </SeccionTarjeta>
-        <SeccionTarjeta isGray={true} isLast={true}>
+        <SeccionTarjeta> {/* Esta tarjeta es gris */}
           <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
           <ContenedorTarjeta isGray={false}>
             Contenido en el contenedor blanco
@@ -61,14 +60,14 @@ const TabTarjetas: React.FC = () => {
 
       <Tarjeta title='Título de la tarjeta dos'>
         <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
-        <NuevoElemento onClose={() => console.log('Hola')} title='Nuevo elemento 1' isGray={true}>
+        <NuevoElemento onClose={() => console.log('Hola')} label='Nuevo elemento 1' isGray={true}>
           Contenido de la tarjeta para agregar
           <br />
           Input
           <br />
           Input
         </NuevoElemento>
-        <NuevoElemento onClose={() => console.log('Hola')} title='Nuevo elemento 2' isGray={true}>
+        <NuevoElemento onClose={() => console.log('Hola')} label='Nuevo elemento 2' isGray={true}>
           Contenido de la tarjeta para agregar
           <br />
           Input

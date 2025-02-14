@@ -75,7 +75,7 @@ const TarjetaLectura: React.FC<TarjetaLecturaProps> = ({ title, subtitle, header
                     onClick={() => setCurrentStep(index)}
                   >
                     <div className={`step ${index <= currentStep ? "active" : ""}`}>
-                      <step.icon />
+                      <step.icon size={18} />
                     </div>
                     <strong>{step.label}</strong>
                   </li>

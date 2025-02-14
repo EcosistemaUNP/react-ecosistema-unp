@@ -2,7 +2,7 @@ import React from "react";
 
 import { Tab } from "react-bootstrap";
 
-import './Tabs.css';
+import '../ventana-tabs/Tabs.css';
 import '../../styles/Bootstrap.css';
 
 interface TabVentanaProps {

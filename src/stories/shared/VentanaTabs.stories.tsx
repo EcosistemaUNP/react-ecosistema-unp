@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import { AuthProvider } from '../../../lib/utils';
 import { VentanaTabs } from '../../../lib/shared/ventana-tabs/VentanaTabs';
-import { TabVentana } from '../../../lib/shared/ventana-tabs/TabVentana';
+import { TabVentana } from '../../../lib/shared/tab-ventana/TabVentana';
 
 const meta: Meta<typeof VentanaTabs> = {
     title: 'Shared/Ventana tabs',

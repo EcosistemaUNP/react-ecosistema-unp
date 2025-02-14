@@ -3,7 +3,7 @@ import { BusquedaInput } from "../buscador/Buscador";
 
 
 interface EncabezadoTablaProps {
-    title: string;
+    title?: string;
     subtitle: string;
     data: Array<Record<string, any>>;
     setSearchTerm: (term: string) => void;

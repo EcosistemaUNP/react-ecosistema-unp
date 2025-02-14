@@ -13,7 +13,7 @@ interface StepContent {
 
 interface PaginadorProps {
   stepContent: StepContent[];
-  onSubmit: (...args: any[]) => any;
+  onSubmit?: (...args: any[]) => any;
   canJump?: boolean;
 }
 
@@ -23,10 +23,9 @@ const Paginador: React.FC<PaginadorProps> = ({ stepContent, onSubmit, canJump = 
   const paginadorRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (paginadorRef.current) {
+    if (paginadorRef.current && currentStep > 0) {
       paginadorRef.current.scrollIntoView({
         behavior: 'smooth',
-        block: 'start'
       })
     }
   }, [currentStep]);
@@ -53,7 +52,7 @@ const Paginador: React.FC<PaginadorProps> = ({ stepContent, onSubmit, canJump = 
               }}
             >
               <div className={`step ${index <= currentStep ? "active" : ""}`}>
-                <step.icon />
+                <step.icon size={18} />
               </div>
               <strong>{step.label}</strong>
             </li>
@@ -72,9 +71,6 @@ const Paginador: React.FC<PaginadorProps> = ({ stepContent, onSubmit, canJump = 
           <Button
             variant="unp_secondary"
             onClick={() => setCurrentStep(currentStep - 1)}
-            style={{
-              marginRight: '1rem'
-            }}
           >
             Anterior
           </Button>
@@ -82,7 +78,7 @@ const Paginador: React.FC<PaginadorProps> = ({ stepContent, onSubmit, canJump = 
         {currentStep < stepContent.length - 1 && (
           <Button
             variant="unp_primary"
-            style={{ justifySelf: 'end' }}
+            style={{ justifySelf: 'end', marginLeft: '1rem' }}
             onClick={() => {
               stepContent[currentStep].handleNextClick && stepContent[currentStep].handleNextClick();
               setCurrentStep(currentStep + 1);
@@ -91,11 +87,12 @@ const Paginador: React.FC<PaginadorProps> = ({ stepContent, onSubmit, canJump = 
             Siguiente
           </Button>
         )}
-        {currentStep === stepContent.length - 1 && (
+        {(currentStep === stepContent.length - 1) && onSubmit && (
           <Button
             type="submit"
             variant="unp_send"
             onClick={onSubmit}
+            style={{ marginLeft: '1rem' }}
           >
             Enviar
           </Button>

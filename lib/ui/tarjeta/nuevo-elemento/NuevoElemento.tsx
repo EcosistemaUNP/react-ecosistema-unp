@@ -4,7 +4,7 @@ import { FaTrash } from "react-icons/fa6";
 import { Button } from "react-bootstrap";
 
 interface NuevoElementoProps {
-    title?: string;
+    label?: string;
     children: React.ReactNode;
     onClose: (...args: any[]) => any;
     isGray?: boolean;
@@ -18,16 +18,17 @@ const titleStyle = {
     color: '#303d50'
 };
 
-const NuevoElemento: React.FC<NuevoElementoProps> = ({ title, children, onClose, isGray = false }) => {
+const NuevoElemento: React.FC<NuevoElementoProps> = ({ label, children, onClose, isGray = false }) => {
     return (
         <div 
-        className="border border-gray-300 rounded-3" 
+        className="border border-gray-300" 
         style={{ 
             position: "relative", 
             padding: '1rem',
             marginTop: '0.5rem',
             marginBottom: '0.5rem',
-            background: !isGray ? '#ffffff' : '#f7f7f7'
+            background: !isGray ? '#ffffff' : '#f7f7f7',
+            borderRadius: '10px'
         }}
         >
             <Button
@@ -45,9 +46,9 @@ const NuevoElemento: React.FC<NuevoElementoProps> = ({ title, children, onClose,
                 <FaTrash size={16} color="red" />
             </Button>
 
-            {title && (
+            {label && (
                 <div>
-                    <span style={titleStyle}>{title}</span>
+                    <span style={titleStyle}>{label}</span>
                 </div>
             )}
 

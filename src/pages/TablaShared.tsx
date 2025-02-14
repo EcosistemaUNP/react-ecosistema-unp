@@ -10,22 +10,39 @@ const TablaShared: React.FC = () => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const [showHistoricoCaso, setShowHistoricoCaso] = useState(false);
-  const [showHistoricoSer, setShowHistoricoSer] = useState(false);
-  const [showRemitir, setShowRemitir] = useState(false);
-
-  const [isShowing, setIsShowing] = useState(false);
-
-  const buttons = [
+  const modalContent = [
     {
-      title: 'Contenido uno',
-      icon: FaBoxArchive,
-      onShow: () => { setShowHistoricoSer(true); setIsShowing(true); }
+      label: 'Contenido principal',
+      content: (setView: (view: number) => void) => {
+        return (
+          <>
+            Contenido principal
+            <br /><br />
+            <Button onClick={() => setView(3)} variant='unp_tertiary'>Ir al contenido cuatro</Button>
+            <br /><br />
+            <Button onClick={() => setView(4)} variant='unp_send'>Ir al contenido cinco</Button>
+          </>
+        )
+      }
+
     },
     {
-      title: 'Contenido dos',
+      label: 'Contenido dos',
       icon: FaClockRotateLeft,
-      onShow: () => { setShowHistoricoCaso(true); setIsShowing(true); }
+      content: <>Contenido dos</>
+    },
+    {
+      label: 'Contenido tres',
+      icon: FaBoxArchive,
+      content: <>Contenido tres</>
+    },
+    {
+      label: 'Contenido cuatro',
+      content: <>Contenido cuatro</>
+    },
+    {
+      label: 'Contenido cinco',
+      content: <>Contenido cinco</>
     }
   ];
 
@@ -50,31 +67,17 @@ const TablaShared: React.FC = () => {
     switch (column.key) {
       case "numeroRegistro":
         return (
-          <>
-            <ContenidoModal
-              title={row.numeroRegistro}
-              buttons={buttons}
-              isShowing={isShowing}
-              setIsShowing={setIsShowing}
-            >
-              {showHistoricoCaso ? (
-                <>Contenido dos</>
-              ) : showHistoricoSer ? (
-                <>Contenido uno</>
-              ) : showRemitir ? (
-                <>Remitir</>
-              ) : (
-                <>
-                  <Button onClick={onHide}>Cerrar</Button>
-                  <br />
-                  {/* <Button onClick={() => { setShowRemitir(true); setIsShowing(true) }}>Remitir</Button> */}
-                </>
-              )}
-            </ContenidoModal>
-          </>
+          <ContenidoModal
+            title={row.numeroRegistro}
+            modalContent={modalContent}
+          />
         );
       case "nombres":
-        return (<></>);
+        return (
+          <ContenidoModal title={row.numeroRegistro}>
+            <Button onClick={onHide}>Cerrar</Button>
+          </ContenidoModal>
+        );
       case "ubicacion":
         return (<></>);
       default:
@@ -102,14 +105,6 @@ const TablaShared: React.FC = () => {
     }, 2500)
   }, [])
 
-  useEffect(() => {
-    if (!isShowing) {
-      setShowHistoricoCaso(false);
-      setShowHistoricoSer(false);
-      setShowRemitir(false);
-    }
-  }, [isShowing])
-
   return (
     <>
       <TablaRegistros
@@ -121,6 +116,7 @@ const TablaShared: React.FC = () => {
         isLoading={isLoading}
         isShared={true}
         renderModalContent={renderModalContent}
+        alertAction={() => console.log('Acción!!')}
         closeModalOut={true}
         extraInput={
           <>

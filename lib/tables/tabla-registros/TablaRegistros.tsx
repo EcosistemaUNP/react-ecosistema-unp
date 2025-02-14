@@ -1,6 +1,7 @@
 import React, { useState, useEffect, ReactNode } from "react";
 
 import Lottie from "lottie-react";
+import Swal from "sweetalert2";
 
 import { Tabla } from "./tabla/Tabla.js";
 import { CustomModal } from "./modal/Modal.js";
@@ -21,13 +22,13 @@ interface Column {
 }
 
 interface TableProps {
-  title: string;
+  title?: string;
   subtitle: string;
   columns: Column[];
   data: Array<Record<string, any>>;
   totalDias?: number;
   renderModalContent?: (row: any, column: any, onHide: () => void) => ReactNode;
-  renderAlertContent?: (row: any, column: any, onHide?: () => void) => ReactNode;
+  alertAction?: (...args: any[]) => any;
   extraInput?: React.ReactNode;
   dateColumnKey?: string;
   isShared?: boolean;
@@ -50,7 +51,7 @@ const TablaRegistros: React.FC<TableProps> = ({
   columns,
   data,
   renderModalContent,
-  renderAlertContent,
+  alertAction,
   totalDias,
   title,
   extraInput,
@@ -95,16 +96,34 @@ const TablaRegistros: React.FC<TableProps> = ({
     );
 
   const handleCellClick = (column: any, row: Record<string, any>) => {
-    if (column.hasModal && renderModalContent) {
-      if (renderAlertContent && (row.estadoRegistro === 'por_gestionar' && isShared)) {
-        const actionResult = renderAlertContent(row, column);
-        console.log('Estado por gestionar');
-        
-        if (actionResult === null) return;
+    if (column.hasModal) {
+      // Si el estado de la fila es por_gestionar, es una tabla compartida y tiene una acción
+      if ((row.estadoRegistro === 'por_gestionar' && isShared) && alertAction) {
+        Swal.fire({
+          title: '<small>¿Desea tomar este registro?</small>',
+          text: 'Tenga presente que, una vez lo haga, deberá darle trámite en los tiempos definidos en el procedimiento.',
+          icon: 'info',
+          showCancelButton: true,
+          confirmButtonColor: "#178250",
+          cancelButtonColor: "#cc5159",
+          confirmButtonText: "Sí, tomar registro",
+          cancelButtonText: "No, cancelar"
+        }).then(async (result) => {
+          // Si confirma la alerta ejecuta la acción
+          if (result.isConfirmed) {
+            alertAction();
+          }
+        });
+
       } else if (row.estadoRegistro === 'en_gestion' || !isShared) {
+        // Si la fila está en_gestion o no es una tabla compartida
         setModalData({ row, column });
         setShowModal(true);
       }
+    } else if ((column.hasModal && renderModalContent) && !isShared) {
+      // Si la columna tiene modal, hay modal y no es compartida
+      setModalData({ row, column });
+      setShowModal(true);
     }
   };
 
