@@ -1,5 +1,5 @@
 import React from 'react'
-import { TarjetaInfo, TarjetaListado } from '../../lib/ui'
+import { TarjetaInfo, ItemsModal } from '../../lib/ui'
 
 import { FaClipboardUser, FaPhone, FaUser, FaUsers } from 'react-icons/fa6';
 
@@ -14,7 +14,7 @@ const TabElementosModal: React.FC = () => {
 
     return (
         <>
-            <TarjetaListado sections={sections} />
+            <ItemsModal sections={sections} />
             <br />
             <TarjetaInfo icon={FaUser} label='Label'>
             Hola!

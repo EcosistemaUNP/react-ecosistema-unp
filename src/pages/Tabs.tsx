@@ -12,6 +12,9 @@ const Tabs: React.FC = () => {
 
   return (
     <VentanaTabs>
+      <TabVentana eventKey="modal" title={'Elementos modal'}>
+        <TabElementosModal />
+      </TabVentana>
       <TabVentana eventKey="ui" title={'Elementos UI'}>
         <TabElementosUi />
       </TabVentana>
@@ -20,9 +23,6 @@ const Tabs: React.FC = () => {
       </TabVentana>
       <TabVentana eventKey="lectura" title={'Tarjeta lectura'}>
         <TabLectura />
-      </TabVentana>
-      <TabVentana eventKey="modal" title={'Elementos modal'}>
-        <TabElementosModal />
       </TabVentana>
       <TabVentana eventKey="shared" title={'Tabla compartida'}>
         <TablaShared />

@@ -14,8 +14,8 @@ html {
 /* Clases para el contraste */
 body.contrast-govco {
     /* margin: 0; */
-    background: #000 !important; /* Fondo negro base */
-    filter: invert(100%) contrast(80%);
+    background: #0e0e0e !important; /* Fondo negro base */
+    filter: invert(100%) contrast(70%);
 }
 
 body.contrast-gevco img,

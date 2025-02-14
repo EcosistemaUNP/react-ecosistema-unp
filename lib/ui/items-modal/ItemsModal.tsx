@@ -5,24 +5,24 @@ import { IconType } from "react-icons";
 
 import { FaCircleCheck, FaClock } from "react-icons/fa6";
 import { LiaDownloadSolid } from "react-icons/lia";
-import './TarjetaListado.css';
+import './ItemsModal.css';
 
 interface Listado {
     label: string;
     icon: IconType;
     route: string;
     closed?: boolean;
-    handleDownload?: any; // Corregir tipado
+    handleDownload?: (...args: any[]) => any;
 }
 
-interface TarjetaListadoProps {
+interface ItemsModalProps {
     sections: Listado[]
 }
 
-const TarjetaListado: React.FC<TarjetaListadoProps> = ({ sections }) => {
+const ItemsModal: React.FC<ItemsModalProps> = ({ sections }) => {
 
     const navigate = useNavigate();
-    
+
 
     return (
         <div className='listado-tarjetas'>
@@ -51,7 +51,9 @@ const TarjetaListado: React.FC<TarjetaListadoProps> = ({ sections }) => {
                             className='tarjeta-listado-download-container'
                             onClick={(e) => {
                                 e.stopPropagation();
-                                section.handleDownload();
+                                if (section.handleDownload) {
+                                    section.handleDownload();
+                                }
                             }}
                         >
                             <LiaDownloadSolid className='tarjeta-listado-download-icon' />
@@ -63,4 +65,4 @@ const TarjetaListado: React.FC<TarjetaListadoProps> = ({ sections }) => {
     );
 };
 
-export { TarjetaListado };
+export { ItemsModal };

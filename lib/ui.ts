@@ -1,7 +1,7 @@
 export { Encabezado } from './ui/encabezado/Encabezado.js'
 export { Subtitulo } from './ui/subtitulo/Subtitulo.js'
 
-export { ContenidoModal } from './tables/tabla-registros/contenido-modal/ContenidoModal.js'
+export { ContenidoModal } from './ui/contenido-modal/ContenidoModal.js'
 
 export { Tarjeta } from './ui/tarjeta/Tarjeta.js'
 export { SeccionTarjeta } from './ui/tarjeta/seccion-tarjeta/SeccionTarjeta.js'
@@ -15,5 +15,5 @@ export { Logo } from './ui/logo/Logo.js'
 export { TarjetaLectura } from './ui/tarjeta-lectura/TarjetaLectura.js'
 export { SeccionTarjetaLectura } from './ui/tarjeta-lectura/seccion-tarjeta-lectura/SeccionTarjetaLectura.js'
 
-export { TarjetaListado } from './ui/tarjeta-listado/TarjetaListado.js'
+export { ItemsModal } from './ui/items-modal/ItemsModal.js'
 export { TarjetaInfo } from './ui/tarjeta-info/TarjetaInfo.js'

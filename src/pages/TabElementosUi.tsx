@@ -64,8 +64,8 @@ const TabElementosUi: React.FC = () => {
             <IconoTabla customIcon={{ icon: FaShield, color: '#e1ff00', tooltipText: 'Custom text & color' }} />
             <IconoTabla customIcon={{ icon: FaShield, color: '#e1ff00', tooltipText: 'Custom text & color' }} taken={false} />
             <br /><br />
-            <IconoTabla customIcon={{ icon: FaMap, color: '#2b0f54', tooltipText: 'Custom text & color' }} />
-            <IconoTabla customIcon={{ icon: FaMap, color: '#2b0f54', tooltipText: 'Custom text & color' }} taken={false} />
+            <IconoTabla customIcon={{ icon: FaMap, color: '#3b26d9', tooltipText: 'Custom text & color' }} />
+            <IconoTabla customIcon={{ icon: FaMap, color: '#3b26d9', tooltipText: 'Custom text & color' }} taken={false} />
 
             <Subtitulo icon={FaBars} subtitle={'Botones'} />
             <Button variant='unp_primary'>Primario</Button>
