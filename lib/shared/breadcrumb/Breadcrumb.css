@@ -1,0 +1,46 @@
+/* Contenedor de la miga de pan */
+.breadcrumb-container {
+    z-index: 1000;
+    /* Asegura que esté por encima de otros elementos */
+    margin-top: 0;
+    margin-left: 78px;
+
+    padding: 10px 20px;
+    /* Espaciado interno */
+
+    background-color: #f8f9fa;
+    height: 3.438rem;
+}
+
+/* Estilo de los enlaces en la miga de pan */
+.breadcrumb-container a {
+    text-decoration: none;
+    /* Elimina subrayados */
+    color: #303D50;
+    /* Azul para enlaces */
+    font-weight: 500;
+    /* Peso medio para texto */
+    font-size: 14px;
+    /* Tamaño de fuente */
+    transition: color 0.3s ease;
+    /* Transición suave para hover */
+}
+
+/* Hover de los enlaces */
+.breadcrumb-container a:hover {
+    color: #0056b3;
+    /* Azul más oscuro al pasar el mouse */
+}
+
+/* Separador entre los elementos de la miga de pan */
+.breadcrumb-container span {
+    margin: 0;
+    /* Espaciado entre el separador y los enlaces */
+    color: #6c757d;
+    /* Gris suave */
+    font-size: 14px;
+}
+
+ol.breadcrumb {
+    margin: 0 !important;
+}
