@@ -2,7 +2,7 @@ import { Encabezado } from "../../../ui";
 import { BusquedaInput } from "../buscador/Buscador";
 
 
-interface Encabezado {
+interface EncabezadoTablaProps {
     title: string;
     subtitle: string;
     data: Array<Record<string, any>>;
@@ -10,7 +10,7 @@ interface Encabezado {
     extraInput?: React.ReactNode;
 }
 
-const EncabezadoTabla: React.FC<Encabezado> = ({
+const EncabezadoTabla: React.FC<EncabezadoTablaProps> = ({
     title,
     subtitle,
     data,

@@ -61,7 +61,27 @@ const TabTarjetas: React.FC = () => {
 
       <Tarjeta title='Título de la tarjeta dos'>
         <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
-        Contenido de la tarjeta dos...
+        <TarjetaAgregar onClose={() => console.log('Hola')} title='Nuevo elemento 1' isGray={true}>
+          Contenido de la tarjeta para agregar
+          <br />
+          Input
+          <br />
+          Input
+        </TarjetaAgregar>
+        <TarjetaAgregar onClose={() => console.log('Hola')} title='Nuevo elemento 2' isGray={true}>
+          Contenido de la tarjeta para agregar
+          <br />
+          Input
+          <br />
+          Input
+        </TarjetaAgregar>
+        <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
+        Contenido
+        <ContenedorTarjeta>
+          Contenido en el contenedor gris
+        </ContenedorTarjeta>
+        <Subtitulo icon={FaHouse} subtitulo={'Subtítulo aquí...'} />
+        Contenido
       </Tarjeta>
 
       {/* <BarraAccesibilidad /> */}
