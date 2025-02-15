@@ -6,6 +6,8 @@ import './TarjetaLectura.css'
 import { Logo } from "../logo/Logo";
 import { SeccionTarjetaLectura } from "./seccion-tarjeta-lectura/SeccionTarjetaLectura";
 
+import '../../styles/Bootstrap.css';
+
 interface StepContent {
   label: string;
   icon: IconType;

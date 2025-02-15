@@ -1,7 +1,10 @@
 import React from "react";
 
 import { FaTrash } from "react-icons/fa6";
+
 import { Button } from "react-bootstrap";
+
+import '../../../styles/Bootstrap.css';
 
 interface NuevoElementoProps {
     label?: string;
