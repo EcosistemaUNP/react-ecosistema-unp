@@ -11,10 +11,9 @@ export interface BreadcrumbItem {
 
 interface BreadcrumbNavProps {
   items?: BreadcrumbItem[];
-  extraInput?: React.ReactNode;
 }
 
-const BreadcrumbNav: React.FC<BreadcrumbNavProps> = ({ items, extraInput }) => {
+const BreadcrumbNav: React.FC<BreadcrumbNavProps> = ({ items }) => {
   return (
     <div className="breadcrumb-container">
       <div
@@ -34,16 +33,9 @@ const BreadcrumbNav: React.FC<BreadcrumbNavProps> = ({ items, extraInput }) => {
             ))}
           </Breadcrumb>
         )}
-
-        {/* Componente a la derecha */}
-        {extraInput && (
-          <div className="breadcrumb-right">
-            {extraInput}
-          </div>
-        )}
       </div>
     </div>
   );
 };
 
-export default BreadcrumbNav;
+export { BreadcrumbNav };

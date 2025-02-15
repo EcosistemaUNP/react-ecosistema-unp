@@ -3,16 +3,17 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 
-import BreadcrumbNav, { BreadcrumbItem } from "../breadcrumb/Breadcrumb.js";
+import { IconoSistema, IconosSistema } from "../iconos-sistema/IconosSistema.js";
+
+import { BreadcrumbNav, BreadcrumbItem } from "../breadcrumb/Breadcrumb.js";
 import { MenuLateral } from "../menu-lateral/MenuLateral.js";
 
 import './VentanaLienzo.css';
-import NotificacionUsuario from "../notificacion-usuario/NotificacionUsuario.js";
 
 interface VentanaLienzoProps {
   children?: React.ReactNode;
   items?: BreadcrumbItem[];
-  extraInput?: React.ReactNode;
+  extraInput?: IconoSistema[];
 }
 
 const VentanaLienzo: React.FC<VentanaLienzoProps> = ({ children, items, extraInput }) => {
@@ -24,13 +25,13 @@ const VentanaLienzo: React.FC<VentanaLienzoProps> = ({ children, items, extraInp
 
   return (
     <BrowserRouter>
-      <NotificacionUsuario />
+      <IconosSistema elements={extraInput} />
 
       <MenuLateral onToggle={handleToggle} isOpen={menuOpen} />
 
       <div className={`${menuOpen ? "menu-open" : ""}`}>
         <div className={`main-section`}>
-          <BreadcrumbNav items={items} extraInput={extraInput} />
+          <BreadcrumbNav items={items} />
 
           <div className="ventana-lienzo-container">
             {children}

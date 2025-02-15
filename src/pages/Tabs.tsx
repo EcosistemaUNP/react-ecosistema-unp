@@ -7,11 +7,20 @@ import { TabTarjetas } from './TabTarjetas';
 import { TablaShared } from './TablaShared';
 import { Tabla } from './Tabla';
 import { TabPaginador } from './TabPaginador';
+import { FaUser } from 'react-icons/fa';
 
 const Tabs: React.FC = () => {
+  const iconos = [
+    { icon: FaUser, action: () => console.log('goodbye!!') },
+    { icon: FaUser, action: () => console.log('adios!!') },
+    { icon: FaUser, action: () => console.log('auf wiedersehen!!') },
+    { icon: FaUser, action: () => console.log('adieu!!') },
+    { icon: FaUser, action: () => console.log('hola!!') },
+    { icon: FaUser, action: () => console.log('no va a aparecer') },
+  ];
 
   return (
-    <VentanaTabs>
+    <VentanaTabs extraInput={iconos}>
       <TabVentana eventKey="modal" title={'Elementos modal'}>
         <TabElementosModal />
       </TabVentana>

@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter } from "react-router-dom";
 
 import { MenuLateral } from "../menu-lateral/MenuLateral.js";
-import NotificacionUsuario from "../notificacion-usuario/NotificacionUsuario.js";
+import { IconoSistema, IconosSistema } from "../iconos-sistema/IconosSistema.js";
 
 import { Tabs } from "react-bootstrap";
 
@@ -10,9 +10,10 @@ import '../../styles/Bootstrap.css';
 
 interface VentanaUsuarioProps {
   children?: React.ReactNode;
+  extraInput?: IconoSistema[];
 }
 
-const VentanaTabs: React.FC<VentanaUsuarioProps> = ({ children }) => {
+const VentanaTabs: React.FC<VentanaUsuarioProps> = ({ children, extraInput }) => {
   const [menuOpen, setMenuOpen] = React.useState(false);
   const [key, setKey] = React.useState<string | undefined>(undefined);
 
@@ -22,7 +23,7 @@ const VentanaTabs: React.FC<VentanaUsuarioProps> = ({ children }) => {
 
   return (
     <BrowserRouter>
-      <NotificacionUsuario />
+      <IconosSistema elements={extraInput} />
 
       <MenuLateral onToggle={handleToggle} isOpen={menuOpen} />
 

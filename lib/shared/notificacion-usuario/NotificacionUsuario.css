@@ -22,7 +22,6 @@
 }
 
 .icono-notificaciones {
-    width: 25px;
-    height: 25px;
+    font-size: 25px;
     color: #303d50;
 }
