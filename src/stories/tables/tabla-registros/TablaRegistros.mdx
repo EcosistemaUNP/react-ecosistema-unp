@@ -1,5 +1,5 @@
-import { Meta, Story, Canvas, Stories } from '@storybook/blocks';
-import TablaRegistrosStories from './TablaRegistros.stories';
+import { Meta, Story, Canvas, Stories, ArgTypes } from '@storybook/blocks';
+import * as TablaRegistrosStories from './TablaRegistros.stories';
 
 <Meta of={TablaRegistrosStories} />
 
@@ -19,7 +19,13 @@ const MiComponente: React.FC = () => {
 }
 ```
 
-## Previsualización
+## Props
 
-<Stories />
+<ArgTypes />
+
+{/* ## Previsualización */}
+
+{/* <Story of={TablaRegistrosStories.Loading} /> */}
+
+{/* <Stories /> */}
 

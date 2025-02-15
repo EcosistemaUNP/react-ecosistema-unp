@@ -1,0 +1,49 @@
+import { Meta, Story, Canvas, Stories, Markdown, ArgTypes } from '@storybook/blocks';
+import VentanaTabsStories from './VentanaTabs.stories';
+import TabVentanaStories from '../tab-ventana/TabVentana.stories';
+import Ventana from '../Ventana.md?raw';
+
+<Meta of={VentanaTabsStories} />
+
+<Markdown>{ Ventana }</Markdown>
+
+# VentanaTabs
+El componente `VentanaTabs` es un contenedor en blanco con tabs en la parte superior. Incluye el menú lateral.
+
+## Ejemplo de uso
+
+- MiComponente.tsx
+> **Uso de tabs:** Para usar correctamente las *tabs* se requiere del componente `TabVentana` por cada pestaña que se requiera agregar.
+
+```tsx
+import { VentanaTabs, TabVentana } from 'react-ecosistema-unp/shared';
+
+const MiComponente: React.FC = () => {
+  return (
+    <VentanaTabs>
+    <TabVentana eventKey="idTabUno" title={'Pestaña Uno'}>
+      <div>
+        Contenido de la pestaña uno...
+      </div>
+    </TabVentana>
+    <TabVentana eventKey="idTabDos" title={'Pestaña Dos'}>
+      <div>
+        Contenido de la pestaña dos...
+      </div>
+    </TabVentana>
+  </VentanaTabs>
+  );
+}
+```
+
+## Props VentanaTabs
+
+<ArgTypes />
+
+## Props VentanaTabs
+
+<ArgTypes of={TabVentanaStories} />
+
+## Previsualización
+
+<Stories />
