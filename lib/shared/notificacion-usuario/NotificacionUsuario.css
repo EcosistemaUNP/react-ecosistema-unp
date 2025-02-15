@@ -24,4 +24,20 @@
 .icono-notificaciones {
     font-size: 25px;
     color: #303d50;
+
+    transform-origin: top center;
+    transition: transform 0.3s;
+}
+
+.icono-notificaciones:hover {
+    animation: balanceoCampana 0.425s ease-in-out;
+}
+
+@keyframes balanceoCampana {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(10deg); }
+    40% { transform: rotate(-10deg); }
+    60% { transform: rotate(6deg); }
+    80% { transform: rotate(-6deg); }
+    100% { transform: rotate(0deg); }
 }
