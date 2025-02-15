@@ -50,33 +50,34 @@ const Tarjeta: React.FC<TarjetaProps> = ({
     });
 
     return (
-        <>
+        <form
+            method={method}
+            noValidate
+            onSubmit={onSubmit}
+            className={validated ? "was-validated" : ""}
+        >
             <Card className="border-0 mb-4 tarjeta-unp">
                 <CardHeader className="d-flex justify-content-between align-items-center bg-unp text-light py-3 tarjeta-header-unp">
                     {title}
                 </CardHeader>
-                <form
-                    method={method}
-                    noValidate
-                    className={validated ? "was-validated" : ""}
-                >
-                    {hasSeccionTarjeta ? (
-                        processedChildren
-                    ) : (
-                        <CardBody className={`${firstChildIsSubtitulo ? 'pt-0' : ''}`}>
-                            {children}
-                        </CardBody>
-                    )}
-                </form>
+
+                {hasSeccionTarjeta ? (
+                    processedChildren
+                ) : (
+                    <CardBody className={`${firstChildIsSubtitulo ? 'pt-0' : ''}`}>
+                        {children}
+                    </CardBody>
+                )}
+
             </Card>
             {method === 'POST' || method === 'post' && (
                 <div style={{ display: 'flex', justifyContent: 'end' }}>
-                    <Button variant="unp_send" style={btnSendStyle} onClick={onSubmit}>
+                    <Button variant="unp_send" style={btnSendStyle} type="submit">
                         Enviar
                     </Button>
                 </div>
             )}
-        </>
+        </form>
     );
 };
 
