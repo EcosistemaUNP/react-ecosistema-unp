@@ -2,7 +2,7 @@
   "name": "react-ecosistema-unp",
   "author": "Ecosistema de Información - Unidad Nacional de Protección",
   "private": false,
-  "version": "0.9.1",
+  "version": "0.9.2",
   "type": "module",
   "exports": {
     ".": {
@@ -52,8 +52,8 @@
     "deploy:storybook": "gh-pages -d .storybook-build -b gh-pages -t"
   },
   "peerDependencies": {
-    "react": "19.0.0",
-    "react-dom": "19.0.0"
+    "react": ">=18.0.0 <=20.0.0",
+    "react-dom": ">=18.0.0 <=20.0.0"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
