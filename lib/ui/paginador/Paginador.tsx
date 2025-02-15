@@ -80,12 +80,12 @@ const Paginador: React.FC<PaginadorProps> = ({ stepContent, onSubmit, canJump = 
           <Button
             variant="unp_primary"
             style={{ justifySelf: 'end', marginLeft: '1rem' }}
-            onClick={() => {
+            onClick={async () => {
               const currentHandler = stepContent[currentStep].handleNextClick;
               let canProceed = true;
 
               if (currentHandler) {
-                const result = currentHandler();
+                const result = await currentHandler();
                 if (typeof result === 'boolean') {
                   canProceed = result;
                 }
