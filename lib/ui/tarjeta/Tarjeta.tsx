@@ -11,6 +11,7 @@ interface TarjetaProps {
     title: string;
     children: React.ReactNode;
     method?: string;
+    validated?: boolean;
     onSubmit?: (...args: any[]) => any;
 }
 
@@ -23,6 +24,7 @@ const Tarjeta: React.FC<TarjetaProps> = ({
     title,
     children,
     method,
+    validated = false,
     onSubmit
 }) => {
     const childrenArray = React.Children.toArray(children);
@@ -53,13 +55,19 @@ const Tarjeta: React.FC<TarjetaProps> = ({
                 <CardHeader className="d-flex justify-content-between align-items-center bg-unp text-light py-3 tarjeta-header-unp">
                     {title}
                 </CardHeader>
-                {hasSeccionTarjeta ? (
-                    processedChildren
-                ) : (
-                    <CardBody className={`${firstChildIsSubtitulo ? 'pt-0' : ''}`}>
-                        {children}
-                    </CardBody>
-                )}
+                <form
+                    method={method}
+                    noValidate
+                    className={validated ? "was-validated" : ""}
+                >
+                    {hasSeccionTarjeta ? (
+                        processedChildren
+                    ) : (
+                        <CardBody className={`${firstChildIsSubtitulo ? 'pt-0' : ''}`}>
+                            {children}
+                        </CardBody>
+                    )}
+                </form>
             </Card>
             {method === 'POST' || method === 'post' && (
                 <div style={{ display: 'flex', justifyContent: 'end' }}>
