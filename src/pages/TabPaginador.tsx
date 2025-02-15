@@ -35,7 +35,7 @@ const TabPaginador: React.FC = () => {
                         Contenido de la tarjeta
                     </Tarjeta>
                 </>,
-            handleNextClick: () => console.log('Dos')
+            handleNextClick: () => {return false;}
         },
         {
             label: 'Tres',

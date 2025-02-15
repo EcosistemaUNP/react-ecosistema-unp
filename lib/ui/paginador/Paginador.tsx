@@ -3,6 +3,7 @@ import { Button, Card } from "react-bootstrap";
 import { IconType } from "react-icons";
 
 import './Paginador.css'
+import '../../styles/Bootstrap.css'
 
 interface StepContent {
   label: string;
@@ -80,8 +81,19 @@ const Paginador: React.FC<PaginadorProps> = ({ stepContent, onSubmit, canJump = 
             variant="unp_primary"
             style={{ justifySelf: 'end', marginLeft: '1rem' }}
             onClick={() => {
-              stepContent[currentStep].handleNextClick && stepContent[currentStep].handleNextClick();
-              setCurrentStep(currentStep + 1);
+              const currentHandler = stepContent[currentStep].handleNextClick;
+              let canProceed = true;
+
+              if (currentHandler) {
+                const result = currentHandler();
+                if (typeof result === 'boolean') {
+                  canProceed = result;
+                }
+              }
+
+              if (canProceed) {
+                setCurrentStep(currentStep + 1);
+              }
             }}
           >
             Siguiente
