@@ -40,8 +40,22 @@ const Paginador: React.FC<PaginadorProps> = ({ stepContent, onSubmit, canJump = 
             <li
               key={index}
               className={index <= currentStep ? "active" : ""}
-              onClick={() => {
-                if (!canJump) {
+              onClick={async () => {
+                if (stepContent[currentStep].handleNextClick && !canJump) {
+                  const currentHandler = stepContent[currentStep].handleNextClick;
+                  let canProceed = true;
+
+                  if (currentHandler) {
+                    const result = await currentHandler();
+                    if (typeof result === 'boolean') {
+                      canProceed = result;
+                    }
+                  }
+
+                  if (canProceed) {
+                    setCurrentStep(currentStep + 1);
+                  }
+                } else if (!canJump) {
                   if (index === (currentStep + 1)) {
                     setCurrentStep(index);
                   } else if (index < currentStep) {
@@ -80,21 +94,22 @@ const Paginador: React.FC<PaginadorProps> = ({ stepContent, onSubmit, canJump = 
           <Button
             variant="unp_primary"
             style={{ justifySelf: 'end', marginLeft: '1rem' }}
-            onClick={async () => {
-              const currentHandler = stepContent[currentStep].handleNextClick;
-              let canProceed = true;
+            onClick={
+              async () => {
+                const currentHandler = stepContent[currentStep].handleNextClick;
+                let canProceed = true;
 
-              if (currentHandler) {
-                const result = await currentHandler();
-                if (typeof result === 'boolean') {
-                  canProceed = result;
+                if (currentHandler) {
+                  const result = await currentHandler();
+                  if (typeof result === 'boolean') {
+                    canProceed = result;
+                  }
                 }
-              }
 
-              if (canProceed) {
-                setCurrentStep(currentStep + 1);
-              }
-            }}
+                if (canProceed) {
+                  setCurrentStep(currentStep + 1);
+                }
+              }}
           >
             Siguiente
           </Button>

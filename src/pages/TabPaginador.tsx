@@ -35,7 +35,7 @@ const TabPaginador: React.FC = () => {
                         Contenido de la tarjeta
                     </Tarjeta>
                 </>,
-            handleNextClick: () => {return false;}
+            handleNextClick: () => { return false; }
         },
         {
             label: 'Tres',
@@ -97,7 +97,7 @@ const TabPaginador: React.FC = () => {
             <Paginador
                 stepContent={form}
                 onSubmit={() => console.log('Enviado!!!')}
-            // canJump={true}
+                // canJump={false}
             />
         </>
     )
