@@ -298,7 +298,8 @@ body {
   margin-right: 0px;
   transition: margin-left 0.5s ease;
   z-index: 1;
-  height: calc(100vh - 17px);
+  /* La altura se maneja en los componentes de Ventana */
+  /* height: calc(100vh - 17px); */
 }
 
 .menu-open .main-section {

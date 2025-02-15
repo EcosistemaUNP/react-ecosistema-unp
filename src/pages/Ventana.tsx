@@ -1,12 +1,20 @@
 import React from 'react'
 import { VentanaLienzo } from '../../lib/shared'
-import { TabElementosUi } from './TabElementosUi'
+import { TabElementosModal } from './TabElementosModal'
+import { TabPaginador } from './TabPaginador'
 
 const Ventana: React.FC = () => {
 
+    const breadcrumbItems = [
+      { label: "Inicio", link: "/" },
+      { label: "Página 1", link: "/" },
+      { label: "Subpágina 1" }
+    ];
+
     return (
-        <VentanaLienzo>
-            <TabElementosUi />
+        <VentanaLienzo items={breadcrumbItems} extraInput={'Hola!'}>
+            <TabElementosModal />
+            <TabPaginador />
         </VentanaLienzo>
     )
 }

@@ -1,46 +1,53 @@
+/* Elimina la margen del breadcrumb de bootstrap */
+ol.breadcrumb {
+    margin: 0 !important;
+}
+
 /* Contenedor de la miga de pan */
 .breadcrumb-container {
-    z-index: 1000;
     /* Asegura que esté por encima de otros elementos */
-    margin-top: 0;
-    margin-left: 78px;
-
-    padding: 10px 20px;
-    /* Espaciado interno */
-
+    z-index: 1000;
     background-color: #f8f9fa;
-    height: 3.438rem;
+    height: 56px;
+    border-bottom: 1px solid #dee2e6;
 }
 
 /* Estilo de los enlaces en la miga de pan */
-.breadcrumb-container a {
-    text-decoration: none;
+.breadcrumb-item a {
     /* Elimina subrayados */
-    color: #303D50;
-    /* Azul para enlaces */
-    font-weight: 500;
+    text-decoration: none;
+    /* Gris para enlaces */
+    color: #697580;
     /* Peso medio para texto */
-    font-size: 14px;
-    /* Tamaño de fuente */
+    font-weight: 500;
     transition: color 0.3s ease;
-    /* Transición suave para hover */
 }
 
 /* Hover de los enlaces */
-.breadcrumb-container a:hover {
-    color: #0056b3;
+.breadcrumb-item a:hover {
     /* Azul más oscuro al pasar el mouse */
+    color: #344754;
 }
 
-/* Separador entre los elementos de la miga de pan */
-.breadcrumb-container span {
-    margin: 0;
-    /* Espaciado entre el separador y los enlaces */
-    color: #6c757d;
-    /* Gris suave */
-    font-size: 14px;
+.breadcrumb-item {
+    --bs-breadcrumb-item-active-color: #074470;
 }
 
-ol.breadcrumb {
-    margin: 0 !important;
+.breadcrumb-item.active {
+    font-weight: 500;
+}
+
+/* Ajuste para el contenedor de las migas de pan */
+.breadcrumb-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin-right: 2rem;
+}
+
+/* Estilos para la parte derecha del breadcrumb */
+.breadcrumb-right {
+    display: flex;
+    align-items: center;
+    justify-content: end;
 }

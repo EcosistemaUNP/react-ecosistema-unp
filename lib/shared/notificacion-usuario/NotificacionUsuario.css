@@ -1,13 +1,20 @@
 .dropdown-toggle {
-    padding-right: 0.75rem !important;
+    /* padding-right: 0.75rem !important; */
+    margin-top: 0.5rem;
+    margin-right: 0.75rem;
 }
 
 .dropdown-toggle::after {
     display: none !important;
 }
 
+.dropdown-toggle.nav-link {
+    padding: 0;
+}
+
 .dropdown-menu.show {
-    margin-right: 2rem;
+    margin-top: 0.75rem;
+    /* margin-right: 1rem; */
 
     border-radius: 10px;
     border: 0;
