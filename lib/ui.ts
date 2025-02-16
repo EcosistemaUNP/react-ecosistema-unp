@@ -10,3 +10,5 @@ export { Logo } from './ui/logo/Logo.js'
 export { ItemsModal } from './ui/items-modal/ItemsModal.js'
 
 export { IconoTooltip } from './ui/icono-tooltip/IconoTooltip.js'
+
+export { ContenedorVentana } from './ui/contenedor-ventana/ContenedorVentana.js'

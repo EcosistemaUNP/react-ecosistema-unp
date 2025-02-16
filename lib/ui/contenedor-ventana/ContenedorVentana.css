@@ -1,0 +1,61 @@
+.container-ecosistema-unp {
+    margin: 0 auto;
+
+    /* Equilibrio entre 1100px y 92% del viewport */
+    width: min(1100px, 92%);
+    
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0 0.5rem;
+
+    /* Suaviza los cambios de tamaño */
+    transition: width 0.3s ease;
+}
+
+/* Breakpoints para pantallas menores (max-width) */
+@media (max-width: 1600px) {
+    .container-ecosistema-unp {
+        width: min(1000px, 90%);
+        /* Transición suave desde 1100px */
+    }
+}
+
+@media (max-width: 1333px) {
+    .container-ecosistema-unp {
+        width: min(950px, 88%);
+        /* Reducción gradual en lugar de salto */
+    }
+}
+
+@media (max-width: 1176px) {
+    .container-ecosistema-unp {
+        width: min(850px, 92%);
+    }
+}
+
+@media (max-width: 1024px) {
+    .container-ecosistema-unp {
+        width: min(800px, 95%);
+    }
+}
+
+@media (max-width: 900px) {
+    .container-ecosistema-unp {
+        width: 90%;
+        /* Cambio a porcentaje antes de móviles */
+    }
+}
+
+@media (max-width: 768px) {
+    .container-ecosistema-unp {
+        width: 95%;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-ecosistema-unp {
+        width: 100%;
+        padding: 0 0.75rem;
+    }
+}
