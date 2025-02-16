@@ -1,0 +1,29 @@
+import { Meta, Story, Canvas, Stories, ArgTypes, Controls, Markdown } from '@storybook/blocks';
+import * as BarraAccesibilidadStories from './BarraAccesibilidad.stories';
+
+<Meta of={BarraAccesibilidadStories} />
+
+# BarraAccesibilidad
+El componente `BarraAccesibilidad` .
+
+## Ejemplo de uso
+
+- MiComponente.tsx
+```tsx
+
+```
+
+{/* Fuerza la altura directamente en el contenedor de Docs */}
+<div style={{ height: '200px', overflow: 'hidden', margin: '0 auto' }}>
+  <Story 
+    name="BarraDeAccesibilidad" 
+    parameters={{ 
+      docs: { 
+        // Anula configuraciones heredadas
+        inlineStories: false,
+        iframeHeight: 200 
+      } 
+    }}
+  />
+</div>
+

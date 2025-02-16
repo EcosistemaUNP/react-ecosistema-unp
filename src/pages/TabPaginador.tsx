@@ -1,6 +1,7 @@
 import React from 'react'
-import { Paginador, Subtitulo, Tarjeta } from '../../lib/ui'
+import { Paginador, Subtitulo } from '../../lib/ui'
 import { FaHouse, FaPerson } from 'react-icons/fa6'
+import { Tarjeta } from '../../lib/cards'
 
 const TabPaginador: React.FC = () => {
 

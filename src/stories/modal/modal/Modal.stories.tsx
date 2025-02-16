@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { CustomModal } from '../../../lib/tables/tabla-registros/modal/Modal';
+import { CustomModal } from '../../../../lib/tables/tabla-registros/modal/Modal';
 
 const meta: Meta<typeof CustomModal> = {
   title: 'Modal/Modal',

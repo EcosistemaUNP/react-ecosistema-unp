@@ -1,5 +1,6 @@
 import React from 'react'
-import { TarjetaInfo, ItemsModal } from '../../lib/ui'
+import { ItemsModal } from '../../lib/ui'
+import { TarjetaInfo } from '../../lib/cards';
 
 import { FaClipboardUser, FaPhone, FaUser, FaUsers } from 'react-icons/fa6';
 

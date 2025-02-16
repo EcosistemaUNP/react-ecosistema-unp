@@ -1,6 +1,7 @@
 import React from 'react'
-import { ContenedorTarjeta, SeccionTarjeta, Subtitulo, Tarjeta, NuevoElemento } from '../../lib/ui'
+import { Subtitulo } from '../../lib/ui'
 import { FaHouse } from 'react-icons/fa6'
+import { ContenedorTarjeta, NuevoElemento, SeccionTarjeta, Tarjeta } from '../../lib/cards'
 // import { BarraAccesibilidad } from '../../lib/accessibility'
 
 const TabTarjetas: React.FC = () => {

@@ -1,6 +1,7 @@
 import React from 'react'
-import { SeccionTarjetaLectura, Subtitulo, TarjetaLectura } from '../../lib/ui'
+import { Subtitulo } from '../../lib/ui'
 import { FaHouse, FaPerson } from 'react-icons/fa6'
+import { SeccionTarjetaLectura, TarjetaLectura } from '../../lib/cards'
 
 const TabLectura: React.FC = () => {
 

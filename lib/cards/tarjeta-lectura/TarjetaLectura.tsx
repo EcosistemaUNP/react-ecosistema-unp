@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 import { IconType } from "react-icons";
 
 import './TarjetaLectura.css'
-import { Logo } from "../logo/Logo";
+import { Logo } from "../../ui/logo/Logo";
 import { SeccionTarjetaLectura } from "./seccion-tarjeta-lectura/SeccionTarjetaLectura";
 
 import '../../styles/Bootstrap.css';
