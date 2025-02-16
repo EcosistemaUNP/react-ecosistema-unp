@@ -111,7 +111,7 @@ const TablaRegistros: React.FC<TableProps> = ({
         }).then(async (result) => {
           // Si confirma la alerta ejecuta la acción
           if (result.isConfirmed) {
-            alertAction();
+            alertAction(row);
           }
         });
 
