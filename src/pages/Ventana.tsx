@@ -3,13 +3,14 @@ import { VentanaLienzo } from '../../lib/shared'
 import { TabElementosModal } from './TabElementosModal'
 import { TabPaginador } from './TabPaginador'
 import { FaUser } from 'react-icons/fa'
+import { ContenedorVentana } from '../../lib/ui'
 
 const Ventana: React.FC = () => {
 
     const breadcrumbItems = [
-      { label: "Inicio", link: "/" },
-      { label: "Página 1", link: "/" },
-      { label: "Subpágina 1" }
+        { label: "Inicio", link: "/" },
+        { label: "Página 1", link: "/" },
+        { label: "Subpágina 1" }
     ];
 
     const iconos = [
@@ -21,8 +22,10 @@ const Ventana: React.FC = () => {
 
     return (
         <VentanaLienzo items={breadcrumbItems} extraInput={iconos}>
-            <TabElementosModal />
-            <TabPaginador />
+            <ContenedorVentana>
+                <TabElementosModal />
+                <TabPaginador />
+            </ContenedorVentana>
         </VentanaLienzo>
     )
 }

@@ -31,7 +31,7 @@ const ContenidoModal: React.FC<ContenidoModalProps> = ({ title, modalContent, ch
 
     return (
         <>
-            <div style={{ marginBottom: '2rem' }}>
+            <div style={{ padding: '0.5rem' }}>
                 <div className="modal-title-container">
                     <div className="modal-subtitle-container-left">
                         <div className="red-item"></div>

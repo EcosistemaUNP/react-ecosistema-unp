@@ -56,7 +56,7 @@ const Tarjeta: React.FC<TarjetaProps> = ({
             onSubmit={onSubmit}
             className={validated ? "was-validated" : ""}
         >
-            <Card className="border-0 mb-4 tarjeta-unp">
+            <Card className="border-0 tarjeta-unp">
                 <CardHeader className="d-flex justify-content-between align-items-center bg-unp text-light py-3 tarjeta-header-unp">
                     {title}
                 </CardHeader>

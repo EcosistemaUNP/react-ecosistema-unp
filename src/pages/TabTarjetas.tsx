@@ -36,7 +36,7 @@ const TabTarjetas: React.FC = () => {
           </ContenedorTarjeta>
           Contenido
         </SeccionTarjeta>
-        <SeccionTarjeta> {/* Esta tarjeta es gris */}
+        <SeccionTarjeta hasPaddingTop={false}> {/* Esta tarjeta es gris */}
           <Subtitulo icon={FaHouse} subtitle={'Subtítulo aquí...'} />
           <ContenedorTarjeta isGray={false}>
             Contenido en el contenedor blanco

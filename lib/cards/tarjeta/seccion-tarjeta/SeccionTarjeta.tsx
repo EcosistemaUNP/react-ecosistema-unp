@@ -7,9 +7,10 @@ export interface SeccionTarjetaProps {
     isGray?: boolean;
     children: React.ReactNode;
     isLast?: boolean;
+    hasPaddingTop?: boolean;
 }
 
-const SeccionTarjeta: React.FC<SeccionTarjetaProps> = ({ isGray = false, children, isLast = false }) => {
+const SeccionTarjeta: React.FC<SeccionTarjetaProps> = ({ isGray = false, children, isLast = false, hasPaddingTop = true }) => {
     const childrenArray = React.Children.toArray(children);
     const firstChildIsSubtitulo = childrenArray[0] &&
         React.isValidElement(childrenArray[0]) &&
@@ -18,9 +19,13 @@ const SeccionTarjeta: React.FC<SeccionTarjetaProps> = ({ isGray = false, childre
     return (
         <CardBody className={
             `${isGray ? 'tarjeta-container-section' : ''} 
-            ${isLast ? 'tarjeta-container-last' : ''} 
-            ${firstChildIsSubtitulo ? 'pt-0' : ''}`
-        }>
+            ${(firstChildIsSubtitulo || !hasPaddingTop) ? 'pt-0' : ''}`
+        }
+            style={{
+                borderBottomLeftRadius: isLast ? '12px' : '',
+                borderBottomRightRadius: isLast ? '12px' : ''
+            }}
+        >
             {children}
         </CardBody>
     );

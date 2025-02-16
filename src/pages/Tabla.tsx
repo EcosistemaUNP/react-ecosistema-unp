@@ -4,6 +4,7 @@ import { Button } from 'react-bootstrap';
 import { ContenidoModal } from '../../lib/ui/contenido-modal/ContenidoModal';
 import { FaBoxArchive, FaClockRotateLeft } from 'react-icons/fa6';
 import { IconoTooltip } from '../../lib/ui';
+import { TabElementosModal } from './TabElementosModal';
 
 const Tabla: React.FC = () => {
 
@@ -75,6 +76,7 @@ const Tabla: React.FC = () => {
       case "nombres":
         return (
           <ContenidoModal title={row.numeroRegistro}>
+            <TabElementosModal />
             <Button onClick={onHide}>Cerrar</Button>
           </ContenidoModal>
         );

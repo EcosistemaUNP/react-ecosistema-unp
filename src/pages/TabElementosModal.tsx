@@ -43,7 +43,7 @@ const TabElementosModal: React.FC = () => {
                 Hola!
                 <br />
             </TarjetaInfo>
-            <br />
+
             <TarjetaInfo icon={FaUser} label='Label'>
                 Hola!
                 <br />

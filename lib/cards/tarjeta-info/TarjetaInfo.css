@@ -6,6 +6,8 @@
     border: 1px solid #F4F4F4;
     border-radius: 10px;
     box-shadow: 0 2px 4px #00000014;
+
+    margin-bottom: 1.5rem;
 }
 
 .tarjeta-info-titulo-container {

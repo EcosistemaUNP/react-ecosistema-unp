@@ -57,7 +57,7 @@ const TarjetaLectura: React.FC<TarjetaLecturaProps> = ({ title, subtitle, header
             <h5>{subtitle}</h5>
           </div>
           <div className='logo_container_qy'>
-            <Logo type="entidad" variant="unidad" color="rojo" height="80px" />
+            <Logo type="entidad" variant="unidad" color="gris" height="90px" />
           </div>
         </div>
 
