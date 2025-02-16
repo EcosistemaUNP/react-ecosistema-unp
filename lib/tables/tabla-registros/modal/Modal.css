@@ -114,7 +114,10 @@
 }
 
 .modal_body {
-  padding: 1rem;
+  padding-top: 1.25rem;
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+  padding-bottom: 1rem;
   height: calc(100% - 56px);
   border-radius: 0 0 12px 12px;
   overflow-y: auto;

@@ -9,10 +9,12 @@ import '../../styles/Bootstrap.css'
 
 interface TarjetaProps {
     title: string;
+    header?: boolean;
     children: React.ReactNode;
     method?: string;
     validated?: boolean;
     onSubmit?: (...args: any[]) => any;
+    hasPaddingTop?: boolean;
 }
 
 const btnSendStyle = {
@@ -22,10 +24,12 @@ const btnSendStyle = {
 
 const Tarjeta: React.FC<TarjetaProps> = ({
     title,
+    header,
     children,
     method,
     validated = false,
-    onSubmit
+    onSubmit,
+    hasPaddingTop = true
 }) => {
     const childrenArray = React.Children.toArray(children);
 
@@ -57,14 +61,24 @@ const Tarjeta: React.FC<TarjetaProps> = ({
             className={validated ? "was-validated" : ""}
         >
             <Card className="border-0 tarjeta-unp">
-                <CardHeader className="d-flex justify-content-between align-items-center bg-unp text-light py-3 tarjeta-header-unp">
+                <CardHeader
+                    className="bg-unp text-light tarjeta-header-unp"
+                    style={{
+                        paddingTop: '1rem',
+                        paddingBottom: '1rem',
+                        fontSize: !header ? '1.075rem' : '1.125rem',
+                        fontWeight: header ? 500 : '',
+                        display: header ? 'flex' : '',
+                        justifyContent: header ? 'center' : ''
+                    }}
+                >
                     {title}
                 </CardHeader>
 
                 {hasSeccionTarjeta ? (
                     processedChildren
                 ) : (
-                    <CardBody className={`${firstChildIsSubtitulo ? 'pt-0' : ''}`}>
+                    <CardBody className={`${(firstChildIsSubtitulo || !hasPaddingTop) ? 'pt-0' : ''}`}>
                         {children}
                     </CardBody>
                 )}

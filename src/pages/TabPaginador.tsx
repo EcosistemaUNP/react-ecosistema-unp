@@ -27,7 +27,7 @@ const TabPaginador: React.FC = () => {
                         <Subtitulo icon={FaHouse} subtitle={'Subtítulo...'} />
                         Contenido de la tarjeta
                     </Tarjeta>
-                    <Tarjeta title='Título de la tarjeta'>
+                    <Tarjeta title='Título de la tarjeta' header={true}>
                         <Subtitulo icon={FaHouse} subtitle={'Subtítulo...'} />
                         Contenido de la tarjeta
                     </Tarjeta>
