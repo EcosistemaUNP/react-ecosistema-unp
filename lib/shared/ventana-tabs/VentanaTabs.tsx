@@ -1,5 +1,4 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
 
 import { MenuLateral } from "../menu-lateral/MenuLateral.js";
 import { IconoSistema, IconosSistema } from "../iconos-sistema/IconosSistema.js";
@@ -22,7 +21,7 @@ const VentanaTabs: React.FC<VentanaUsuarioProps> = ({ children, extraInput }) =>
   };
 
   return (
-    <BrowserRouter>
+    <React.Fragment>
       <IconosSistema elements={extraInput} />
 
       <MenuLateral onToggle={handleToggle} isOpen={menuOpen} />
@@ -43,7 +42,7 @@ const VentanaTabs: React.FC<VentanaUsuarioProps> = ({ children, extraInput }) =>
           </Tabs>
         </div>
       </div>
-    </BrowserRouter>
+    </React.Fragment>
   );
 };
 

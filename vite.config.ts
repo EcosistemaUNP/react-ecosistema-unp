@@ -22,7 +22,7 @@ export default defineConfig({
     },
     copyPublicDir: false,
     rollupOptions: {
-      external: ['react', 'react/jsx-runtime'],
+      external: ['react', 'react/jsx-runtime', 'react-router-dom'], // react-router-dom se agrega para que en la aplicación no existan dos routers
       input: Object.fromEntries(
         // https://rollupjs.org/configuration-options/#input
         glob.sync('lib/**/*.{ts,tsx}', {

@@ -1,7 +1,6 @@
 // VentanaLienzo-V.0.1 --> desarrollador: andres.soto
 
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
 
 import { IconoSistema, IconosSistema } from "../iconos-sistema/IconosSistema.js";
 
@@ -24,7 +23,7 @@ const VentanaLienzo: React.FC<VentanaLienzoProps> = ({ children, items, extraInp
   };
 
   return (
-    <BrowserRouter>
+    <React.Fragment>
       <IconosSistema elements={extraInput} />
 
       <MenuLateral onToggle={handleToggle} isOpen={menuOpen} />
@@ -38,7 +37,7 @@ const VentanaLienzo: React.FC<VentanaLienzoProps> = ({ children, items, extraInp
           </div>
         </div>
       </div>
-    </BrowserRouter>
+    </React.Fragment>
   );
 };
 
