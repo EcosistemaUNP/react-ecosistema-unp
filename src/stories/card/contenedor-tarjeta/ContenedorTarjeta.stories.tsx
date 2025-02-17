@@ -10,7 +10,7 @@ const meta: Meta<typeof ContenedorTarjeta> = {
     component: ContenedorTarjeta,
     args: {
         children:
-            <div style={{ display: 'flex', gap: '1rem' }} className='mb-3'>
+            <div style={{ display: 'flex', gap: '1rem' }}>
                 <span>¿Usted corrió este fin de semana?</span>
                 <FormGroup controlId="nacionalidad">
                     <FormCheck
@@ -20,6 +20,11 @@ const meta: Meta<typeof ContenedorTarjeta> = {
                     />
                 </FormGroup>
             </div>
+    },
+    argTypes: {
+        isGray: {
+            description: 'Cambia el fondo de la tarjeta a gris'
+        }
     },
     tags: ['!dev']
 }

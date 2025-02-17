@@ -6,8 +6,8 @@ import * as TarjetaLecturaStories from './TarjetaLectura.stories';
 
 {/* <Markdown>{ Ventana }</Markdown> */}
 
-# VentanaLienzo
-El componente `VentanaLienzo` es un contenedor en blanco. Incluye el menú lateral y una barra superior para el breadcrumb.
+# TarjetaLectura
+El componente `TarjetaLectura`
 
 ## Ejemplo de uso
 
@@ -18,7 +18,39 @@ El componente `VentanaLienzo` es un contenedor en blanco. Incluye el menú later
 
 ## Props
 
-<ArgTypes />
+{/* <ArgTypes /> */}
+<table className='w-100'>
+  <tr>
+    <th>Nombre</th>
+    <th>Descripción</th>
+    <th>Restricciones</th>
+  </tr>
+  <tr>
+    <td>title <span className='text-danger'>*</span></td>
+    <td>Título de la tarjeta</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>subtitle <span className='text-danger'>*</span></td>
+    <td>Subtítulo de la tarjeta</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>headerContent <span className='text-danger'>*</span></td>
+    <td>Contenido del header `ReactNode`</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>stepContent</td>
+    <td><span className='text-primary'>*</span> Tarjeta paginada</td>
+    <td>No se puede utilizar si se está utilizando `children`</td>
+  </tr>
+  <tr>
+    <td>children</td>
+    <td><span className='text-primary'>*</span> Tarjeta de una página</td>
+    <td>No se puede utilizar si se está utilziando `stepContent`</td>
+  </tr>
+</table>
 
 ## Previsualización
 
