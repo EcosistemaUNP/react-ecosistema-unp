@@ -7,11 +7,13 @@ import { Button, Card, CardBody, CardHeader } from "react-bootstrap";
 import './Tarjeta.css';
 import '../../styles/Bootstrap.css'
 
+type MethodType = 'get' | 'post' | 'put';
+
 interface TarjetaProps {
     title: string;
     header?: boolean;
     children: React.ReactNode;
-    method?: string;
+    method?: MethodType;
     validated?: boolean;
     onSubmit?: (...args: any[]) => any;
     hasPaddingTop?: boolean;
@@ -24,9 +26,9 @@ const btnSendStyle = {
 
 const Tarjeta: React.FC<TarjetaProps> = ({
     title,
-    header,
+    header = false,
     children,
-    method,
+    method = 'get',
     validated = false,
     onSubmit,
     hasPaddingTop = true
@@ -84,7 +86,7 @@ const Tarjeta: React.FC<TarjetaProps> = ({
                 )}
 
             </Card>
-            {method === 'POST' || method === 'post' && (
+            {method === 'post' && (
                 <div style={{ display: 'flex', justifyContent: 'end' }}>
                     <Button variant="unp_send" style={btnSendStyle} type="submit">
                         Enviar

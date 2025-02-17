@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { TarjetaInfo } from '../../../../lib/cards';
+import { ContenedorVentana } from '../../../../lib/ui';
 
-const meta: Meta<typeof TarjetaInfo> = {
-    title: 'Tarjetas/TarjetaInfo',
-    component: TarjetaInfo,
+const meta: Meta<typeof ContenedorVentana> = {
+    title: 'UI/ContenedorVentana',
+    component: ContenedorVentana,
     tags: ['!dev']
 }
 

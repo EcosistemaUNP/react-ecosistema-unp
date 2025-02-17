@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { TarjetaLectura } from '../../../../lib/cards';
 
 const meta: Meta<typeof TarjetaLectura> = {
-    title: 'Tarjeta/TarjetaLectura',
+    title: 'Tarjetas/Tarjeta lectura/TarjetaLectura',
     component: TarjetaLectura,
     tags: ['!dev']
 }

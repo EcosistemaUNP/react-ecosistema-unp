@@ -4,6 +4,7 @@ import { AuthProvider } from '../../../../lib/utils';
 import { VentanaLienzo } from '../../../../lib/shared';
 
 import { FaFile, FaFolder } from 'react-icons/fa6';
+import { BrowserRouter } from 'react-router-dom';
 
 const meta: Meta<typeof VentanaLienzo> = {
     title: 'Ventanas/VentanaLienzo',
@@ -11,9 +12,11 @@ const meta: Meta<typeof VentanaLienzo> = {
     decorators: [
         (Story) => (
             <AuthProvider>
-                <div style={{ maxHeight: '35rem' }}>
-                    <Story />
-                </div>
+                <BrowserRouter>
+                    <div style={{ maxHeight: '35rem' }}>
+                        <Story />
+                    </div>
+                </BrowserRouter>
             </AuthProvider>
         )
     ],

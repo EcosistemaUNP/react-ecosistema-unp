@@ -4,6 +4,7 @@ import { AuthProvider } from '../../../../lib/utils';
 import { VentanaTabs } from '../../../../lib/shared/ventana-tabs/VentanaTabs';
 import { TabVentana } from '../../../../lib/shared/tab-ventana/TabVentana';
 import { FaFile, FaFolder } from 'react-icons/fa6';
+import { BrowserRouter } from 'react-router-dom';
 
 const meta: Meta<typeof VentanaTabs> = {
     title: 'Ventanas/VentanaTabs',
@@ -11,9 +12,11 @@ const meta: Meta<typeof VentanaTabs> = {
     decorators: [
         (Story) => (
             <AuthProvider>
-                <div style={{ maxHeight: '35rem' }}>
-                    <Story />
-                </div>
+                <BrowserRouter>
+                    <div style={{ maxHeight: '35rem' }}>
+                        <Story />
+                    </div>
+                </BrowserRouter>
             </AuthProvider>
         )
     ],
