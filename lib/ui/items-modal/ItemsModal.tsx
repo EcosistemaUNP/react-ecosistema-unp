@@ -13,6 +13,7 @@ interface Listado {
     route: string;
     closed?: boolean;
     handleDownload?: (...args: any[]) => any;
+    state?: Record<string, any>;
 }
 
 interface ItemsModalProps {
@@ -30,7 +31,7 @@ const ItemsModal: React.FC<ItemsModalProps> = ({ sections }) => {
                 <div className='tarjeta-listado-row' key={index}>
                     <div
                         className='tarjeta-listado-container'
-                        onClick={() => navigate(section.route)}
+                        onClick={() => navigate(section.route, { state: section.state })}
                     >
                         <div className='tarjeta-listado-label-container'>
                             <section.icon className='tarjeta-listado-process-menu' />
