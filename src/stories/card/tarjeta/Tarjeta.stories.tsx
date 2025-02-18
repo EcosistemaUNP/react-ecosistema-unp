@@ -46,7 +46,14 @@ const meta: Meta<typeof Tarjeta> = {
             </>,
         hasPaddingTop: false
     },
-    tags: ['!dev']
+    tags: ['!dev'],
+    parameters: {
+        docs: {
+            source: {
+                code: 'Mirar documentación'
+            }
+        }
+    }
 }
 
 export default meta;

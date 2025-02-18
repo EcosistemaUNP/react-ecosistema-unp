@@ -64,7 +64,14 @@ const meta: Meta<typeof SeccionTarjeta> = {
             description: 'Control para el padding superior del contenido de la tarjeta'
         }
     },
-    tags: ['!dev']
+    tags: ['!dev'],
+    parameters: {
+        docs: {
+            source: {
+                code: 'Mirar documentación'
+            }
+        }
+    }
 }
 
 export default meta;

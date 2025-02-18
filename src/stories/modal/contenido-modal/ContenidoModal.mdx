@@ -6,8 +6,8 @@ import * as ContenidoModalStories from './ContenidoModal.stories';
 
 {/* <Markdown>{ Ventana }</Markdown> */}
 
-# VentanaLienzo
-El componente `VentanaLienzo` es un contenedor en blanco. Incluye el menú lateral y una barra superior para el breadcrumb.
+# ContenidoModal
+El componente `ContenidoModal`
 
 ## Ejemplo de uso
 
@@ -18,7 +18,29 @@ El componente `VentanaLienzo` es un contenedor en blanco. Incluye el menú later
 
 ## Props
 
-<ArgTypes />
+{/* <ArgTypes /> */}
+<table className='w-100'>
+  <tr>
+    <th>Nombre</th>
+    <th>Descripción</th>
+    <th>Restricciones</th>
+  </tr>
+  <tr>
+    <td>title <span className='text-danger'>*</span></td>
+    <td>Título</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>modalContent</td>
+    <td><span className='text-primary'>*</span> Múltiples contenido</td>
+    <td>No se puede utilizar si se está utilizando `children`</td>
+  </tr>
+  <tr>
+    <td>children</td>
+    <td><span className='text-primary'>*</span> Contenido único</td>
+    <td>No se puede utilizar si se está utilziando `modalContent`</td>
+  </tr>
+</table>
 
 ## Previsualización
 

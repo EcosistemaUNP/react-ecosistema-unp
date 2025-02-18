@@ -15,7 +15,14 @@ const meta: Meta<typeof TarjetaLectura> = {
                 Contenido del header de la tarjeta
             </>
     },
-    tags: ['!dev']
+    tags: ['!dev'],
+    parameters: {
+        docs: {
+            source: {
+                code: 'Mirar documentación'
+            }
+        }
+    }
 }
 
 export default meta;

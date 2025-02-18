@@ -21,7 +21,14 @@ const meta: Meta<typeof TarjetaInfo> = {
                 Integer tristique eros non quam euismod volutpat. Nulla eleifend ultricies eros a sollicitudin. Donec quis magna elit. Phasellus ac odio imperdiet, lobortis nisl a, laoreet nisl. Suspendisse vel ante non mi cursus laoreet. Quisque dictum dapibus enim fermentum egestas. Etiam sed libero massa. Proin posuere ex efficitur, luctus urna vitae, porta tortor. Morbi porta bibendum ante sed efficitur. Nullam non elementum urna. Vivamus auctor lacus ex, eget lacinia tortor commodo non.
             </>
     },
-    tags: ['!dev']
+    tags: ['!dev'],
+    parameters: {
+        docs: {
+            source: {
+                code: 'Mirar documentación'
+            }
+        }
+    }
 }
 
 export default meta;

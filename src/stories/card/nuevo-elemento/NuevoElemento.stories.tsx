@@ -34,7 +34,14 @@ const meta: Meta<typeof NuevoElemento> = {
       description: 'Cambia el fondo de la tarjeta a gris'
     }
   },
-  tags: ['!dev']
+  tags: ['!dev'],
+  parameters: {
+      docs: {
+          source: {
+              code: 'Mirar documentación'
+          }
+      }
+  }
 }
 
 export default meta;

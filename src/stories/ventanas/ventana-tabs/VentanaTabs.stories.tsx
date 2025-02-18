@@ -22,6 +22,11 @@ const meta: Meta<typeof VentanaTabs> = {
     ],
     parameters: {
         layout: 'fullscreen',
+        docs: {
+            source: {
+                code: 'Mirar documentación'
+            }
+        }
     },
     argTypes: {
         extraInput: {

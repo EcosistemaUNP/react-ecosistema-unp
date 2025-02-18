@@ -19,7 +19,14 @@ const meta: Meta<typeof SeccionTarjetaLectura> = {
                 Mauris et tincidunt tortor, in maximus ligula. Fusce tincidunt tortor in arcu viverra laoreet. Quisque aliquam sit amet neque sit amet cursus. Morbi eu mi feugiat, accumsan ex vitae, pellentesque libero. Nullam quis ex ante. Morbi rutrum ac lorem at vestibulum. Suspendisse mi mauris, placerat vel nisl a, fermentum suscipit est. Quisque faucibus libero nunc, non euismod enim molestie in. Sed dui quam, scelerisque vel feugiat sed, sodales sit amet ex. Vivamus vel pharetra sapien. Pellentesque vehicula rutrum mauris, vel tincidunt lacus scelerisque ac.
             </>
     },
-    tags: ['!dev']
+    tags: ['!dev'],
+    parameters: {
+        docs: {
+            source: {
+                code: 'Mirar documentación'
+            }
+        }
+    }
 }
 
 export default meta;
