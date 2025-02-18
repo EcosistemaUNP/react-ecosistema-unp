@@ -1,9 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
 import { FaCircleChevronDown, FaCircleChevronRight } from "react-icons/fa6";
 import './TarjetaInfo.css';
+import { IconType } from "react-icons";
 
 interface TarjetaInfoProps {
-    icon: any;
+    icon: IconType;
     label: string;
     children: React.ReactNode;
     show?: boolean;
