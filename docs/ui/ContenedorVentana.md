@@ -18,9 +18,7 @@ const MiComponente: React.FC = () => {
     return (
         <>
             <ContenedorVentana>
-                <>
-                    Contenido del contenedor
-                </>
+                Contenido del contenedor
             </ContenedorVentana>
         <>
     );
