@@ -8,7 +8,7 @@
 La Librería del Ecosistema de Información es una colección de componentes reutilizables y modulares para crear y gestionar el entorno digital de la Unidad Nacional de Protección. Esta librería proporciona componentes para facilitar la integración de diversas funcionalidades dentro de las aplicaciones del ecosistema.
 
 
-### Migración
+#### Migración
 
 Todos los proyectos que utilizan la librería [eco-unp](https://www.npmjs.com/package/eco-unp) deben realizar la migración a [react-ecosistema-unp](https://www.npmjs.com/package/react-ecosistema-unp). Para ello deben seguir los siguientes pasos:
 * Desinstalar eco-unp: ```npm uninstall eco-unp```
@@ -44,7 +44,9 @@ npm install react-ecosistema-unp@latest
 ```
 
 
-## Uso
+## Documentación
+
+*En desarrollo*
 
 * [Elementos UI](docs/ui.md)
 * [Tarjetas](docs/cards.md)
