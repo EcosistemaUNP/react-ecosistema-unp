@@ -17,7 +17,7 @@ const TabElementosUi: React.FC = () => {
                 subtitle={'Subtítulo con un elemento al final'}
                 extraInput={<Button variant='unp_primary'>Botón</Button>}
             />
-            <Subtitulo subtitle={'Subtítulo sin icono'} />
+            <Subtitulo subtitle={'Subtítulo sin icono'} hasMargin={false} />
 
             <Subtitulo icon={FaHouse} subtitle={'Logos'} />
             <Logo type='entidad' variant='unp' color='rojo' />

@@ -7,11 +7,22 @@ import './Encabezado.css';
 interface EncabezadoProps {
   title?: string;
   subtitle: string;
+  hasMargin?: boolean;
 }
 
-const Encabezado: React.FC<EncabezadoProps> = ({ title = '', subtitle = '' }) => {
+const Encabezado: React.FC<EncabezadoProps> = ({ 
+  title = '', 
+  subtitle = '',
+  hasMargin = true
+}) => {
   return (
-    <div className="title-container">
+    <div 
+    className="title-container"
+    style={{
+      marginTop: hasMargin ? '1.75rem' : '',
+      marginBottom: hasMargin ? '1.75rem' : ''
+    }}
+    >
       <div className="logo-subtitle-container">
         <div className="red-section"></div>
         <Logo type="entidad" variant="unp" color="gris" height='62' />

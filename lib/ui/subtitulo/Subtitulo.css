@@ -2,8 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 1.2rem;
-    margin-bottom: 0.9rem;
+    /* margin-top: 1.2rem;
+    margin-bottom: 0.9rem; */
 }
 
 .subtitulo-contenedor-icon-subtitle {

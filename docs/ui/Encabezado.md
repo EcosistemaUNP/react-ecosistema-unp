@@ -4,10 +4,11 @@
 *En desarrollo*
 
 ## Props
-| Nombre                                    | Descripción             | Tipo            |
-| ----------------------------------------- | ----------------------- | --------------- |
-| title | Título del encabezado | string       |
-| subtitle <span style="color:red">*</span>                                | Subtítulo del encabezado      | string |
+| Nombre                                    | Descripción                         | Tipo    |
+| ----------------------------------------- | ----------------------------------- | ------- |
+| title                                     | Título del encabezado               | string  |
+| subtitle <span style="color:red">*</span> | Subtítulo del encabezado            | string  |
+| hasMargin                                 | Control para la margen del elemento | boolean |
 
 ## Uso
 

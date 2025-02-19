@@ -8,15 +8,23 @@ interface SubtituloProps {
   subtitle: string;
   icon?: IconType;
   extraInput?: React.ReactNode;
+  hasMargin?: boolean;
 }
 
 const Subtitulo: React.FC<SubtituloProps> = ({
   subtitle,
   icon: Icon,
-  extraInput
+  extraInput,
+  hasMargin = true
 }) => {
   return (
-    <div className="subtitulo-contenedor-fila">
+    <div
+      className="subtitulo-contenedor-fila"
+      style={{
+        marginTop: hasMargin ? '1.2rem' : '',
+        marginBottom: hasMargin ? '0.9rem' : ''
+      }}
+    >
       <div className="subtitulo-contenedor-icon-subtitle">
         {Icon && (<Icon className="subtitulo-icon" />)}
         <span className="subtitulo-subtitle">{subtitle}</span>

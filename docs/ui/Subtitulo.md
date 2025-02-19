@@ -4,11 +4,12 @@
 *En desarrollo*
 
 ## Props
-| Nombre                                    | Descripción         | Tipo      |
-| ----------------------------------------- | ------------------- | --------- |
-| subtitle <span style="color:red">*</span> | Subtítulo           | string    |
-| icon                                      | Icono del subtítulo | IconType  |
-| extraInput                                | Elemento adicional  | ReactNode |
+| Nombre                                    | Descripción                         | Tipo      |
+| ----------------------------------------- | ----------------------------------- | --------- |
+| subtitle <span style="color:red">*</span> | Subtítulo                           | string    |
+| icon                                      | Icono del subtítulo                 | IconType  |
+| extraInput                                | Elemento adicional                  | ReactNode |
+| hasMargin                                 | Control para la margen del elemento | boolean   |
 
 ## Uso
 
