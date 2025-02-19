@@ -16,18 +16,18 @@ Todos los proyectos que utilizan la librería [eco-unp](https://www.npmjs.com/pa
 * Instalar la última versión de react-ecosistema-unp: ```npm install react-ecosistema-unp@latest```
 * Realizar el cambio en las siguientes importaciones:
 ```tsx
-import { AuthProvider } from 'eco-unp/Utils'; -> import { AuthProvider } from 'react-ecosistema-unp/utils';
-import { UserRoute, ProtectedRoute } from 'eco-unp/Utils'; -> import { ProtectedRoute, UserRoute } from 'react-ecosistema-unp/utils';
+import { AuthProvider } from 'eco-unp/Utils';               -> import { AuthProvider } from 'react-ecosistema-unp/utils';
+import { UserRoute, ProtectedRoute } from 'eco-unp/Utils';  -> import { ProtectedRoute, UserRoute } from 'react-ecosistema-unp/utils';
 
-import { VentanaLienzo } from 'eco-unp/Ui'; -> import { VentanaLienzo } from 'react-ecosistema-unp/shared';
-import { VentanaUsuario } from 'eco-unp/Ui'; -> import { VentanaTabs } from 'react-ecosistema-unp/shared';
-import { TabVentana } from 'eco-unp/Ui'; -> import { VentanaTabs } from 'react-ecosistema-unp/shared';
+import { VentanaLienzo } from 'eco-unp/Ui';                 -> import { VentanaLienzo } from 'react-ecosistema-unp/shared';
+import { VentanaUsuario } from 'eco-unp/Ui';                -> import { VentanaTabs } from 'react-ecosistema-unp/shared';
+import { TabVentana } from 'eco-unp/Ui';                    -> import { VentanaTabs } from 'react-ecosistema-unp/shared';
 
-import { SubtituloForm } from 'eco-unp/Ui'; -> import { Subtitulo } from "react-ecosistema-unp/ui";
+import { SubtituloForm } from 'eco-unp/Ui';                 -> import { Subtitulo } from "react-ecosistema-unp/ui";
 
-import { CardForm } from 'eco-unp/Ui'; -> import { Tarjeta } from 'react-ecosistema-unp/cards';
+import { CardForm } from 'eco-unp/Ui';                      -> import { Tarjeta } from 'react-ecosistema-unp/cards';
 
-import { BootstrapTable } from 'eco-unp/Tables'; -> import { TablaRegistros } from 'react-ecosistema-unp/tables';
+import { BootstrapTable } from 'eco-unp/Tables';            -> import { TablaRegistros } from 'react-ecosistema-unp/tables';
 ```
 
 > El componente Subtitulo cambia el prop subtitulo a subtitle
