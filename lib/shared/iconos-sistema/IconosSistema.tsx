@@ -30,14 +30,16 @@ const IconosSistema: React.FC<IconosSistemaProps> = ({ elements }) => {
                     )}
                 </div>
             ))}
-            <div
-                style={{
-                    border: '1px #ebebeb solid',
-                    marginTop: '9px',
-                    marginBottom: '2px',
-                    borderRadius: '10px'
-                }}
-            />
+            {elements && (
+                <div
+                    style={{
+                        border: '1px #ebebeb solid',
+                        marginTop: '9px',
+                        marginBottom: '2px',
+                        borderRadius: '10px'
+                    }}
+                />
+            )}
             <div>
                 <NotificacionUsuario />
             </div>
