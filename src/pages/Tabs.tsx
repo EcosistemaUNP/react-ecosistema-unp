@@ -8,10 +8,11 @@ import { TablaShared } from './TablaShared';
 import { Tabla } from './Tabla';
 import { TabPaginador } from './TabPaginador';
 import { FaUser } from 'react-icons/fa';
+import { FaHeart } from 'react-icons/fa6';
 
 const Tabs: React.FC = () => {
   const iconos = [
-    { icon: FaUser, action: () => console.log('goodbye!!') },
+    { icon: FaHeart, action: () => console.log('goodbye!!'), label: 'Icono uno' },
     { icon: FaUser, action: () => console.log('adios!!') },
     { icon: FaUser, action: () => console.log('auf wiedersehen!!') },
     { icon: FaUser, action: () => console.log('adieu!!') },

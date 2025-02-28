@@ -15,3 +15,37 @@
     color: #303d50;
     cursor: pointer;
 }
+
+/* Tooltip */
+
+.icono-sistema-tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+
+.icono-sistema-tooltip-text {
+    z-index: 9999;
+    visibility: hidden;
+    width: max-content;
+    background-color: #5f6265ef;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 7px 11px;
+    position: absolute;
+    z-index: 1000;
+    /* Posición debajo del botón, alineado a la derecha */
+    top: 100%;
+    right: 0; /* Alinea borde derecho del tooltip con borde derecho del contenedor */
+    margin-top: 8px; /* Espacio entre botón y tooltip */
+    opacity: 0;
+    transition: opacity 0.1s;
+    pointer-events: none;
+    /* font-size: 0.9rem; */
+    transition: all 0.1s ease-in-out;
+}
+
+.icono-sistema-tooltip-container:hover .icono-sistema-tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}

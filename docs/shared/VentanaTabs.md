@@ -10,10 +10,11 @@
 | extraInput                                | Botónes superiores      | IconoSistema[ ] |
 
 ### IconoSistema
-| Nombre | Descripción       | Tipo       |
-| ------ | ----------------- | ---------- |
-| icon   | Icono del botón   | IconType   |
-| action | Acción a realizar | ( ) => { } |
+| Nombre | Descripción           | Tipo       |
+| ------ | --------------------- | ---------- |
+| icon   | Icono del botón       | IconType   |
+| action | Acción a realizar     | ( ) => { } |
+| label  | Label para el tooltip | string     |
 
 ### TabVentana
 | Nombre   | Descripción      | Tipo   |
@@ -28,7 +29,7 @@ import { TabVentana, VentanaTabs } from 'react-ecosistema-unp/shared';
 
 const MiComponente: React.FC = () => {
     const botones = [
-        { icon: FaMap, action: () => alert('Acción uno!') },
+        { icon: FaMap, action: () => alert('Acción uno!'), label: 'Acción uno' },
         { icon: FaFile, action: () => alert('Acción dos!') },
     ];
 
