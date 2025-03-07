@@ -52,7 +52,7 @@ const CustomModal: React.FC<CustomModalProps> = ({
       >
         <div className="modal_header">
           <span>{title}</span>
-          <button className="close_button" onClick={onHide}>
+          <button className="close_button" onClick={onHide} type="button">
             &times;
           </button>
         </div>
