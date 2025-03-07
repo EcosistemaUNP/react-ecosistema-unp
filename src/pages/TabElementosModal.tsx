@@ -1,10 +1,13 @@
-import React from 'react'
-import { ItemsModal } from '../../lib/ui'
+import React, { useState } from 'react'
+import { CustomModal, ItemsModal } from '../../lib/ui'
 import { TarjetaInfo } from '../../lib/cards';
 
 import { FaClipboardUser, FaPhone, FaUser, FaUsers } from 'react-icons/fa6';
+import { Button } from 'react-bootstrap';
 
 const TabElementosModal: React.FC = () => {
+    const [showModal, setShowModal] = useState(false);
+
     const sections = [
         { label: "Uno", icon: FaPhone, route: "/", closed: true },
         { label: "Dos", icon: FaClipboardUser, route: "/", closed: false, handleDownload: () => console.log('Descargando...') },
@@ -15,10 +18,19 @@ const TabElementosModal: React.FC = () => {
 
     return (
         <>
+            <Button variant='unp_primary' onClick={() => setShowModal(true)}>Abrir Modal</Button>
+            <CustomModal
+                show={showModal}
+                title="Formulario de solciitud de inscripción"
+                onHide={() => setShowModal(false)}
+                closeModalOut={true}
+            >
+                Contenido del modal
+            </CustomModal>
             <ItemsModal sections={sections} />
             <br />
             <TarjetaInfo icon={FaUser} label='Label'>
-            Hola!
+                Hola!
                 <br />
                 Hola!
                 <br />
