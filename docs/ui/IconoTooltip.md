@@ -10,6 +10,19 @@
 | taken                                        | Indica el estado de la solicitud (Por gestionar, en gestión)             | boolean     |
 | <span style="color:blue">*</span> customIcon | Icono personalizado. Si se usa, la propiedad `recordType` se deshabilita | IconTooltip |
 
+### Tipos de solicitud
+* Individual
+* Colectivo
+* Emergencia
+* Jurídico
+* Reasignación
+* CTAR
+* Inactivaciones
+* Desmonte
+* Implementación
+* Correspondencia
+* Uso indebido
+
 ### IconTooltip
 | Nombre                                       | Descripción       | Tipo     |
 | -------------------------------------------- | ----------------- | -------- |

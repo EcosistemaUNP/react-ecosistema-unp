@@ -58,6 +58,24 @@ const TabElementosUi: React.FC = () => {
             <IconoTooltip recordType='Reasignación' />
             <IconoTooltip recordType='Reasignación' taken={false} />
             <br /><br />
+            <IconoTooltip recordType='CTAR' />
+            <IconoTooltip recordType='CTAR' taken={false} />
+            <br /><br />
+            <IconoTooltip recordType='Inactivaciones' />
+            <IconoTooltip recordType='Inactivaciones' taken={false} />
+            <br /><br />
+            <IconoTooltip recordType='Desmonte' />
+            <IconoTooltip recordType='Desmonte' taken={false} />
+            <br /><br />
+            <IconoTooltip recordType='Implementación' />
+            <IconoTooltip recordType='Implementación' taken={false} />
+            <br /><br />
+            <IconoTooltip recordType='Correspondencia' />
+            <IconoTooltip recordType='Correspondencia' taken={false} />
+            <br /><br />
+            <IconoTooltip recordType='Uso indebido' />
+            <IconoTooltip recordType='Uso indebido' taken={false} />
+            <br /><br />
             <IconoTooltip recordType='No encontrado' />
             <IconoTooltip recordType='No encontrado' taken={false} />
             <br /><br />
